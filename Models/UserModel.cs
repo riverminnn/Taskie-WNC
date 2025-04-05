@@ -24,5 +24,9 @@ namespace TaskieWNC.Models
 
         [Required]
         public DateTime CreatedAt { get; set; } = DateTime.Now;
+
+        [Required]
+        [MaxLength(50)]
+        public string Role { get; set; } = "User";
     }
 }

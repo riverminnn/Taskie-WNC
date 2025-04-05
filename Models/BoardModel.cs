@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace TaskieWNC.Models
 {
-    [Table("Board")]
+    [Table("Boards")]
     public class BoardModel
     {
         [Key]

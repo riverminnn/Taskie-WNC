@@ -1,0 +1,109 @@
+<div id="loginModal" class="w-full h-full hidden">
+    <div class="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
+        <div class="w-[800px] relative bg-white rounded-xl shadow-lg">
+            <!-- Close Button -->
+            <button onclick="closeLoginModal()"
+                class="absolute top-4 right-4 bg-gray-100 py-2 px-3 rounded-full text-gray-500 hover:text-gray-700 cursor-pointer"
+                aria-label="Close Modal">
+                &times;
+            </button>
+            <div class="w-full bg-white rounded-xl flex">
+                <div class="aside-left w-6/10 p-8">
+                    <p id="modalTitle" class="text-2xl font-medium text-gray-800">Login with Email</p>
+                    <span id="modalSubtitle" class="text-gray-800">Enter your email and password to log in</span>
+                    <form id="loginForm" class="mt-4">
+                        <!-- Login Form -->
+                        <div id="loginFields">
+                            <div class="form-control mb-4">
+                                <input id="email" type="text" required
+                                    class="w-full px-3 py-2 border-b-2 border-gray-100 text-gray-700"
+                                    placeholder="abc@email.com" aria-label="Email" />
+                            </div>
+                            <div class="form-control mb-4 relative">
+                                <input id="password" type="password" required
+                                    class="w-full px-3 py-2 border-b-2 border-gray-100 text-gray-700"
+                                    placeholder="Password" aria-label="Password" />
+                            </div>
+                            <!-- Login Error Message -->
+                            <div id="loginErrorMessage" class="text-red-500 text-sm hidden"></div>
+                            <button type="button" onclick="login()"
+                                class="w-full px-4 py-3 text-white bg-blue-500 rounded hover:bg-blue-700 cursor-pointer text-[1.2rem]">
+                                Login
+                            </button>
+                        </div>
+
+                        <!-- Sign-Up Form -->
+                        <div id="signupFields" class="hidden">
+                            <div class="form-control mb-4">
+                                <input id="fullname" type="text" required
+                                    class="w-full px-3 py-2 border-b-2 border-gray-100 text-gray-700"
+                                    placeholder="Full Name" aria-label="Full Name" />
+                            </div>
+                            <div class="form-control mb-4">
+                                <input id="signupEmail" type="text" required
+                                    class="w-full px-3 py-2 border-b-2 border-gray-100 text-gray-700"
+                                    placeholder="abc@email.com" aria-label="Email" />
+                            </div>
+                            <div class="form-control mb-4 relative">
+                                <input id="signupPassword" type="password" required
+                                    class="w-full px-3 py-2 border-b-2 border-gray-100 text-gray-700"
+                                    placeholder="Password" aria-label="Password" />
+                            </div>
+                            <div class="form-control mb-4 relative">
+                                <input id="confirmPassword" type="password" required
+                                    class="w-full px-3 py-2 border-b-2 border-gray-100 text-gray-700"
+                                    placeholder="Confirm Password" aria-label="Confirm Password" />
+                            </div>
+                            <!-- Sign-Up Error Message -->
+                            <div id="signupErrorMessage" class="text-red-500 text-sm hidden"></div>
+                            <button type="button" onclick="signup()"
+                                class="w-full px-4 py-3 text-white bg-green-500 rounded hover:bg-green-700 cursor-pointer text-[1.2rem]">
+                                Sign Up
+                            </button>
+                        </div>
+                    </form>
+                    <div class="mt-2">
+                        <p class="text-sm text-gray-600">
+                            <span id="toggleText">Don't have an account? </span>
+                            <button id="toggleButton" onclick="toggleLoginSignup()"
+                                class="text-blue-600 hover:underline">
+                                Sign Up
+                            </button>
+                        </p>
+                    </div>
+                </div>
+                <div class="aside-right w-4/10 bg-gray-100 rounded-r-lg flex flex-col items-center justify-center">
+                    <p class="text-[1.2rem] font-medium text-blue-600">Welcome Back!</p>
+                    <span class="text-base text-blue-600">Log in to continue</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function toggleLoginSignup() {
+        const loginFields = document.getElementById('loginFields');
+        const signupFields = document.getElementById('signupFields');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalSubtitle = document.getElementById('modalSubtitle');
+        const toggleText = document.getElementById('toggleText');
+        const toggleButton = document.getElementById('toggleButton');
+
+        if (loginFields.classList.contains('hidden')) {
+            loginFields.classList.remove('hidden');
+            signupFields.classList.add('hidden');
+            modalTitle.textContent = 'Login with Email';
+            modalSubtitle.textContent = 'Enter your email and password to log in';
+            toggleText.textContent = "Don't have an account? ";
+            toggleButton.textContent = 'Sign Up';
+        } else {
+            loginFields.classList.add('hidden');
+            signupFields.classList.remove('hidden');
+            modalTitle.textContent = 'Sign Up';
+            modalSubtitle.textContent = 'Enter your details to create an account';
+            toggleText.textContent = 'Already have an account? ';
+            toggleButton.textContent = 'Login';
+        }
+    }
+</script>

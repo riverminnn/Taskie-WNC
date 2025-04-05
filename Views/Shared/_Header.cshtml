@@ -1,0 +1,39 @@
+<header class="bg-white border-b-1 border-b-gray-200 relative p-4">
+    <nav class="navbar w-4/5 m-auto flex justify-around items-center">
+        <a href="/" class="flex gap-4 items-center">
+            <img src="~/assets/logo.png" alt="Logo" class="size-8" />
+            <span class="text-2xl">Taskie</span>
+        </a>
+        <div class="flex justify-center items-center">
+            <span>Header</span>
+        </div>
+        <div class="profile flex items-center gap-4">
+            @if (!string.IsNullOrEmpty(Context.Session.GetString("Email")))
+            {
+                if (Context.Session.GetString("Role") == "Admin")
+                {
+                    <button onclick="location.href='/Admin'"
+                        class="block w-full cursor-pointer bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700">
+                        Admin
+                    </button>
+                }
+                <button onclick="logout()"
+                    class="block w-full cursor-pointer bg-red-500 text-white px-4 py-2 rounded hover:bg-red-700">
+                    Logout
+                </button>
+            }
+            else
+            {
+                <button onclick="openLoginModal()"
+                    class="block w-full cursor-pointer bg-green-500 text-white px-4 py-2 rounded hover:bg-green-700">
+                    Login
+                </button>
+            }
+        </div>
+    </nav>
+</header>
+
+<!-- Include Login Modal -->
+@await Html.PartialAsync("_LoginModal")
+
+<script src="~/js/header.js" asp-append-version="true"></script>

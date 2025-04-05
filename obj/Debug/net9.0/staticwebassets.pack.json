@@ -1,6 +1,34 @@
 {
   "Files": [
     {
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\assets\\fonts\\GoogleSans-Bold.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\GoogleSans-Bold.ttf"
+    },
+    {
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\assets\\fonts\\GoogleSans-BoldItalic.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\GoogleSans-BoldItalic.ttf"
+    },
+    {
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\assets\\fonts\\GoogleSans-Italic.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\GoogleSans-Italic.ttf"
+    },
+    {
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\assets\\fonts\\GoogleSans-Medium.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\GoogleSans-Medium.ttf"
+    },
+    {
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\assets\\fonts\\GoogleSans-MediumItalic.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\GoogleSans-MediumItalic.ttf"
+    },
+    {
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\assets\\fonts\\GoogleSans-Regular.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\GoogleSans-Regular.ttf"
+    },
+    {
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\assets\\logo.png",
+      "PackagePath": "staticwebassets\\assets\\logo.png"
+    },
+    {
       "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
@@ -11,6 +39,114 @@
     {
       "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\fontawesome\\css\\all.css",
+      "PackagePath": "staticwebassets\\fontawesome\\css\\all.css"
+    },
+    {
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\fontawesome\\css\\all.min.css",
+      "PackagePath": "staticwebassets\\fontawesome\\css\\all.min.css"
+    },
+    {
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\fontawesome\\css\\brands.css",
+      "PackagePath": "staticwebassets\\fontawesome\\css\\brands.css"
+    },
+    {
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\fontawesome\\css\\brands.min.css",
+      "PackagePath": "staticwebassets\\fontawesome\\css\\brands.min.css"
+    },
+    {
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\fontawesome\\css\\fontawesome.css",
+      "PackagePath": "staticwebassets\\fontawesome\\css\\fontawesome.css"
+    },
+    {
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\fontawesome\\css\\fontawesome.min.css",
+      "PackagePath": "staticwebassets\\fontawesome\\css\\fontawesome.min.css"
+    },
+    {
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\fontawesome\\css\\regular.css",
+      "PackagePath": "staticwebassets\\fontawesome\\css\\regular.css"
+    },
+    {
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\fontawesome\\css\\regular.min.css",
+      "PackagePath": "staticwebassets\\fontawesome\\css\\regular.min.css"
+    },
+    {
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\fontawesome\\css\\solid.css",
+      "PackagePath": "staticwebassets\\fontawesome\\css\\solid.css"
+    },
+    {
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\fontawesome\\css\\solid.min.css",
+      "PackagePath": "staticwebassets\\fontawesome\\css\\solid.min.css"
+    },
+    {
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\fontawesome\\css\\svg-with-js.css",
+      "PackagePath": "staticwebassets\\fontawesome\\css\\svg-with-js.css"
+    },
+    {
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\fontawesome\\css\\svg-with-js.min.css",
+      "PackagePath": "staticwebassets\\fontawesome\\css\\svg-with-js.min.css"
+    },
+    {
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\fontawesome\\css\\v4-font-face.css",
+      "PackagePath": "staticwebassets\\fontawesome\\css\\v4-font-face.css"
+    },
+    {
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\fontawesome\\css\\v4-font-face.min.css",
+      "PackagePath": "staticwebassets\\fontawesome\\css\\v4-font-face.min.css"
+    },
+    {
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\fontawesome\\css\\v4-shims.css",
+      "PackagePath": "staticwebassets\\fontawesome\\css\\v4-shims.css"
+    },
+    {
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\fontawesome\\css\\v4-shims.min.css",
+      "PackagePath": "staticwebassets\\fontawesome\\css\\v4-shims.min.css"
+    },
+    {
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\fontawesome\\css\\v5-font-face.css",
+      "PackagePath": "staticwebassets\\fontawesome\\css\\v5-font-face.css"
+    },
+    {
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\fontawesome\\css\\v5-font-face.min.css",
+      "PackagePath": "staticwebassets\\fontawesome\\css\\v5-font-face.min.css"
+    },
+    {
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\fontawesome\\webfonts\\fa-brands-400.ttf",
+      "PackagePath": "staticwebassets\\fontawesome\\webfonts\\fa-brands-400.ttf"
+    },
+    {
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\fontawesome\\webfonts\\fa-brands-400.woff2",
+      "PackagePath": "staticwebassets\\fontawesome\\webfonts\\fa-brands-400.woff2"
+    },
+    {
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\fontawesome\\webfonts\\fa-regular-400.ttf",
+      "PackagePath": "staticwebassets\\fontawesome\\webfonts\\fa-regular-400.ttf"
+    },
+    {
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\fontawesome\\webfonts\\fa-regular-400.woff2",
+      "PackagePath": "staticwebassets\\fontawesome\\webfonts\\fa-regular-400.woff2"
+    },
+    {
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\fontawesome\\webfonts\\fa-solid-900.ttf",
+      "PackagePath": "staticwebassets\\fontawesome\\webfonts\\fa-solid-900.ttf"
+    },
+    {
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\fontawesome\\webfonts\\fa-solid-900.woff2",
+      "PackagePath": "staticwebassets\\fontawesome\\webfonts\\fa-solid-900.woff2"
+    },
+    {
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\fontawesome\\webfonts\\fa-v4compatibility.ttf",
+      "PackagePath": "staticwebassets\\fontawesome\\webfonts\\fa-v4compatibility.ttf"
+    },
+    {
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\fontawesome\\webfonts\\fa-v4compatibility.woff2",
+      "PackagePath": "staticwebassets\\fontawesome\\webfonts\\fa-v4compatibility.woff2"
+    },
+    {
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\js\\header.js",
+      "PackagePath": "staticwebassets\\js\\header.js"
     },
     {
       "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\js\\site.js",

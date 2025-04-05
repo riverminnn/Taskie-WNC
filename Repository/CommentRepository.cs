@@ -49,9 +49,9 @@ public class CommentRepository
         return false;
     }
 
-    public List<CommentModel> GetCommentsByTaskId(int taskId)
+    public List<CommentModel> GetCommentsByTaskId(int cardID)
     {
-        return _dbContext.Comments.Where(c => c.TaskID == taskId).ToList();
+        return _dbContext.Comments.Where(c => c.CardID == cardID).ToList();
     }
 
     public List<CommentModel> GetComments(int pageNumber, int pageSize)

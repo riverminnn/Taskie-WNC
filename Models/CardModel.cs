@@ -3,18 +3,18 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace TaskieWNC.Models
 {
-    [Table("Task")]
-    public class TaskModel
+    [Table("Cards")]
+    public class CardModel
     {
         [Key]
-        public int TaskID { get; set; } // Primary Key
+        public int CardID { get; set; } // Primary Key
 
         [Required]
         public int ListID { get; set; } // Foreign Key
 
         [Required]
         [StringLength(255)]
-        public string TaskName { get; set; } = string.Empty;
+        public string CardName { get; set; } = string.Empty;
 
         public string Description { get; set; } = string.Empty;
 
