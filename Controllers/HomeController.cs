@@ -13,11 +13,6 @@ namespace TaskieWNC.Controllers
             _userRepository = memberRepository;
         }
 
-        public IActionResult RegisterSuccess()
-        {
-            return View();
-        }
-
         public IActionResult Index()
         {
             return View();

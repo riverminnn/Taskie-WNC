@@ -11,13 +11,33 @@
 
 <body>
     <div class="flex flex-col min-h-screen">
-        @await Html.PartialAsync("_Header")
+        @if (Context.Session.GetString("Email") != null && Context.Request.Path.StartsWithSegments("/User"))
+        {
+            <!-- Show _UserHeader for logged-in users on User pages -->
+            @await Html.PartialAsync("_UserHeader")
+        }
+        else
+        {
+            <!-- Show normal _Header for other pages -->
+            @await Html.PartialAsync("_Header")
+        }
+
         <div class="flex-grow flex justify-center w-full aligns-center">
-            <main role="main" class="px-12 w-full">
+            <main role="main" class="w-full">
                 @RenderBody()
             </main>
         </div>
-        @await Html.PartialAsync("_Footer")
+
+        @if (Context.Session.GetString("Email") == null && !Context.Request.Path.StartsWithSegments("/User"))
+        {
+            <!-- Show _Footer only for non-User pages -->
+            @await Html.PartialAsync("_Footer")
+        }
+        @if (Context.Session.GetString("Email") != null && !Context.Request.Path.StartsWithSegments("/User"))
+        {
+            <!-- Show _Footer only for non-User pages -->
+            @await Html.PartialAsync("_Footer")
+        }
     </div>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)

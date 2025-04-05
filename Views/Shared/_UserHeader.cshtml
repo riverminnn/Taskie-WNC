@@ -1,18 +1,22 @@
-<header class="fixed bg-white w-full h-15 shadow-md flex flex-col justify-center items-center">
-    <nav class="navbar w-6/10 h-full flex justify-center items-center ">
+<header class="bg-white w-full h-12 shadow-md flex justify-center items-center border-b border-gray-200">
+    <nav class="navbar w-full h-full flex justify-center items-center px-6">
         <div class="left-nav flex gap-4 items-center h-full text-[#091E42] w-7/10 justify-start">
             <a href="/" class="flex gap-2 items-center h-full text-[#173B4D]">
                 <img src="~/assets/logo.png" alt="Logo" class="size-6" />
                 <span class="text-[18px] font-bold">Taskie</span>
             </a>
-            <button onclick="location.href='/feature'" class="cursor-pointer hover:text-blue-500">
-                Features
+            <button onclick="location.href='/feature'" class="cursor-pointer hover:text-blue-500 text-sm">
+                Workspaces
             </button>
-            <button onclick="location.href='/about'" class="cursor-pointer hover:text-blue-500">
-                About
+            <button onclick="location.href='/about'" class="cursor-pointer hover:text-blue-500 text-sm">
+                Recent
             </button>
-            <button onclick="location.href='/contact'" class="cursor-pointer hover:text-blue-500">
-                Contact
+            <button onclick="location.href='/contact'" class="cursor-pointer hover:text-blue-500 text-sm">
+                Starred
+            </button>
+            <button onclick="openLoginModal()"
+                class="block h-8/10 rounded-sm px-4 bg-blue-500 text-white cursor-pointer hover:bg-blue-700 font-medium text-sm">
+                Create
             </button>
         </div>
         <div class="right-nav flex items-center gap-4 h-full w-3/10 justify-end">
@@ -25,9 +29,9 @@
                         Admin
                     </button>
                 }
-                <button onclick="location.href='/User/Home'"
-                    class="block h-full px-6 bg-[#172b4d] text-white cursor-pointer hover:bg-[#4c5970] font-medium">
-                    Go to your boards
+                <button onclick="logout()"
+                    class="block h-8/10 rounded-sm px-4 bg-[#172b4d] text-white cursor-pointer hover:bg-[#4c5970] font-medium">
+                    Logout
                 </button>
             }
             else

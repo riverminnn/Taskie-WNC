@@ -7,8 +7,8 @@ async function closeLoginModal() {
 }
 
 async function login() {
-    const email = document.getElementById('email').value;
-    const password = document.getElementById('password').value;
+    const email = document.getElementById('login-email').value;
+    const password = document.getElementById('login-password').value;
     const loginErrorMessage = document.getElementById('loginErrorMessage');
 
     // Clear previous error message
@@ -24,8 +24,6 @@ async function login() {
     const formData = new URLSearchParams();
     formData.append('email', email);
     formData.append('password', password);
-
-    console.log(formData);
 
     try {
         const response = await fetch('/Home/Login', {
@@ -53,10 +51,10 @@ async function login() {
 }
 
 async function signup() {
-    const fullname = document.getElementById('fullname').value;
-    const signupEmail = document.getElementById('signupEmail').value;
-    const signupPassword = document.getElementById('signupPassword').value;
-    const confirmPassword = document.getElementById('confirmPassword').value;
+    const fullname = document.getElementById('signup-fullname').value;
+    const signupEmail = document.getElementById('signup-email').value;
+    const signupPassword = document.getElementById('signup-password').value;
+    const confirmPassword = document.getElementById('signup-confirmPassword').value;
     const signupErrorMessage = document.getElementById('signupErrorMessage');
 
     // Clear previous error message
@@ -75,28 +73,32 @@ async function signup() {
         return;
     }
 
-    // Submit the form data via AJAX
     const formData = new URLSearchParams();
     formData.append('fullname', fullname);
     formData.append('email', signupEmail);
     formData.append('password', signupPassword);
     formData.append('confirmPassword', confirmPassword);
 
-    const response = await fetch('/Home/Register', {
-        method: 'POST',
-        body: formData,
-        headers: {
-            'Content-Type': 'application/x-www-form-urlencoded'
+    try {
+        const response = await fetch('/Home/Register', {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+            }
+        });
+
+        const result = await response.json();
+
+        if (result.success) {
+            closeLoginModal();
+            location.reload();
+        } else {
+            signupErrorMessage.textContent = result.message || "Registration failed. Please try again.";
+            signupErrorMessage.classList.remove('hidden');
         }
-    });
-
-    const result = await response.json();
-
-    if (result.success) {
-        closeLoginModal();
-        location.reload();
-    } else {
-        errorMessage.textContent = result.message || "Registration failed. Please try again.";
+    } catch (err) {
+        signupErrorMessage.textContent = 'An error occurred. Please try again later.';
         signupErrorMessage.classList.remove('hidden');
         console.error('Error:', err);
     }

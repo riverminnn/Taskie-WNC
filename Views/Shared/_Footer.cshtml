@@ -1,8 +1,45 @@
-<footer class="bottom-0 flex justify-center border border-gray-300 p-3 w-full aligns-center">
-    <span>This is Footer</span>
-</footer>
+<footer class="bg-[#172b4d] bottom-0 flex flex-col justify-center items-center p-6 w-full text-white">
+    <div class="w-full max-w-6xl flex justify-between items-start mb-4">
+        <!-- Left Section -->
+        <a href="/" class="flex gap-2 items-center h-full">
+            <img src="~/assets/logo-light.png" alt="Logo" class="size-6" />
+            <span class="text-[18px] font-bold">Taskie</span>
+        </a>
 
-<!-- Include Login Modal -->
-@await Html.PartialAsync("_LoginModal")
+        <!-- Middle Section -->
+        <div class="flex gap-2">
+            <a href="/feature" class="text-white hover:underline">Feature</a>
+            <a href="/about" class="text-white hover:underline">About</a>
+            <a href="/contact" class="text-white hover:underline">Contact Us</a>
+        </div>
+
+        <!-- Right Section -->
+        <div class="flex gap-4">
+            <a href="/" class="text-white hover:text-gray-300">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="/" class="text-white hover:text-gray-300">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="/" class="text-white hover:text-gray-300">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="/" class="text-white hover:text-gray-300">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- Bottom Section -->
+    <div class="w-full max-w-6xl flex justify-between items-center border-t border-gray-600 pt-4">
+        <div class="flex items-center gap-2">
+            <span>&copy; 2024 Taskie</span>
+        </div>
+        <div class="flex gap-4">
+            <a href="/privacy" class="text-white hover:underline">Privacy Policy</a>
+            <a href="/terms" class="text-white hover:underline">Terms</a>
+        </div>
+    </div>
+</footer>
 
 <script src="~/js/header.js" asp-append-version="true"></script>

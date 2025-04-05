@@ -25,6 +25,10 @@
       "PackagePath": "staticwebassets\\assets\\fonts\\GoogleSans-Regular.ttf"
     },
     {
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\assets\\logo-light.png",
+      "PackagePath": "staticwebassets\\assets\\logo-light.png"
+    },
+    {
       "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\assets\\logo.png",
       "PackagePath": "staticwebassets\\assets\\logo.png"
     },
