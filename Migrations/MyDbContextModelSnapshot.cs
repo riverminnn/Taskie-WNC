@@ -115,7 +115,7 @@ namespace TaskieWNC.Migrations
 
                     b.HasIndex("UserID");
 
-                    b.ToTable("Comment", (string)null);
+                    b.ToTable("Comments", (string)null);
                 });
 
             modelBuilder.Entity("TaskieWNC.Models.ListModel", b =>

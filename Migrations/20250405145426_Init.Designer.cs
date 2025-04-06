@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace TaskieWNC.Migrations
 {
     [DbContext(typeof(MyDbContext))]
-    [Migration("20250405082426_Init")]
+    [Migration("20250405145426_Init")]
     partial class Init
     {
         /// <inheritdoc />
@@ -118,7 +118,7 @@ namespace TaskieWNC.Migrations
 
                     b.HasIndex("UserID");
 
-                    b.ToTable("Comment", (string)null);
+                    b.ToTable("Comments", (string)null);
                 });
 
             modelBuilder.Entity("TaskieWNC.Models.ListModel", b =>

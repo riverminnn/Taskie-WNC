@@ -19,7 +19,7 @@ public class ListRepository
         return _dbContext.Lists.ToList();
     }
 
-    public ListModel CreateList(ListModel list)
+    public ListModel AddList(ListModel list)
     {
         _dbContext.Lists.Add(list);
         _dbContext.SaveChanges();

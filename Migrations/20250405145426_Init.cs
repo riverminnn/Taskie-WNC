@@ -96,7 +96,7 @@ namespace TaskieWNC.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Comment",
+                name: "Comments",
                 columns: table => new
                 {
                     CommentID = table.Column<int>(type: "int", nullable: false)
@@ -108,15 +108,15 @@ namespace TaskieWNC.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Comment", x => x.CommentID);
+                    table.PrimaryKey("PK_Comments", x => x.CommentID);
                     table.ForeignKey(
-                        name: "FK_Comment_Cards_CardID",
+                        name: "FK_Comments_Cards_CardID",
                         column: x => x.CardID,
                         principalTable: "Cards",
                         principalColumn: "CardID",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK_Comment_Users_UserID",
+                        name: "FK_Comments_Users_UserID",
                         column: x => x.UserID,
                         principalTable: "Users",
                         principalColumn: "UserID",
@@ -134,13 +134,13 @@ namespace TaskieWNC.Migrations
                 column: "ListID");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Comment_CardID",
-                table: "Comment",
+                name: "IX_Comments_CardID",
+                table: "Comments",
                 column: "CardID");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Comment_UserID",
-                table: "Comment",
+                name: "IX_Comments_UserID",
+                table: "Comments",
                 column: "UserID");
 
             migrationBuilder.CreateIndex(
@@ -153,7 +153,7 @@ namespace TaskieWNC.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Comment");
+                name: "Comments");
 
             migrationBuilder.DropTable(
                 name: "Cards");

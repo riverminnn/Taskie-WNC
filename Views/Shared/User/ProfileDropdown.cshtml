@@ -1,0 +1,76 @@
+@if (!string.IsNullOrEmpty(Context.Session.GetString("Email")))
+{
+    <div class="relative" id="profileDropdownContainer">
+        <button onclick="toggleDropdown()" id="profileDropdownButton"
+            class="flex items-center gap-2 px-1 py-1 rounded-sm hover:bg-slate-200 size-8">
+            <img src="~/assets/images/default.png" alt="avatar" class="size-6">
+        </button>
+        <!-- Dropdown Menu -->
+        <div id="profileDropdownMenu"
+            class="absolute right-0 mt-4 w-64 bg-white border border-gray-300 rounded shadow-lg hidden z-50">
+            <div class="p-4 border-b border-gray-200">
+                <div class="flex items-center gap-2">
+                    <img src="~/assets/images/default.png" alt="avatar" class="size-8">
+                    <div>
+                        <span class="block text-sm font-medium">@Context.Session.GetString("Email")</span>
+                        <span class="block text-xs text-gray-500">Account</span>
+                    </div>
+                </div>
+            </div>
+            <ul class="py-2">
+                @if (Context.Session.GetString("Role") == "Admin")
+                {
+                    <li>
+                        <a href="/Admin/Home" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                            Admin Panel
+                        </a>
+                    </li>
+                }
+                <li>
+                    <a href="/User/Profile" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                        Profile and Visibility
+                    </a>
+                </li>
+                <li>
+                    <a href="/User/Settings" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                        Settings
+                    </a>
+                </li>
+                <li>
+                    <a href="/User/Help" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                        Help
+                    </a>
+                </li>
+                <li>
+                    <button onclick="logout()"
+                        class="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer">
+                        Logout
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </div>
+}
+else
+{
+    <button onclick="openLoginModal()"
+        class="block h-full px-4 bg-blue-500 text-white cursor-pointer hover:bg-blue-700 font-medium">
+        Login
+    </button>
+}
+
+<script>
+    function toggleDropdown() {
+        const dropdownMenu = document.getElementById('profileDropdownMenu');
+        dropdownMenu.classList.toggle('hidden');
+    }
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', function (event) {
+        const dropdownContainer = document.getElementById('profileDropdownContainer');
+        const dropdownMenu = document.getElementById('profileDropdownMenu');
+        if (!dropdownContainer.contains(event.target)) {
+            dropdownMenu.classList.add('hidden');
+        }
+    });
+</script>

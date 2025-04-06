@@ -18,13 +18,6 @@
         <div class="right-nav flex items-center gap-4 h-full w-3/10 justify-end">
             @if (!string.IsNullOrEmpty(Context.Session.GetString("Email")))
             {
-                if (Context.Session.GetString("Role") == "Admin")
-                {
-                    <button onclick="location.href='/Admin'"
-                        class="block w-full cursor-pointer bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700">
-                        Admin
-                    </button>
-                }
                 <button onclick="location.href='/User/Home'"
                     class="block h-full px-6 bg-[#172b4d] text-white cursor-pointer hover:bg-[#4c5970] font-medium">
                     Go to your boards
@@ -45,3 +38,4 @@
 @await Html.PartialAsync("_LoginModal")
 
 <script src="~/js/header.js" asp-append-version="true"></script>
+<script src="~/js/login.js" asp-append-version="true"></script>

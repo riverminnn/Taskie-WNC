@@ -13,7 +13,7 @@ public class MyDbContext : DbContext
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         // Explicitly map CommentModel to the "Comment" table
-        modelBuilder.Entity<CommentModel>().ToTable("Comment");
+        modelBuilder.Entity<CommentModel>().ToTable("Comments");
 
         // Configure the foreign key relationships for CommentModel
         modelBuilder.Entity<CommentModel>()

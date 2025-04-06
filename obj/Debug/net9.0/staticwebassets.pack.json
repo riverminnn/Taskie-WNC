@@ -25,6 +25,10 @@
       "PackagePath": "staticwebassets\\assets\\fonts\\GoogleSans-Regular.ttf"
     },
     {
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\assets\\images\\default.png",
+      "PackagePath": "staticwebassets\\assets\\images\\default.png"
+    },
+    {
       "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\assets\\logo-light.png",
       "PackagePath": "staticwebassets\\assets\\logo-light.png"
     },
@@ -149,12 +153,24 @@
       "PackagePath": "staticwebassets\\fontawesome\\webfonts\\fa-v4compatibility.woff2"
     },
     {
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\js\\Login.js",
+      "PackagePath": "staticwebassets\\js\\Login.js"
+    },
+    {
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\js\\boardDetail.js",
+      "PackagePath": "staticwebassets\\js\\boardDetail.js"
+    },
+    {
       "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\js\\header.js",
       "PackagePath": "staticwebassets\\js\\header.js"
     },
     {
       "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\js\\user.js",
+      "PackagePath": "staticwebassets\\js\\user.js"
     },
     {
       "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.TaskieWNC.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",

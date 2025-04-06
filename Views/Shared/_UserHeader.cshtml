@@ -1,4 +1,6 @@
-<header class="bg-white w-full h-12 shadow-md flex justify-center items-center border-b border-gray-200">
+<header class="
+bg-white 
+w-full h-12 flex justify-center items-center border-b border-gray-300">
     <nav class="navbar w-full h-full flex justify-center items-center px-6">
         <div class="left-nav flex gap-4 items-center h-full text-[#091E42] w-7/10 justify-start">
             <a href="/" class="flex gap-2 items-center h-full text-[#173B4D]">
@@ -19,28 +21,8 @@
                 Create
             </button>
         </div>
-        <div class="right-nav flex items-center gap-4 h-full w-3/10 justify-end">
-            @if (!string.IsNullOrEmpty(Context.Session.GetString("Email")))
-            {
-                if (Context.Session.GetString("Role") == "Admin")
-                {
-                    <button onclick="location.href='/Admin'"
-                        class="block w-full cursor-pointer bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700">
-                        Admin
-                    </button>
-                }
-                <button onclick="logout()"
-                    class="block h-8/10 rounded-sm px-4 bg-[#172b4d] text-white cursor-pointer hover:bg-[#4c5970] font-medium">
-                    Logout
-                </button>
-            }
-            else
-            {
-                <button onclick="openLoginModal()"
-                    class="block h-full px-4 bg-blue-500 text-white cursor-pointer hover:bg-blue-700 font-medium">
-                    Login
-                </button>
-            }
+        <div class="right-nav flex items-center gap-4 h-full w-3/10 justify-end relative">
+            @await Html.PartialAsync("User/ProfileDropdown")
         </div>
     </nav>
 </header>
@@ -49,3 +31,5 @@
 @await Html.PartialAsync("_LoginModal")
 
 <script src="~/js/header.js" asp-append-version="true"></script>
+
+<script src="~/js/login.js" asp-append-version="true"></script>

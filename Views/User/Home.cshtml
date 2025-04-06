@@ -1,13 +1,42 @@
-﻿<section class="bg-white lg:grid lg:h-screen lg:place-content-center">
-    <div class="mx-auto w-screen max-w-screen-xl px-4 py-12 sm:px-6 sm:py-24 lg:px-8 lg:py-32">
-        <div class="mx-auto max-w-[52rem] text-center">
-            <h1 class="text-4xl font-bold text-gray-900 sm:text-5xl">
-                Welcome, @Context.Session.GetString("Email")!
-            </h1>
-
-            <p class="mt-4 text-base text-gray-700 sm:text-lg/relaxed">
-                This is your dashboard. Feel free to explore your boards and tasks.
-            </p>
+﻿<div class="h-screen flex flex-col">
+    <!-- Main Content -->
+    <main class="flex-grow flex flex-col bg-gray-100 px-92 py-6">
+        <!-- Profile Section -->
+        <div class="flex items-center gap-4 mb-6">
+            <img src="~/assets/images/default.png" alt="avatar" class="size-16">
+            <div class="flex flex-col">
+                <span class="text-lg font-semibold">@Context.Session.GetString("Email")</span>
+                <span class="text-sm text-gray-500">Private</span>
+            </div>
         </div>
-    </div>
-</section>
+
+        <h1 class="text-2xl font-medium my-5">Boards</h1>
+
+        <!-- Sorting, Filtering, and Search -->
+        <div class="flex items-center justify-between mb-6">
+            <div class="flex items-center gap-4">
+                <div>
+                    <label for="sort" class="text-sm text-gray-500">Sort by</label>
+                    <select id="sort" class="ml-2 px-3 py-2 border border-gray-300 rounded text-sm">
+                        <option>Most recently active</option>
+                        <option>Alphabetical</option>
+                        <option>Date created</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <input type="text" placeholder="Search boards" class="px-4 py-2 border rounded text-sm w-64" />
+            </div>
+        </div>
+
+        <!-- Boards Section -->
+        <div id="boardsContainer" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <!-- Boards will be dynamically rendered here -->
+        </div>
+    </main>
+</div>
+
+<!-- Include the New Board Modal -->
+@await Html.PartialAsync("User/NewBoard")
+
+<script src="~/js/user.js" asp-append-version="true"></script>

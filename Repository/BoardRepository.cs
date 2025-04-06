@@ -19,7 +19,7 @@ public class BoardRepository
         return _dbContext.Boards.ToList();
     }
 
-    public BoardModel CreateBoard(BoardModel board)
+    public BoardModel AddBoard(BoardModel board)
     {
         _dbContext.Boards.Add(board);
         _dbContext.SaveChanges();
