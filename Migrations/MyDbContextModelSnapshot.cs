@@ -21,6 +21,37 @@ namespace TaskieWNC.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("TaskieWNC.Models.BoardMemberModel", b =>
+                {
+                    b.Property<int>("MemberID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("MemberID"));
+
+                    b.Property<DateTime>("AddedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("BoardID")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Role")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<int>("UserID")
+                        .HasColumnType("int");
+
+                    b.HasKey("MemberID");
+
+                    b.HasIndex("BoardID");
+
+                    b.HasIndex("UserID");
+
+                    b.ToTable("BoardMembers");
+                });
+
             modelBuilder.Entity("TaskieWNC.Models.BoardModel", b =>
                 {
                     b.Property<int>("BoardID")
@@ -178,6 +209,21 @@ namespace TaskieWNC.Migrations
                     b.HasKey("UserID");
 
                     b.ToTable("Users");
+                });
+
+            modelBuilder.Entity("TaskieWNC.Models.BoardMemberModel", b =>
+                {
+                    b.HasOne("TaskieWNC.Models.BoardModel", null)
+                        .WithMany()
+                        .HasForeignKey("BoardID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("TaskieWNC.Models.UserModel", null)
+                        .WithMany()
+                        .HasForeignKey("UserID")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("TaskieWNC.Models.BoardModel", b =>

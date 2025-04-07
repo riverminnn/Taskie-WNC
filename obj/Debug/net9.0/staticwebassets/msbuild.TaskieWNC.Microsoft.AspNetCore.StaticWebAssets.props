@@ -192,8 +192,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>xx2h2h81mn</Fingerprint>
-      <Integrity>JQ+9YoFOi7N+ssk4f/RW2WgC4iMfcgO97IL4UXHylgE=</Integrity>
+      <Fingerprint>5t7arf88hc</Fingerprint>
+      <Integrity>CV3mBFXdn/FG6e9P9/a4pRDqEqv95BRdrM9cdYiD42w=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\tailwind.css'))</OriginalItemSpec>
@@ -714,11 +714,29 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>5hz7fmowk8</Fingerprint>
-      <Integrity>Wba17WCC82sM/K1pzDwCDMVlVJMzPN6AGSxDP8ZxNqg=</Integrity>
+      <Fingerprint>p6pnxzpybe</Fingerprint>
+      <Integrity>QRzDoWabiB4RJtUelj4wgVxXbtZsqVoFal8rOOPvXvs=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\boardDetail.js'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\cardDetail.js'))">
+      <SourceType>Package</SourceType>
+      <SourceId>TaskieWNC</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/TaskieWNC</BasePath>
+      <RelativePath>js/cardDetail.js</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>hmv8dp6ril</Fingerprint>
+      <Integrity>51zh4+/uKGuvLREQ39vZDrE75Wnfn6/7sEvIZJ49lGE=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\cardDetail.js'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\header.js'))">
       <SourceType>Package</SourceType>
@@ -786,8 +804,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>86pe3eyhbe</Fingerprint>
-      <Integrity>EE6eg0A43safv6wcgE/LWMoo312K/byJX17G0M+yoiM=</Integrity>
+      <Fingerprint>upn79n12ao</Fingerprint>
+      <Integrity>Lpfp+pGbXou3Fj1nVkht8CcfDJnfiXT7l1Hz6BMmnpA=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\user.js'))</OriginalItemSpec>

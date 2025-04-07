@@ -1,0 +1,107 @@
+1. Init mvc project
+
+terminal: 
+
+dotnet tool install --global dotnet-ef
+
+dotnet new mvc
+
+dotnet add package Microsoft.EntityFrameworkCore.SqlServer
+
+dotnet add package Microsoft.EntityFrameworkCore
+
+dotnet add package Microsoft.EntityFrameworkCore.Design
+
+2. Install tailwindcss and FontAweSome
+
+Download Font Awesome for the web: https://fontawesome.com/download --> Unzip
+
+Copy css and webfonts to fontawesome folder in wwwroot
+
+<link rel="stylesheet" href="~/fontawesome/css/all.min.css">
+
+a. Install via npm
+
+terminal: 
+
+npm init -y
+
+npm install tailwindcss @tailwindcss/cli
+
+b. Replace content in site.css with: @import "tailwindcss";
+
+c. Init css file ~/css/tailwind.css
+
+terminal: run this in another terminal to keep rendering tailwind.css
+
+npx tailwindcss -i ./wwwroot/css/site.css -o ./wwwroot/css/tailwind.css --watch
+
+d. Start using Tailwind in your HTML
+ 
+<link rel="stylesheet" href="~/css/tailwind.css">
+
+3. Remove unnecessary files
+
+Bootstrap folders in ~/lib
+
+ValidationScriptsPartial.cshtml
+
+Error.cshtml
+
+Privacy.cshtml
+
+@using taskie_wnc.Models in ViewImports.cshtml
+
+ErrorViewModel.cs
+
+using taskie_wnc.Models; in HomeController.cs and keep only Index action
+
+AFTER FINISHED: 
+
+dotnet watch run
+
+4. Git
+
+terminal: 
+git init
+git add .
+git commit -m "first commit"
+git branch -m main
+git remote add origin <gitlink>
+git push -u origin main
+
+5. Optional
+
+a. Remove or add something to last commit
+
+terminal: 
+git commit --amend -m "message"
+git push -u origin main --force
+
+b. Edit commit message
+
+terminal: git rebase -i --root 
+-> press i = edit mode -> replace pick = reword -> esc -> :wq -> :q!
+
+terminal: 
+git commit --amend -m "new commit message"
+git push --force
+
+--- New Run
+
+1. Change The ConnectionString in appsettings.json to your desired database
+
+"ConnectionStrings": {
+    "DefaultConnection": "Data Source=(YOUR DESKTOP DATASOURCE);Initial Catalog=(YOUR DATABASE NAME);Integrated Security=True;Trust Server Certificate=True"
+  }
+
+2. Run the commands
+
+dotnet add package Microsoft.EntityFrameworkCore.Design
+
+npm i
+
+dotnet restore
+dotnet ef migrations add Init
+dotnet ef database update
+dotnet watch
