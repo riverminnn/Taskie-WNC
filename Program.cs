@@ -11,6 +11,7 @@ builder.Services.AddScoped<CommentRepository>();
 builder.Services.AddScoped<ListRepository>();
 builder.Services.AddScoped<CardRepository>();
 builder.Services.AddScoped<UserRepository>();
+builder.Services.AddScoped<BoardMemberRepository>();
 
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddSession();

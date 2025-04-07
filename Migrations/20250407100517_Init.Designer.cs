@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace TaskieWNC.Migrations
 {
     [DbContext(typeof(MyDbContext))]
-    [Migration("20250405145426_Init")]
+    [Migration("20250407100517_Init")]
     partial class Init
     {
         /// <inheritdoc />
@@ -23,6 +23,37 @@ namespace TaskieWNC.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
+
+            modelBuilder.Entity("TaskieWNC.Models.BoardMemberModel", b =>
+                {
+                    b.Property<int>("MemberID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("MemberID"));
+
+                    b.Property<DateTime>("AddedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("BoardID")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Role")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<int>("UserID")
+                        .HasColumnType("int");
+
+                    b.HasKey("MemberID");
+
+                    b.HasIndex("BoardID");
+
+                    b.HasIndex("UserID");
+
+                    b.ToTable("BoardMembers");
+                });
 
             modelBuilder.Entity("TaskieWNC.Models.BoardModel", b =>
                 {
@@ -181,6 +212,21 @@ namespace TaskieWNC.Migrations
                     b.HasKey("UserID");
 
                     b.ToTable("Users");
+                });
+
+            modelBuilder.Entity("TaskieWNC.Models.BoardMemberModel", b =>
+                {
+                    b.HasOne("TaskieWNC.Models.BoardModel", null)
+                        .WithMany()
+                        .HasForeignKey("BoardID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("TaskieWNC.Models.UserModel", null)
+                        .WithMany()
+                        .HasForeignKey("UserID")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("TaskieWNC.Models.BoardModel", b =>

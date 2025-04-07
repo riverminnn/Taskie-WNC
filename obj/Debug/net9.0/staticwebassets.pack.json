@@ -161,6 +161,10 @@
       "PackagePath": "staticwebassets\\js\\boardDetail.js"
     },
     {
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\js\\cardDetail.js",
+      "PackagePath": "staticwebassets\\js\\cardDetail.js"
+    },
+    {
       "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\js\\header.js",
       "PackagePath": "staticwebassets\\js\\header.js"
     },

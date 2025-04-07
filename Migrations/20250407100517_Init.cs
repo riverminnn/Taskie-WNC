@@ -50,6 +50,33 @@ namespace TaskieWNC.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "BoardMembers",
+                columns: table => new
+                {
+                    MemberID = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    BoardID = table.Column<int>(type: "int", nullable: false),
+                    UserID = table.Column<int>(type: "int", nullable: false),
+                    Role = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
+                    AddedAt = table.Column<DateTime>(type: "datetime2", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_BoardMembers", x => x.MemberID);
+                    table.ForeignKey(
+                        name: "FK_BoardMembers_Boards_BoardID",
+                        column: x => x.BoardID,
+                        principalTable: "Boards",
+                        principalColumn: "BoardID",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_BoardMembers_Users_UserID",
+                        column: x => x.UserID,
+                        principalTable: "Users",
+                        principalColumn: "UserID");
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Lists",
                 columns: table => new
                 {
@@ -124,6 +151,16 @@ namespace TaskieWNC.Migrations
                 });
 
             migrationBuilder.CreateIndex(
+                name: "IX_BoardMembers_BoardID",
+                table: "BoardMembers",
+                column: "BoardID");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_BoardMembers_UserID",
+                table: "BoardMembers",
+                column: "UserID");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Boards_UserID",
                 table: "Boards",
                 column: "UserID");
@@ -152,6 +189,9 @@ namespace TaskieWNC.Migrations
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropTable(
+                name: "BoardMembers");
+
             migrationBuilder.DropTable(
                 name: "Comments");
 
