@@ -153,8 +153,8 @@
       "PackagePath": "staticwebassets\\fontawesome\\webfonts\\fa-v4compatibility.woff2"
     },
     {
-      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\js\\Login.js",
-      "PackagePath": "staticwebassets\\js\\Login.js"
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\js\\alert.js",
+      "PackagePath": "staticwebassets\\js\\alert.js"
     },
     {
       "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\js\\boardDetail.js",
@@ -163,6 +163,10 @@
     {
       "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\js\\header.js",
       "PackagePath": "staticwebassets\\js\\header.js"
+    },
+    {
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\js\\login.js",
+      "PackagePath": "staticwebassets\\js\\login.js"
     },
     {
       "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\js\\site.js",

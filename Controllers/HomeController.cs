@@ -79,10 +79,14 @@ namespace TaskieWNC.Controllers
             return Json(new { success = true, message = "Login successful." });
         }
 
+        [HttpPost]
         public IActionResult Logout()
         {
+            // Clear the session
             HttpContext.Session.Clear();
-            return RedirectToAction("Index");
+
+            // Return a success response
+            return Json(new { success = true, message = "Logout successful." });
         }
     }
 }

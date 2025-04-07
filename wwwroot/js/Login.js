@@ -1,9 +1,76 @@
+// Ensure the JavaScript runs after the DOM is fully loaded
+document.addEventListener('DOMContentLoaded', () => {
+    // If you have a button to trigger the modal, you can add an event listener here
+    // Example: document.getElementById('openLoginButton').addEventListener('click', openLoginModal);
+});
+
+function togglePassword(inputId, toggleId) {
+    const passwordInput = document.getElementById(inputId);
+    const toggleIcon = document.getElementById(toggleId);
+
+    if (!passwordInput || !toggleIcon) {
+        console.error(`Password input or toggle icon not found for inputId: ${inputId}, toggleId: ${toggleId}`);
+        return;
+    }
+
+    if (passwordInput.type === 'password') {
+        passwordInput.type = 'text';
+        toggleIcon.classList.remove('fa-eye');
+        toggleIcon.classList.add('fa-eye-slash');
+    } else {
+        passwordInput.type = 'password';
+        toggleIcon.classList.remove('fa-eye-slash');
+        toggleIcon.classList.add('fa-eye');
+    }
+}
+
+function openLoginModal() {
+    const modal = document.getElementById('loginModal');
+    if (!modal) {
+        console.error("Login modal not found!");
+        return;
+    }
+    modal.classList.remove('hidden');
+    setTimeout(() => {
+        const modalContent = modal.querySelector('.modal-content');
+        if (!modalContent) {
+            console.error("Modal content not found!");
+            return;
+        }
+        modalContent.classList.remove('scale-95', 'opacity-0');
+        modalContent.classList.add('scale-100', 'opacity-100');
+    }, 50); // Slight delay for smooth entrance
+}
+
+function closeLoginModal() {
+    const modal = document.getElementById('loginModal');
+    if (!modal) {
+        console.error("Login modal not found!");
+        return;
+    }
+    const modalContent = modal.querySelector('.modal-content');
+    if (!modalContent) {
+        console.error("Modal content not found!");
+        return;
+    }
+    modalContent.classList.remove('scale-100', 'opacity-100');
+    modalContent.classList.add('scale-95', 'opacity-0');
+    setTimeout(() => {
+        modal.classList.add('hidden');
+    }, 300); // Match the duration-500 (slightly shorter for smoother feel)
+}
+
 function toggleLoginSignup() {
     const loginFields = document.getElementById('loginFields');
     const signupFields = document.getElementById('signupFields');
     const modalTitle = document.getElementById('modalTitle');
     const toggleText = document.getElementById('toggleText');
     const toggleButton = document.getElementById('toggleButton');
+
+    if (!loginFields || !signupFields || !modalTitle || !toggleText || !toggleButton) {
+        console.error("One or more elements for toggleLoginSignup not found!");
+        return;
+    }
 
     if (loginFields.classList.contains('hidden')) {
         loginFields.classList.remove('hidden');
@@ -24,6 +91,11 @@ async function login() {
     const email = document.getElementById('login-email').value;
     const password = document.getElementById('login-password').value;
     const loginErrorMessage = document.getElementById('loginErrorMessage');
+
+    if (!loginErrorMessage) {
+        console.error("Login error message element not found!");
+        return;
+    }
 
     // Clear previous error message
     loginErrorMessage.textContent = '';
@@ -52,7 +124,8 @@ async function login() {
 
         if (data.success) {
             closeLoginModal();
-            location.reload();
+            sessionStorage.setItem('loginSuccess', 'true');
+            window.location.href = "User/Home";
         } else {
             loginErrorMessage.textContent = data.message;
             loginErrorMessage.classList.remove('hidden');
@@ -60,8 +133,29 @@ async function login() {
     } catch (err) {
         loginErrorMessage.textContent = 'An error occurred. Please try again later.';
         loginErrorMessage.classList.remove('hidden');
-        console.error('Error:', err);
+        console.error('Error during login:', err);
     }
+}
+
+function validatePassword(password) {
+    const minLength = 8;
+    const hasUpperCase = /[A-Z]/.test(password);
+    const hasSpecialChar = /[@$!%*?&]/.test(password);
+    const hasNumber = /\d/.test(password);
+
+    if (password.length < minLength) {
+        return 'Password must be at least 8 characters long.';
+    }
+    if (!hasUpperCase) {
+        return 'Password must contain at least one uppercase letter.';
+    }
+    if (!hasSpecialChar) {
+        return 'Password must contain at least one special character (@$!%*?&).';
+    }
+    if (!hasNumber) {
+        return 'Password must contain at least one number.';
+    }
+    return null; // Password is valid
 }
 
 async function signup() {
@@ -71,18 +165,43 @@ async function signup() {
     const confirmPassword = document.getElementById('signup-confirmPassword').value;
     const signupErrorMessage = document.getElementById('signupErrorMessage');
 
+
+
+    if (!signupErrorMessage) {
+        console.error("Signup error message element not found!");
+        return;
+    }
+
     // Clear previous error message
     signupErrorMessage.textContent = '';
     signupErrorMessage.classList.add('hidden');
 
+    // Basic field validation
     if (!fullname || !signupEmail || !signupPassword || !confirmPassword) {
         signupErrorMessage.textContent = 'Please fill in all fields.';
         signupErrorMessage.classList.remove('hidden');
         return;
     }
 
+    // Email validation
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(signupEmail)) {
+        signupErrorMessage.textContent = 'Invalid email format.';
+        signupErrorMessage.classList.remove('hidden');
+        return;
+    }
+
+    // Password match validation
     if (signupPassword !== confirmPassword) {
         signupErrorMessage.textContent = 'Passwords do not match.';
+        signupErrorMessage.classList.remove('hidden');
+        return;
+    }
+
+    // Password complexity validation
+    const passwordError = validatePassword(signupPassword);
+    if (passwordError) {
+        signupErrorMessage.textContent = passwordError;
         signupErrorMessage.classList.remove('hidden');
         return;
     }
@@ -106,7 +225,8 @@ async function signup() {
 
         if (result.success) {
             closeLoginModal();
-            location.reload();
+            sessionStorage.setItem('signupSuccess', 'true');
+            window.location.href = '/';
         } else {
             signupErrorMessage.textContent = result.message || "Registration failed. Please try again.";
             signupErrorMessage.classList.remove('hidden');
@@ -114,7 +234,7 @@ async function signup() {
     } catch (err) {
         signupErrorMessage.textContent = 'An error occurred. Please try again later.';
         signupErrorMessage.classList.remove('hidden');
-        console.error('Error:', err);
+        console.error('Error during signup:', err);
     }
 }
 
@@ -128,7 +248,8 @@ async function logout() {
         });
 
         if (response.ok) {
-            location.reload(); // Reload the page or redirect to the homepage
+            sessionStorage.setItem('logoutSuccess', 'true');
+            window.location.href = '/';
         } else {
             console.error('Logout failed.');
         }

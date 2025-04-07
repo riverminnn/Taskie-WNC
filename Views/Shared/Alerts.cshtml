@@ -1,0 +1,44 @@
+<!-- Success Alert -->
+<div id="successAlert" role="alert"
+    class="fixed bottom-4 left-4 hidden rounded-md border border-gray-300 bg-white p-4 shadow-none transition-all duration-300 ease-out transform -translate-x-full opacity-0 scale-95">
+    <div class="flex items-start gap-4">
+        <!-- Font Awesome Check Circle Icon -->
+        <i class="fa-regular fa-circle-check text-green-600 text-xl"></i>
+
+        <div class="flex-1">
+            <strong class="font-medium text-gray-900" id="successAlertTitle">Success</strong>
+            <p class="mt-0.5 text-sm text-gray-700" id="successAlertMessage">Your action was successful.</p>
+        </div>
+
+        <button class="-m-3 rounded-full p-1.5 text-gray-500 transition-colors hover:bg-gray-50 hover:text-gray-700"
+            type="button" aria-label="Dismiss alert" onclick="hideAlert('successAlert')">
+            <span class="sr-only">Dismiss popup</span>
+            <i class="fa-solid fa-xmark text-lg"></i>
+        </button>
+    </div>
+</div>
+
+<!-- Error Alert -->
+<div id="errorAlert" role="alert"
+    class="fixed bottom-4 left-4 hidden rounded-md border border-red-300 bg-red-50 p-4 shadow-none transition-all duration-300 ease-out transform -translate-x-full opacity-0 scale-95">
+    <div class="flex items-start gap-4">
+        <!-- Font Awesome Exclamation Triangle Icon -->
+        <i class="fa-solid fa-triangle-exclamation text-red-700 text-xl"></i>
+
+        <div class="flex-1">
+            <strong class="font-medium text-red-700" id="errorAlertTitle">Something went wrong</strong>
+            <p class="mt-0.5 text-sm text-red-700" id="errorAlertMessage">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo quasi assumenda numquam deserunt
+                consectetur autem nihil quos debitis dolor culpa.
+            </p>
+        </div>
+
+        <button class="-m-3 rounded-full p-1.5 text-red-500 transition-colors hover:bg-red-100 hover:text-red-700"
+            type="button" aria-label="Dismiss alert" onclick="hideAlert('errorAlert')">
+            <span class="sr-only">Dismiss popup</span>
+            <i class="fa-solid fa-xmark text-lg"></i>
+        </button>
+    </div>
+</div>
+
+<script src="~/js/alert.js" asp-append-version="true"></script>

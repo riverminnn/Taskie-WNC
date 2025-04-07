@@ -31,7 +31,6 @@ async function createBoard() {
         const data = await response.json();
 
         if (data.success) {
-            alert(data.message);
             closeNewBoardModal();
             fetchBoards(); // Refresh the board list
         } else {
@@ -90,8 +89,32 @@ function renderBoards(boards) {
 }
 
 // Function to navigate to BoardDetail
-function goToBoardDetail(boardID) {
-    window.location.href = `/User/BoardDetail?boardId=${boardID}`;
+async function goToBoardDetail(boardID) {
+    try {
+        // Fetch the board details to get the board name
+        const response = await fetch(`/User/GetBoards`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+        });
+
+        const data = await response.json();
+        if (data.success) {
+            const board = data.boards.find(b => b.boardID === boardID);
+            if (board) {
+                // Construct the URL with board ID and name
+                const boardNameSlug = board.boardName.replace(/\s+/g, '-').toLowerCase();
+                window.location.href = `/User/${boardID}/${boardNameSlug}`;
+            } else {
+                console.error('Board not found.');
+            }
+        } else {
+            console.error(data.message);
+        }
+    } catch (error) {
+        console.error('Error navigating to board detail:', error);
+    }
 }
 
 // Fetch boards when the page loads
