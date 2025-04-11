@@ -173,8 +173,16 @@
       "PackagePath": "staticwebassets\\js\\login.js"
     },
     {
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\js\\recentBoards.js",
+      "PackagePath": "staticwebassets\\js\\recentBoards.js"
+    },
+    {
       "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\js\\starredBoards.js",
+      "PackagePath": "staticwebassets\\js\\starredBoards.js"
     },
     {
       "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\js\\user.js",

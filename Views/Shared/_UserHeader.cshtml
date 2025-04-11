@@ -1,4 +1,4 @@
-<header class=" fixed bg-white z-1 w-full h-12 flex justify-center items-center border-b border-gray-300">
+<header class=" fixed bg-white z-10 w-full h-12 flex justify-center items-center border-b border-gray-300">
     <nav class="navbar w-full h-full flex justify-center items-center px-6">
         <div class="left-nav flex gap-4 items-center h-full text-[#091E42] w-7/10 justify-start">
             <a href="/User/Home" class="flex gap-2 items-center h-full text-[#173B4D]">
@@ -8,12 +8,36 @@
             <button onclick="location.href='/feature'" class="cursor-pointer hover:text-blue-500 text-sm">
                 Workspaces
             </button>
-            <button onclick="location.href='/about'" class="cursor-pointer hover:text-blue-500 text-sm">
-                Recent
-            </button>
-            <button onclick="location.href='/contact'" class="cursor-pointer hover:text-blue-500 text-sm">
-                Starred
-            </button>
+            <div class="relative group">
+                <button class="cursor-pointer hover:text-blue-500 text-sm py-2">
+                    Recent
+                </button>
+                <div id="recentBoardsDropdown"
+                    class="absolute left-0 w-64 bg-white shadow-lg rounded z-50 hidden group-hover:block">
+                    <div class="py-2 px-3 border-b border-gray-200">
+                        <h3 class="text-sm font-medium text-gray-700">Recent boards</h3>
+                    </div>
+                    <div id="recentBoardsList" class="max-h-60 overflow-y-auto">
+                        <!-- Boards will be populated here -->
+                        <div class="py-2 px-3 text-sm text-gray-500 text-center">No recent boards</div>
+                    </div>
+                </div>
+            </div>
+            <div class="relative group">
+                <button class="cursor-pointer hover:text-blue-500 text-sm py-2">
+                    Starred
+                </button>
+                <div id="starredBoardsDropdown"
+                    class="absolute left-0 w-64 bg-white shadow-lg rounded z-50 hidden group-hover:block">
+                    <div class="py-2 px-3 border-b border-gray-200">
+                        <h3 class="text-sm font-medium text-gray-700">Starred boards</h3>
+                    </div>
+                    <div id="starredBoardsList" class="max-h-60 overflow-y-auto">
+                        <!-- Boards will be populated here -->
+                        <div class="py-2 px-3 text-sm text-gray-500 text-center">No starred boards</div>
+                    </div>
+                </div>
+            </div>
             <button onclick="openNewBoardModal()"
                 class="block h-8/10 rounded-sm px-4 bg-blue-500 text-white cursor-pointer hover:bg-blue-700 font-medium text-sm">
                 Create
@@ -31,3 +55,7 @@
 <script src="~/js/header.js" asp-append-version="true"></script>
 
 <script src="~/js/login.js" asp-append-version="true"></script>
+
+<script src="~/js/recentBoards.js" asp-append-version="true"></script>
+
+<script src="~/js/starredBoards.js" asp-append-version="true"></script>

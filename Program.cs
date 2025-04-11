@@ -38,6 +38,21 @@ app.MapControllerRoute(
     pattern: "User/{boardId}/{boardName}",
     defaults: new { controller = "User", action = "BoardDetail" });
 
+app.MapControllerRoute(
+    name: "features",
+    pattern: "feature",
+    defaults: new { controller = "Home", action = "Features" });
+
+app.MapControllerRoute(
+    name: "about",
+    pattern: "about",
+    defaults: new { controller = "Home", action = "About" });
+
+app.MapControllerRoute(
+    name: "contact",
+    pattern: "contact",
+    defaults: new { controller = "Home", action = "Contact" });
+
 // Default route
 app.MapControllerRoute(
     name: "default",

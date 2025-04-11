@@ -88,6 +88,21 @@ namespace TaskieWNC.Controllers
             // Return a success response
             return Json(new { success = true, message = "Logout successful." });
         }
+
+        public IActionResult Features()
+        {
+            return View("Features");
+        }
+
+        public IActionResult About()
+        {
+            return View("About");
+        }
+
+        public IActionResult Contact()
+        {
+            return View("Contact");
+        }
     }
 }
 

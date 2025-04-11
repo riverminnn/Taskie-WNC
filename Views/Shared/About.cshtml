@@ -1,0 +1,140 @@
+@{
+    ViewData["Title"] = "About - Taskie";
+    Layout = "_Layout";
+}
+
+<div class="flex flex-col items-center min-h-screen pt-24 pb-16">
+    <!-- Hero Section -->
+    <div class="w-full bg-gradient-to-r from-slate-700 to-slate-900 py-16">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <h1 class="text-4xl font-bold text-white mb-4">Our Story</h1>
+            <p class="text-xl text-slate-300 max-w-3xl mx-auto">Building the simplest way for teams to track their work
+            </p>
+        </div>
+    </div>
+
+    <!-- Mission Section -->
+    <div class="max-w-4xl mx-auto px-6 py-16">
+        <div class="flex flex-col md:flex-row items-center gap-8">
+            <div class="md:w-1/2">
+                <img src="~/assets/about-team.jpg" alt="Team collaboration" class="rounded-lg shadow-lg w-full h-auto"
+                    onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80';">
+            </div>
+            <div class="md:w-1/2">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Our Mission</h2>
+                <p class="text-gray-600 mb-4">
+                    At Taskie, we believe that great teamwork starts with organization and clarity. Our mission is to
+                    help teams
+                    of all sizes manage their projects with a simple, flexible tool that adapts to how you work, not the
+                    other way around.
+                </p>
+                <p class="text-gray-600">
+                    Founded in 2024, we've already helped thousands of teams streamline their workflows, improve
+                    communication,
+                    and achieve their goals faster than ever before.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Values Section -->
+    <div class="w-full bg-gray-100 py-16">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Our Values</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Value 1 -->
+                <div class="bg-white rounded-lg shadow p-6">
+                    <div class="flex items-center justify-center h-16 w-16 rounded-full bg-blue-100 text-blue-600 mb-4">
+                        <i class="fas fa-lightbulb text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Simplicity</h3>
+                    <p class="text-gray-600">We believe in creating tools that are intuitive and easy to use. No
+                        unnecessary complexity or steep learning curves.</p>
+                </div>
+
+                <!-- Value 2 -->
+                <div class="bg-white rounded-lg shadow p-6">
+                    <div
+                        class="flex items-center justify-center h-16 w-16 rounded-full bg-green-100 text-green-600 mb-4">
+                        <i class="fas fa-handshake text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Collaboration</h3>
+                    <p class="text-gray-600">Great things happen when people work together. We design our features to
+                        make teamwork seamless and effective.</p>
+                </div>
+
+                <!-- Value 3 -->
+                <div class="bg-white rounded-lg shadow p-6">
+                    <div
+                        class="flex items-center justify-center h-16 w-16 rounded-full bg-purple-100 text-purple-600 mb-4">
+                        <i class="fas fa-rocket text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Innovation</h3>
+                    <p class="text-gray-600">We constantly explore new ideas to improve how teams work. We're never
+                        satisfied with the status quo.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Team Section -->
+    <div class="max-w-6xl mx-auto px-6 py-16">
+        <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Meet Our Team</h2>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+            <!-- Team Member 1 -->
+            <div class="bg-white rounded-lg shadow text-center p-6">
+                <div class="w-24 h-24 rounded-full bg-gray-300 mx-auto mb-4 overflow-hidden">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Team member"
+                        class="w-full h-full object-cover">
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800">David Chen</h3>
+                <p class="text-gray-500">Co-Founder & CEO</p>
+            </div>
+
+            <!-- Team Member 2 -->
+            <div class="bg-white rounded-lg shadow text-center p-6">
+                <div class="w-24 h-24 rounded-full bg-gray-300 mx-auto mb-4 overflow-hidden">
+                    <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Team member"
+                        class="w-full h-full object-cover">
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800">Maya Rodriguez</h3>
+                <p class="text-gray-500">Co-Founder & CTO</p>
+            </div>
+
+            <!-- Team Member 3 -->
+            <div class="bg-white rounded-lg shadow text-center p-6">
+                <div class="w-24 h-24 rounded-full bg-gray-300 mx-auto mb-4 overflow-hidden">
+                    <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Team member"
+                        class="w-full h-full object-cover">
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800">James Wilson</h3>
+                <p class="text-gray-500">Head of Design</p>
+            </div>
+
+            <!-- Team Member 4 -->
+            <div class="bg-white rounded-lg shadow text-center p-6">
+                <div class="w-24 h-24 rounded-full bg-gray-300 mx-auto mb-4 overflow-hidden">
+                    <img src="https://randomuser.me/api/portraits/women/90.jpg" alt="Team member"
+                        class="w-full h-full object-cover">
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800">Sophia Patel</h3>
+                <p class="text-gray-500">Head of Product</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="w-full bg-blue-600 py-12">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold text-white mb-4">Ready to Transform Your Workflow?</h2>
+            <p class="text-xl text-blue-100 mb-8">Join thousands of teams already using Taskie to collaborate more
+                effectively.</p>
+            <a href="/User/Register"
+                class="inline-block px-8 py-4 bg-white text-blue-600 font-bold rounded-lg hover:bg-blue-50 transition-colors">
+                Get Started for Free
+            </a>
+        </div>
+    </div>
+</div>

@@ -18,19 +18,20 @@
                 <div>
                     <label for="sort" class="text-sm text-gray-500">Sort by</label>
                     <select id="sort" class="ml-2 px-3 py-2 border border-gray-300 rounded text-sm">
-                        <option>Most recently active</option>
-                        <option>Alphabetical</option>
-                        <option>Date created</option>
+                        <option value="Most recently active">Most recently active</option>
+                        <option value="Alphabetical">Alphabetical</option>
+                        <option value="Date created">Date created</option>
                     </select>
                 </div>
             </div>
             <div>
-                <input type="text" placeholder="Search boards" class="px-4 py-2 border rounded text-sm w-64" />
+                <input id="searchBoards" type="text" placeholder="Search boards"
+                    class="px-4 py-2 border rounded text-sm w-64" />
             </div>
         </div>
 
         <!-- Boards Section -->
-        <div id="boardsContainer" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        <div id="boardsContainer" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 w-full">
             <!-- Boards will be dynamically rendered here -->
         </div>
     </main>

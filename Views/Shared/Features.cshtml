@@ -1,0 +1,105 @@
+@{
+    ViewData["Title"] = "Features - Taskie";
+    Layout = "_Layout";
+}
+
+<div class="flex flex-col items-center min-h-screen pt-24 pb-16">
+    <!-- Hero Section -->
+    <div class="w-full bg-gradient-to-r from-blue-600 to-blue-800 py-16">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <h1 class="text-4xl font-bold text-white mb-4">Powerful Features, Simple Interface</h1>
+            <p class="text-xl text-blue-100 max-w-3xl mx-auto">Everything you need to organize your work and boost your
+                team's productivity.</p>
+        </div>
+    </div>
+
+    <!-- Features Grid -->
+    <div class="max-w-6xl mx-auto px-6 py-16">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Feature 1 -->
+            <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
+                <div class="flex items-center justify-center h-16 w-16 rounded-full bg-blue-100 text-blue-600 mb-4">
+                    <i class="fas fa-layer-group text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">Flexible Boards</h3>
+                <p class="text-gray-600">Create and customize boards for any project. Organize your tasks your way with
+                    a simple, intuitive interface.</p>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
+                <div class="flex items-center justify-center h-16 w-16 rounded-full bg-green-100 text-green-600 mb-4">
+                    <i class="fas fa-users text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">Team Collaboration</h3>
+                <p class="text-gray-600">Share boards with team members and assign different roles. Work together in
+                    real-time to complete projects faster.</p>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
+                <div class="flex items-center justify-center h-16 w-16 rounded-full bg-purple-100 text-purple-600 mb-4">
+                    <i class="fas fa-check-circle text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">Task Management</h3>
+                <p class="text-gray-600">Create, assign, and track tasks effortlessly. Mark tasks as complete and keep
+                    everyone updated on progress.</p>
+            </div>
+
+            <!-- Feature 4 -->
+            <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
+                <div class="flex items-center justify-center h-16 w-16 rounded-full bg-yellow-100 text-yellow-600 mb-4">
+                    <i class="fas fa-star text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">Favorites & Recents</h3>
+                <p class="text-gray-600">Star important boards and quickly access recently viewed boards for fast
+                    navigation between projects.</p>
+            </div>
+
+            <!-- Feature 5 -->
+            <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
+                <div class="flex items-center justify-center h-16 w-16 rounded-full bg-red-100 text-red-600 mb-4">
+                    <i class="fas fa-search text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">Powerful Search</h3>
+                <p class="text-gray-600">Find boards, tasks and team members instantly with our smart search
+                    functionality. Save time and stay organized.</p>
+            </div>
+
+            <!-- Feature 6 -->
+            <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
+                <div class="flex items-center justify-center h-16 w-16 rounded-full bg-indigo-100 text-indigo-600 mb-4">
+                    <i class="fas fa-shield-alt text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">Role-Based Access</h3>
+                <p class="text-gray-600">Secure your work with customizable permissions. Assign owner, editor, or viewer
+                    roles to control what team members can do.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Testimonial Section -->
+    <div class="w-full bg-gray-100 py-16">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8">What Our Users Say</h2>
+
+            <div class="bg-white rounded-lg shadow-lg p-8 mb-8">
+                <div class="flex flex-col items-center">
+                    <div class="w-20 h-20 rounded-full bg-gray-300 overflow-hidden mb-4">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="User profile"
+                            class="w-full h-full object-cover">
+                    </div>
+                    <p class="text-gray-600 italic mb-4">"Taskie has transformed how our team collaborates on projects.
+                        The intuitive interface makes it easy for everyone to stay on the same page."</p>
+                    <p class="font-semibold text-gray-800">Sarah Johnson</p>
+                    <p class="text-sm text-gray-500">Product Manager at TechCorp</p>
+                </div>
+            </div>
+
+            <a href="/contact"
+                class="inline-block px-6 py-3 bg-blue-600 text-white font-medium rounded hover:bg-blue-700 transition-colors">
+                Contact Us to Learn More
+            </a>
+        </div>
+    </div>
+</div>

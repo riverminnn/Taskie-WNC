@@ -5,7 +5,8 @@
             <button class="font-bold text-gray-800 w-fit">
                 <input class="w-fit px-2 py-1" type="" id="boardName" value="@ViewData["BoardName"]" />
             </button>
-            <button id="starred" class="flex justify-center items-center px-1 py-1 rounded-sm hover:bg-white/30 size-8">
+            <button id="starred" onclick="toggleBoardStar()"
+                class="flex justify-center items-center px-1 py-1 rounded-sm hover:bg-white/30 size-8">
                 <i class="fa-regular fa-star text-[14px]"></i>
             </button>
             @if (ViewData["UserRole"]?.ToString() == "Viewer")
@@ -179,3 +180,4 @@
 <input type="hidden" id="userRole" value="@ViewData["UserRole"]" />
 <script src="~/js/boardDetail.js" asp-append-version="true"></script>
 <script src="~/js/cardDetail.js" asp-append-version="true"></script>
+<script src="~/js/starredBoards.js" asp-append-version="true"></script>

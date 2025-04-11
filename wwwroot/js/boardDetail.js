@@ -28,7 +28,8 @@ const SELECTORS = {
     LIST_SETTINGS: '[id^="list-settings-"]',
     CARD_BUTTONS: '[id^="addCardButton-"]',
     LIST_NAMES: '[id^="list-name-"]',
-    USER_ROLE: '#userRole'
+    USER_ROLE: '#userRole',
+    STAR_BUTTON: '#starred'
 };
 
 /**
@@ -961,10 +962,31 @@ document.addEventListener('click', function (event) {
  */
 document.addEventListener('DOMContentLoaded', () => {
     const boardID = document.querySelector(SELECTORS.BOARD_ID).value;
+    const boardName = document.querySelector(SELECTORS.BOARD_NAME).value;
 
-    // Fetch and render lists
+    // Track this board visit for recent boards
+    if (typeof trackBoardVisit === 'function') {
+        trackBoardVisit(boardID, boardName);
+    }
+
+    // Rest of your existing initialization code...
     fetchLists(boardID);
-
-    // Set up board name editing
     setupBoardNameEditing();
 });
+
+/**
+ * Toggles the star status of the current board
+ */
+function toggleBoardStar() {
+    const boardId = document.querySelector(SELECTORS.BOARD_ID).value;
+    const boardName = document.querySelector(SELECTORS.BOARD_NAME).value;
+
+    // Call the toggleStarredStatus function from starredBoards.js
+    const isStarred = toggleStarredStatus(boardId, boardName);
+
+    // Update the star icon
+    updateStarIcon(isStarred);
+
+    // Update the dropdown
+    updateStarredBoardsDropdown();
+}

@@ -192,8 +192,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>5t7arf88hc</Fingerprint>
-      <Integrity>CV3mBFXdn/FG6e9P9/a4pRDqEqv95BRdrM9cdYiD42w=</Integrity>
+      <Fingerprint>st1cde4l0r</Fingerprint>
+      <Integrity>QDnO7zNJlIF7l3SeyMTHda791q11bjgWl38jMf8s/CQ=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\tailwind.css'))</OriginalItemSpec>
@@ -714,8 +714,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>p6pnxzpybe</Fingerprint>
-      <Integrity>QRzDoWabiB4RJtUelj4wgVxXbtZsqVoFal8rOOPvXvs=</Integrity>
+      <Fingerprint>n151sumhj3</Fingerprint>
+      <Integrity>y0NaQOc6klkC7O+2QLRcASe1HPHHVQIVRc7ZA4qquTU=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\boardDetail.js'))</OriginalItemSpec>
@@ -732,8 +732,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>hmv8dp6ril</Fingerprint>
-      <Integrity>51zh4+/uKGuvLREQ39vZDrE75Wnfn6/7sEvIZJ49lGE=</Integrity>
+      <Fingerprint>sta6cu6t3n</Fingerprint>
+      <Integrity>UOBd5M4XCdVfRUHl6NaOTfpe43/4WbNHfkuNaCC5KQE=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\cardDetail.js'))</OriginalItemSpec>
@@ -774,6 +774,24 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\login.js'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\recentBoards.js'))">
+      <SourceType>Package</SourceType>
+      <SourceId>TaskieWNC</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/TaskieWNC</BasePath>
+      <RelativePath>js/recentBoards.js</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>a4hazhc7uz</Fingerprint>
+      <Integrity>Ktw/g6lsp3tSsqoWVowndHHjZOao5D8zbduUJ1jozCA=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\recentBoards.js'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\site.js'))">
       <SourceType>Package</SourceType>
       <SourceId>TaskieWNC</SourceId>
@@ -792,6 +810,24 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\site.js'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\starredBoards.js'))">
+      <SourceType>Package</SourceType>
+      <SourceId>TaskieWNC</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/TaskieWNC</BasePath>
+      <RelativePath>js/starredBoards.js</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>5bwqji5sc2</Fingerprint>
+      <Integrity>EfH3oeKd4s8FMiwbFQg+F/ZxufbLgAkZFaHxTSEvnOE=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\starredBoards.js'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\user.js'))">
       <SourceType>Package</SourceType>
       <SourceId>TaskieWNC</SourceId>
@@ -804,8 +840,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>upn79n12ao</Fingerprint>
-      <Integrity>Lpfp+pGbXou3Fj1nVkht8CcfDJnfiXT7l1Hz6BMmnpA=</Integrity>
+      <Fingerprint>z8vyg6ml22</Fingerprint>
+      <Integrity>s1pzh54ZMrpgGzSDS8q5D4f92gmLayidtDMmUBeZ5/Q=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\user.js'))</OriginalItemSpec>
