@@ -29,6 +29,14 @@
       "PackagePath": "staticwebassets\\assets\\images\\default.png"
     },
     {
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\assets\\images\\ha.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\ha.jpg"
+    },
+    {
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\assets\\images\\su.png",
+      "PackagePath": "staticwebassets\\assets\\images\\su.png"
+    },
+    {
       "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\assets\\logo-light.png",
       "PackagePath": "staticwebassets\\assets\\logo-light.png"
     },
@@ -159,6 +167,38 @@
     {
       "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\js\\boardDetail.js",
       "PackagePath": "staticwebassets\\js\\boardDetail.js"
+    },
+    {
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\js\\board\\board.js",
+      "PackagePath": "staticwebassets\\js\\board\\board.js"
+    },
+    {
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\js\\board\\cards.js",
+      "PackagePath": "staticwebassets\\js\\board\\cards.js"
+    },
+    {
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\js\\board\\constants.js",
+      "PackagePath": "staticwebassets\\js\\board\\constants.js"
+    },
+    {
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\js\\board\\events.js",
+      "PackagePath": "staticwebassets\\js\\board\\events.js"
+    },
+    {
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\js\\board\\lists.js",
+      "PackagePath": "staticwebassets\\js\\board\\lists.js"
+    },
+    {
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\js\\board\\modals.js",
+      "PackagePath": "staticwebassets\\js\\board\\modals.js"
+    },
+    {
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\js\\board\\permissions.js",
+      "PackagePath": "staticwebassets\\js\\board\\permissions.js"
+    },
+    {
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\js\\board\\sharing.js",
+      "PackagePath": "staticwebassets\\js\\board\\sharing.js"
     },
     {
       "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\js\\cardDetail.js",

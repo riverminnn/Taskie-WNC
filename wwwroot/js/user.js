@@ -22,7 +22,7 @@ async function createBoard() {
     boardTitleError.classList.add('hidden');
 
     try {
-        const response = await fetch('/User/CreateBoard', {
+        const response = await fetch('/Board/Create', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -45,7 +45,7 @@ async function createBoard() {
 
 async function fetchBoards() {
     try {
-        const response = await fetch('/User/GetBoards', {
+        const response = await fetch('/Board/GetBoards', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -207,7 +207,7 @@ function formatDate(dateString) {
 async function goToBoardDetail(boardID) {
     try {
         // Fetch the board details to get the board name
-        const response = await fetch(`/User/GetBoards`, {
+        const response = await fetch(`/Board/GetBoards`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

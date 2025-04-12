@@ -80,6 +80,29 @@ public class BoardMemberRepository
         return _dbContext.BoardMembers
             .FirstOrDefault(bm => bm.BoardID == boardId && bm.UserID == userId);
     }
+    public bool UpdateBoardMemberRole(int boardId, int userId, string role)
+    {
+        try
+        {
+            var membership = _dbContext.BoardMembers
+                .FirstOrDefault(m => m.BoardID == boardId && m.UserID == userId);
+
+            if (membership == null)
+            {
+                return false;
+            }
+
+            // Update the role
+            membership.Role = role;
+            _dbContext.SaveChanges();
+
+            return true;
+        }
+        catch
+        {
+            return false;
+        }
+    }
 }
 
 // Add this view model to represent the result of joining BoardMembers with Users
