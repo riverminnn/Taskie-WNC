@@ -98,6 +98,34 @@ public class BoardRepository
             .ToList();
     }
 
+    /// <summary>
+    /// Gets the role of a user in a specific board
+    /// </summary>
+    /// <param name="boardId">The ID of the board</param>
+    /// <param name="userId">The ID of the user</param>
+    /// <returns>Role as a string: "Owner", "Editor", or "Viewer"</returns>
+    public string GetUserRoleInBoard(int boardId, int userId)
+    {
+        // Check if the user is the owner of the board
+        var board = GetBoardById(boardId);
+        if (board != null && board.UserID == userId)
+        {
+            return "Owner";
+        }
+
+        // Check if user is a member with a specific role
+        var membership = _dbContext.BoardMembers
+            .FirstOrDefault(bm => bm.BoardID == boardId && bm.UserID == userId);
+
+        if (membership != null)
+        {
+            return membership.Role;
+        }
+
+        // User has no role in this board
+        return "Viewer"; // Default to most restrictive
+    }
+
     public class BoardWithOwnerInfo
     {
         public int BoardID { get; set; }

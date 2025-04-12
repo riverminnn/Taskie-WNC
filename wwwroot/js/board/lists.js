@@ -257,10 +257,6 @@ export function toggleListDropdown(listID) {
  * @param {number} listID - The ID of the list to delete.
  */
 export async function deleteList(listID) {
-    if (!confirm('Are you sure you want to delete this list and all its cards?')) {
-        return;
-    }
-
     try {
         const response = await fetch('/List/Delete', {
             method: 'POST',

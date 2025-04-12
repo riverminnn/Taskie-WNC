@@ -7,6 +7,8 @@ window.closeCardDetailModal = closeCardDetailModal;
 window.toggleCardDetailStatus = toggleCardDetailStatus;
 window.saveDueDate = saveDueDate;
 window.removeDueDate = removeDueDate;
+window.addComment = addComment;
+window.deleteComment = deleteComment;
 
 /**
  * Opens the card detail modal.
@@ -36,11 +38,185 @@ export async function openCardDetailModal(event, cardID) {
 
         if (data.success) {
             populateCardDetailModal(data.card);
+            // Load comments for this card
+            loadComments(cardID);
         } else {
             console.error(data.message);
         }
     } catch (error) {
         console.error('Error fetching card details:', error);
+    }
+}
+
+/**
+ * Loads comments for a card
+ * @param {number} cardID - The ID of the card
+ */
+async function loadComments(cardID) {
+    try {
+        const response = await fetch('/Card/GetComments', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ cardID }),
+        });
+
+        const data = await response.json();
+
+        console.log(data);
+
+
+        if (data.success) {
+            renderComments(data.comments);
+        } else {
+            console.error(data.message);
+            document.getElementById('commentsContainer').innerHTML =
+                `<div class="text-sm text-red-500">Error loading comments: ${data.message}</div>`;
+        }
+    } catch (error) {
+        console.error('Error loading comments:', error);
+        document.getElementById('commentsContainer').innerHTML =
+            '<div class="text-sm text-red-500">Error loading comments. Please try again.</div>';
+    }
+}
+
+/**
+ * Renders comments in the comment container
+ * @param {Array} comments - Array of comment objects
+ */
+function renderComments(comments) {
+    const container = document.getElementById('commentsContainer');
+
+    // Clear container
+    container.innerHTML = '';
+
+    if (comments.length === 0) {
+        container.innerHTML = '<div class="text-sm text-gray-500 italic">No comments yet</div>';
+        return;
+    }
+
+    // Sort comments by date (newest first)
+    comments.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+
+    // Check if user can edit
+    const isEditor = canEditBoard();
+
+    // Generate HTML for each comment
+    comments.forEach(comment => {
+        const formattedDate = new Date(comment.createdAt).toLocaleString();
+
+        // Create comment element
+        const commentEl = document.createElement('div');
+        commentEl.className = 'border-b pb-3 mb-3'; // Added mb-3 for spacing
+        commentEl.innerHTML = `
+            <div class="flex items-start">
+                <div class="flex-shrink-0 mr-3">
+                    <div class="bg-purple-500 text-white w-8 h-8 rounded-full flex items-center justify-center">
+                        ${comment.userInitial}
+                    </div>
+                </div>
+                <div class="flex-grow">
+                    <div class="flex justify-between items-start">
+                        <span class="font-medium">${comment.userName}</span>
+                        <div class="flex items-center">
+                            <span class="text-xs text-gray-500 mr-2">${formattedDate}</span>
+                            ${(isEditor || comment.isCurrentUser) ?
+                `<button class="delete-comment-btn text-gray-400 hover:text-red-500" data-comment-id="${comment.commentID}">
+                                    <i class="fa-solid fa-trash-can text-xs"></i>
+                                </button>` :
+                ''}
+                        </div>
+                    </div>
+                    <p class="text-sm mt-1 whitespace-pre-wrap">${comment.content}</p>
+                </div>
+            </div>
+        `;
+
+        container.appendChild(commentEl);
+
+        // Add event listener to delete button if it exists
+        const deleteBtn = commentEl.querySelector('.delete-comment-btn');
+        if (deleteBtn) {
+            deleteBtn.addEventListener('click', function () {
+                deleteComment(comment.commentID);
+            });
+        }
+    });
+}
+/**
+ * Adds a new comment to the card
+ */
+async function addComment() {
+    // Check if user has edit permissions
+    if (!canEditBoard()) {
+        alert('You do not have permission to comment on this card.');
+        return;
+    }
+
+    const commentText = document.getElementById('cardComment').value.trim();
+    if (!commentText) return;
+
+    const cardID = document.getElementById('cardDetailModalContent').dataset.cardId;
+
+    try {
+        const response = await fetch('/Card/AddComment', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                cardID,
+                content: commentText
+            }),
+        });
+
+        const data = await response.json();
+
+        if (data.success) {
+            // Clear the input field
+            document.getElementById('cardComment').value = '';
+
+            // Refresh the comments
+            loadComments(cardID);
+        } else {
+            console.error(data.message);
+            alert(data.message);
+        }
+    } catch (error) {
+        console.error('Error adding comment:', error);
+        alert('An error occurred while adding your comment.');
+    }
+}
+
+/**
+ * Deletes a comment from the card
+ * @param {number} commentID - The ID of the comment to delete
+ */
+async function deleteComment(commentID) {
+    try {
+        const cardID = document.getElementById('cardDetailModalContent').dataset.cardId;
+
+        const response = await fetch('/Card/DeleteComment', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ commentID }),
+        });
+
+        const data = await response.json();
+
+        if (data.success) {
+            // Refresh comments to reflect the deletion
+            loadComments(cardID);
+        } else {
+            console.error(data.message);
+            alert(data.message);
+        }
+    } catch (error) {
+        console.error('Error deleting comment:', error);
+        alert('An error occurred while deleting the comment.');
     }
 }
 
@@ -266,6 +442,9 @@ function removeDueDate() {
  * Toggles the visibility of the date picker.
  */
 function toggleDatePicker() {
+    if (!canEditBoard()) {
+        return;
+    }
     const datePickerContainer = document.getElementById('datePickerContainer');
 
     // Close any other open dropdowns first
@@ -326,4 +505,71 @@ document.addEventListener('DOMContentLoaded', function () {
         cardNameInput.removeEventListener('blur', handleCardNameBlur); // Remove to avoid duplicates
         cardNameInput.addEventListener('blur', handleCardNameBlur);
     }
+
+    // Set up Add Comment button
+    const addCommentButton = document.getElementById('addCommentButton');
+    if (addCommentButton) {
+        addCommentButton.addEventListener('click', addComment);
+    }
+
+    // Allow pressing Enter to submit comment (with Shift+Enter for new lines)
+    const cardComment = document.getElementById('cardComment');
+    if (cardComment) {
+        cardComment.addEventListener('keydown', function (event) {
+            if (event.key === 'Enter' && !event.shiftKey) {
+                event.preventDefault();
+                addComment();
+            }
+        });
+    }
 });
+
+// Add this function to your existing file
+function deleteCard() {
+    const modalContent = document.getElementById('cardDetailModalContent');
+    const cardID = modalContent.dataset.cardId;
+
+    if (!cardID) return;
+
+    // Only proceed if the user has edit permissions
+    if (!canEditBoard()) {
+        return;
+    }
+
+    deleteCardById(cardID);
+}
+
+// Add this function for the actual deletion
+async function deleteCardById(cardID) {
+    try {
+        const response = await fetch('/Card/Delete', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ cardID }),
+        });
+
+        const data = await response.json();
+
+        if (data.success) {
+            // Close the modal
+            const modal = document.getElementById('cardDetailModal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex', 'items-center', 'justify-center');
+
+            // Refresh lists to show updated board
+            const boardId = document.getElementById('boardId').value;
+            fetchLists(boardId);
+        } else {
+            console.error(data.message);
+            alert('Error deleting card: ' + data.message);
+        }
+    } catch (error) {
+        console.error('Error deleting card:', error);
+        alert('An error occurred while deleting the card');
+    }
+}
+
+// Add this to your window exports at the top of the file
+window.deleteCard = deleteCard;

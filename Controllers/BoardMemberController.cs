@@ -164,7 +164,7 @@ namespace TaskieWNC.Controllers
             }
 
             // Update the role
-            bool success = _boardMemberRepository.UpdateBoardMemberRole(request.BoardId, request.UserId, request.Role);
+            bool success = _boardMemberRepository.UpdateBoardMemberRole(request.BoardId, request.UserId, request.Role ?? "Editor");
 
             if (success)
             {

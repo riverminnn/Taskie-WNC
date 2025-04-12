@@ -1,5 +1,5 @@
 using TaskieWNC.Models;
-
+using Microsoft.EntityFrameworkCore;
 public class CommentRepository
 {
     private readonly MyDbContext _dbContext;
@@ -51,7 +51,12 @@ public class CommentRepository
 
     public List<CommentModel> GetCommentsByTaskId(int cardID)
     {
-        return _dbContext.Comments.Where(c => c.CardID == cardID).ToList();
+        {
+            return _dbContext.Comments
+                .Include(c => c.User)  // This loads the related User entity
+                .Where(c => c.CardID == cardID)
+                .ToList();
+        }
     }
 
     public List<CommentModel> GetComments(int pageNumber, int pageSize)
