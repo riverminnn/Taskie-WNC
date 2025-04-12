@@ -40,6 +40,7 @@ window.handleRoleChange = Sharing.handleRoleChange;
 
 window.deleteBoard = Board.deleteBoard;
 window.toggleSettingsDropdown = Board.toggleSettingsDropdown;
+window.canEditBoard = Permissions.canEditBoard;
 
 // Initialize the board
 document.addEventListener('DOMContentLoaded', () => {

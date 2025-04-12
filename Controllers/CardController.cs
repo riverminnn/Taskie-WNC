@@ -127,6 +127,8 @@ namespace TaskieWNC.Controllers
             }
         }
 
+
+
         // Model classes
         public class GetCardDetailsRequest
         {
