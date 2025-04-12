@@ -1,6 +1,7 @@
 import { SELECTORS, STATUS } from './constants.js';
 import { canEditBoard } from './permissions.js';
-import { openNewListModal, openNewCardModal } from './modals.js';
+
+let listSubmissionInProgress = false;
 
 /**
  * Fetches the lists for the current board and renders them.
@@ -141,11 +142,17 @@ export function renderLists(lists) {
  * Adds a new list to the board.
  */
 export async function addList() {
+    // Prevent duplicate submissions
+    if (listSubmissionInProgress) return;
+
+    listSubmissionInProgress = true;
+
     const listNameInput = document.getElementById('listNameInput');
     const listName = listNameInput.value.trim();
     const boardId = document.querySelector(SELECTORS.BOARD_ID).value;
 
     if (!listName) {
+        listSubmissionInProgress = false;
         alert('List name is required!');
         return;
     }
@@ -162,6 +169,7 @@ export async function addList() {
         const data = await response.json();
 
         if (data.success) {
+            listNameInput.value = '';
             import('./modals.js').then(module => {
                 module.closeNewListModal();
                 fetchLists(boardId);
@@ -169,8 +177,9 @@ export async function addList() {
         } else {
             console.error(data.message);
         }
-    } catch (error) {
-        console.error('Error adding list:', error);
+    } finally {
+        // Reset the flag
+        listSubmissionInProgress = false;
     }
 }
 
@@ -258,7 +267,7 @@ export async function deleteList(listID) {
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({ listID }),
+            body: JSON.stringify(listID),
         });
 
         const data = await response.json();
@@ -272,5 +281,36 @@ export async function deleteList(listID) {
     } catch (error) {
         console.error('Error deleting list:', error);
         alert('An error occurred while deleting the list');
+    }
+}
+
+// Make this function idempotent by cleaning up existing listeners
+export function setupListInputHandlers() {
+    const listNameInput = document.getElementById('listNameInput');
+
+    if (listNameInput) {
+        // Remove any existing listeners first
+        listNameInput.removeEventListener('keypress', handleListEnterKey);
+
+        // Add the listener
+        listNameInput.addEventListener('keypress', handleListEnterKey);
+    }
+}
+
+// Separated function for the event handler
+function handleListEnterKey(event) {
+    if (event.key === 'Enter') {
+        event.preventDefault();
+        addList();
+    }
+}
+
+// Call this function when the list modal is opened
+export function focusListInput() {
+    const listNameInput = document.getElementById('listNameInput');
+    if (listNameInput) {
+        // Focus the input field and select any existing text
+        listNameInput.focus();
+        listNameInput.select();
     }
 }

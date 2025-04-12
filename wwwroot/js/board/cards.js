@@ -1,17 +1,24 @@
 import { SELECTORS, STATUS } from './constants.js';
-import { closeNewCardModal } from './modals.js';
+import { closeNewCardModal, openNewCardModal } from './modals.js';
 import { fetchLists } from './lists.js';
+
+let cardSubmissionInProgress = false;
 
 /**
  * Adds a new card to a list.
  */
 export async function addCard() {
+    if (cardSubmissionInProgress) return;
+
+    cardSubmissionInProgress = true;
+
     const cardNameInput = document.getElementById('cardNameInput');
     const cardName = cardNameInput.value.trim();
     const modalContent = document.getElementById('newCardModalContent');
     const listID = modalContent.dataset.listId;
 
     if (!cardName) {
+        cardSubmissionInProgress = false;
         alert('Card name is required!');
         return;
     }
@@ -31,16 +38,32 @@ export async function addCard() {
             // Clear the input field
             cardNameInput.value = '';
 
-            // Close the modal
             closeNewCardModal();
 
             // Refresh the lists
-            fetchLists(document.querySelector(SELECTORS.BOARD_ID).value);
+            await fetchLists(document.querySelector(SELECTORS.BOARD_ID).value);
+
+            setTimeout(() => {
+                const addCardButton = document.getElementById(`addCardButton-${listID}`);
+                if (addCardButton) {
+                    // Create a simulated click event
+                    const simulatedEvent = {
+                        currentTarget: addCardButton,
+                        stopPropagation: function () { } // Dummy function
+                    };
+
+                    // Call openNewCardModal with the correct parameters
+                    openNewCardModal(simulatedEvent, listID);
+                }
+            }, 0);
         } else {
             console.error(data.message);
         }
     } catch (error) {
         console.error('Error adding card:', error);
+    } finally {
+        // Reset the flag
+        cardSubmissionInProgress = false;
     }
 }
 
@@ -97,5 +120,38 @@ export async function toggleCardStatus(cardID) {
         }
     } catch (error) {
         console.error('Error updating card status:', error);
+    }
+}
+
+// Make this function idempotent by cleaning up existing listeners
+export function setupCardInputHandlers() {
+    const cardNameInput = document.getElementById('cardNameInput');
+
+    if (cardNameInput) {
+        // Remove any existing listeners first
+        cardNameInput.removeEventListener('keypress', handleCardEnterKey);
+
+        // Add the listener
+        cardNameInput.addEventListener('keypress', handleCardEnterKey);
+    }
+}
+
+// Separated function for the event handler
+function handleCardEnterKey(event) {
+    if (event.key === 'Enter') {
+        event.preventDefault();
+        addCard();
+    } else if (event.key === 'Escape') {
+        closeNewCardModal();
+    }
+}
+
+// Call this function when the card modal is opened
+export function focusCardInput() {
+    const cardNameInput = document.getElementById('cardNameInput');
+    if (cardNameInput) {
+        // Focus the input field and select any existing text
+        cardNameInput.focus();
+        cardNameInput.select();
     }
 }

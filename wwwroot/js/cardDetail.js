@@ -13,7 +13,7 @@ async function openCardDetailModal(event, cardID) {
 
     // Fetch card details
     try {
-        const response = await fetch('/User/GetCardDetails', {
+        const response = await fetch('/Card/GetDetails', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

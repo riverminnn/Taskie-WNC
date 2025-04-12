@@ -1,7 +1,5 @@
 import { SELECTORS } from './constants.js';
 import { closeNewCardModal, closeNewListModal } from './modals.js';
-// Change this line:
-// To these two separate imports:
 import { addList } from './lists.js';
 import { addCard } from './cards.js';
 import { closeShareModal } from './sharing.js';
@@ -22,7 +20,8 @@ export function setupEventListeners() {
                 if (cardNameInput.value.trim() === '') {
                     closeNewCardModal();
                 } else {
-                    addCard();
+                    // Let addCard handle its own submission tracking
+                    setTimeout(() => addCard(), 0);
                 }
             }
         }
@@ -40,7 +39,8 @@ export function setupEventListeners() {
                 if (listNameInput.value.trim() === '') {
                     closeNewListModal();
                 } else {
-                    addList();
+                    // Let addCard handle its own submission tracking
+                    setTimeout(() => addList(), 0);
                 }
             }
         }
@@ -82,4 +82,28 @@ export function setupEventListeners() {
             closeShareModal();
         }
     });
+
+    window.addEventListener('scroll', function () {
+        const modal = document.getElementById('newCardModal');
+        const modalContent = document.getElementById('newCardModalContent');
+
+        // Only update if modal is visible
+        if (!modal.classList.contains('hidden')) {
+            const listID = modalContent.dataset.listId;
+            const listContainer = document.getElementById(`list-item-${listID}`);
+
+            if (listContainer) {
+                const listRect = listContainer.getBoundingClientRect();
+                const addButton = listContainer.querySelector(`#addCardButton-${listID}`);
+
+                if (addButton) {
+                    const buttonRect = addButton.getBoundingClientRect();
+
+                    // Update position - use viewport coordinates since we're using position:fixed
+                    modalContent.style.top = `${buttonRect.top}px`;
+                    modalContent.style.left = `${listRect.left}px`;
+                }
+            }
+        }
+    }, { passive: true });
 }

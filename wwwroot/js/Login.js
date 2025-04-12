@@ -2,7 +2,51 @@
 document.addEventListener('DOMContentLoaded', () => {
     // If you have a button to trigger the modal, you can add an event listener here
     // Example: document.getElementById('openLoginButton').addEventListener('click', openLoginModal);
+    setupEnterKeyHandlers();
 });
+// Add this function to handle Enter key presses
+function setupEnterKeyHandlers() {
+    // Login form
+    const loginEmailInput = document.getElementById('login-email');
+    const loginPasswordInput = document.getElementById('login-password');
+
+    if (loginEmailInput) {
+        loginEmailInput.addEventListener('keypress', (event) => {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                login();
+            }
+        });
+    }
+
+    if (loginPasswordInput) {
+        loginPasswordInput.addEventListener('keypress', (event) => {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                login();
+            }
+        });
+    }
+
+    // Signup form
+    const signupInputs = [
+        document.getElementById('signup-fullname'),
+        document.getElementById('signup-email'),
+        document.getElementById('signup-password'),
+        document.getElementById('signup-confirmPassword')
+    ];
+
+    signupInputs.forEach(input => {
+        if (input) {
+            input.addEventListener('keypress', (event) => {
+                if (event.key === 'Enter') {
+                    event.preventDefault();
+                    signup();
+                }
+            });
+        }
+    });
+}
 
 function togglePassword(inputId, toggleId) {
     const passwordInput = document.getElementById(inputId);

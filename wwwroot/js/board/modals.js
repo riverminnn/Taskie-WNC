@@ -1,7 +1,41 @@
-/**
- * Opens the "New List" modal and positions it relative to the "Add another list" button.
- * @param {Event} event - The click event.
- */
+// Import at the top of the file
+import { setupListInputHandlers, focusListInput } from './lists.js';
+import { setupCardInputHandlers, focusCardInput } from './cards.js';
+
+export function openNewCardModal(event, listID) {
+    event.stopPropagation();
+
+    const modal = document.getElementById('newCardModal');
+    const modalContent = document.getElementById('newCardModalContent');
+    const listContainer = document.getElementById(`list-item-${listID}`);
+
+    if (!listContainer) return;
+
+    // Store the list ID in the modal
+    modalContent.dataset.listId = listID;
+
+    // Set position to fixed so it stays in place during scrolling
+    modalContent.style.position = 'fixed';
+
+    const listRect = listContainer.getBoundingClientRect();
+    const addButton = listContainer.querySelector(`#addCardButton-${listID}`);
+    const buttonRect = addButton.getBoundingClientRect();
+
+    // Position at the bottom of the list relative to viewport
+    // No need for window.scrollY/X with fixed positioning
+    modalContent.style.top = `${buttonRect.top}px`;
+    modalContent.style.left = `${listRect.left}px`;
+    modalContent.style.width = `${listRect.width}px`;
+
+    // Show the modal
+    modal.classList.remove('hidden');
+
+    // Add Enter key handler and focus the input
+    setupCardInputHandlers();
+    focusCardInput();
+}
+
+// Modify the openNewListModal function
 export function openNewListModal(event) {
     const modal = document.getElementById('newListModal');
     const modalContent = document.getElementById('newListModalContent');
@@ -16,6 +50,10 @@ export function openNewListModal(event) {
 
     // Show the modal
     modal.classList.remove('hidden');
+
+    // Add Enter key handler and focus the input
+    setupListInputHandlers();
+    focusListInput();
 }
 
 /**
@@ -24,34 +62,6 @@ export function openNewListModal(event) {
 export function closeNewListModal() {
     const modal = document.getElementById('newListModal');
     modal.classList.add('hidden');
-}
-
-/**
- * Opens the "New Card" modal and positions it relative to the "Add a card" button and the list.
- * @param {Event} event - The click event.
- * @param {number} listID - The ID of the list where the card is being added.
- */
-export function openNewCardModal(event, listID) {
-    event.stopPropagation();
-
-    const modal = document.getElementById('newCardModal');
-    const modalContent = document.getElementById('newCardModalContent');
-    const addCardButton = event.currentTarget;
-    const listContainer = document.getElementById(`list-item-${listID}`);
-
-    // Store the list ID in the modal
-    modalContent.dataset.listId = listID;
-
-    // Position and size the modal
-    const buttonRect = addCardButton.getBoundingClientRect();
-    const listRect = listContainer.getBoundingClientRect();
-
-    modalContent.style.top = `${buttonRect.top + window.scrollY}px`;
-    modalContent.style.left = `${listRect.left + window.scrollX}px`;
-    modalContent.style.width = `${listRect.width}px`;
-
-    // Show the modal
-    modal.classList.remove('hidden');
 }
 
 /**
