@@ -18,6 +18,79 @@ function isBoardStarred(boardId) {
     return starredBoards.some(board => board.id === parseInt(boardId));
 }
 
+/**
+ * Validates if a board exists on the server
+ * @param {number} boardId - The ID of the board to check
+ * @returns {Promise<boolean>} - True if board exists, false otherwise
+ */
+async function validateBoardExists(boardId) {
+    try {
+        const response = await fetch('/Board/GetBoards', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            }
+        });
+
+        const data = await response.json();
+
+        if (data.success) {
+            // Check if board exists in either owned or shared boards
+            return (
+                (data.ownedBoards?.some(b => b.boardID === boardId)) ||
+                (data.sharedBoards?.some(b => b.boardID === boardId))
+            );
+        }
+        return false;
+    } catch (error) {
+        console.error('Error validating board:', error);
+        return false;
+    }
+}
+
+/**
+ * Cleans up starred boards list by removing boards that no longer exist
+ * @returns {Promise<Array>} - Cleaned starred boards array
+ */
+async function cleanupStarredBoards() {
+    const starredBoards = getStarredBoards();
+    if (starredBoards.length === 0) return starredBoards;
+
+    // Get all board IDs from the server for validation
+    try {
+        const response = await fetch('/Board/GetBoards', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            }
+        });
+
+        const data = await response.json();
+
+        if (data.success) {
+            // Collect all valid board IDs from owned and shared boards
+            const validBoardIds = [
+                ...(data.ownedBoards || []).map(b => b.boardID),
+                ...(data.sharedBoards || []).map(b => b.boardID)
+            ];
+
+            // Filter out boards that don't exist
+            const validStarredBoards = starredBoards.filter(board =>
+                validBoardIds.includes(parseInt(board.id))
+            );
+
+            // Save the cleaned list back to localStorage
+            saveStarredBoards(validStarredBoards);
+
+            return validStarredBoards;
+        }
+    } catch (error) {
+        console.error('Error cleaning up starred boards:', error);
+    }
+
+    return starredBoards;
+}
+
 // Toggle star status for a board
 function toggleStarredStatus(boardId, boardName) {
     const starredBoards = getStarredBoards();
@@ -55,11 +128,15 @@ function updateStarIcon(isStarred) {
 }
 
 // Update the starred boards dropdown
-function updateStarredBoardsDropdown() {
+async function updateStarredBoardsDropdown() {
     const dropdownContent = document.getElementById('starredBoardsList');
     if (!dropdownContent) return;
 
-    const starredBoards = getStarredBoards();
+    // Show loading indicator
+    dropdownContent.innerHTML = '<div class="py-2 px-3 text-sm text-gray-500 text-center">Loading...</div>';
+
+    // Clean up starred boards to remove deleted ones
+    const starredBoards = await cleanupStarredBoards();
 
     if (starredBoards.length === 0) {
         dropdownContent.innerHTML = `<div class="py-2 px-3 text-sm text-gray-500 text-center">No starred boards</div>`;

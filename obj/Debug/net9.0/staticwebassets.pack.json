@@ -1,231 +1,231 @@
 {
   "Files": [
     {
-      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\assets\\fonts\\GoogleSans-Bold.ttf",
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\assets\\fonts\\GoogleSans-Bold.ttf",
       "PackagePath": "staticwebassets\\assets\\fonts\\GoogleSans-Bold.ttf"
     },
     {
-      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\assets\\fonts\\GoogleSans-BoldItalic.ttf",
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\assets\\fonts\\GoogleSans-BoldItalic.ttf",
       "PackagePath": "staticwebassets\\assets\\fonts\\GoogleSans-BoldItalic.ttf"
     },
     {
-      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\assets\\fonts\\GoogleSans-Italic.ttf",
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\assets\\fonts\\GoogleSans-Italic.ttf",
       "PackagePath": "staticwebassets\\assets\\fonts\\GoogleSans-Italic.ttf"
     },
     {
-      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\assets\\fonts\\GoogleSans-Medium.ttf",
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\assets\\fonts\\GoogleSans-Medium.ttf",
       "PackagePath": "staticwebassets\\assets\\fonts\\GoogleSans-Medium.ttf"
     },
     {
-      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\assets\\fonts\\GoogleSans-MediumItalic.ttf",
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\assets\\fonts\\GoogleSans-MediumItalic.ttf",
       "PackagePath": "staticwebassets\\assets\\fonts\\GoogleSans-MediumItalic.ttf"
     },
     {
-      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\assets\\fonts\\GoogleSans-Regular.ttf",
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\assets\\fonts\\GoogleSans-Regular.ttf",
       "PackagePath": "staticwebassets\\assets\\fonts\\GoogleSans-Regular.ttf"
     },
     {
-      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\assets\\images\\default.png",
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\assets\\images\\default.png",
       "PackagePath": "staticwebassets\\assets\\images\\default.png"
     },
     {
-      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\assets\\images\\ha.jpg",
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\assets\\images\\ha.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\ha.jpg"
     },
     {
-      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\assets\\images\\su.png",
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\assets\\images\\su.png",
       "PackagePath": "staticwebassets\\assets\\images\\su.png"
     },
     {
-      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\assets\\logo-light.png",
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\assets\\logo-light.png",
       "PackagePath": "staticwebassets\\assets\\logo-light.png"
     },
     {
-      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\assets\\logo.png",
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\assets\\logo.png",
       "PackagePath": "staticwebassets\\assets\\logo.png"
     },
     {
-      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\css\\site.css",
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
-      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\css\\tailwind.css",
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\css\\tailwind.css",
       "PackagePath": "staticwebassets\\css\\tailwind.css"
     },
     {
-      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\favicon.ico",
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\fontawesome\\css\\all.css",
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\fontawesome\\css\\all.css",
       "PackagePath": "staticwebassets\\fontawesome\\css\\all.css"
     },
     {
-      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\fontawesome\\css\\all.min.css",
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\fontawesome\\css\\all.min.css",
       "PackagePath": "staticwebassets\\fontawesome\\css\\all.min.css"
     },
     {
-      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\fontawesome\\css\\brands.css",
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\fontawesome\\css\\brands.css",
       "PackagePath": "staticwebassets\\fontawesome\\css\\brands.css"
     },
     {
-      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\fontawesome\\css\\brands.min.css",
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\fontawesome\\css\\brands.min.css",
       "PackagePath": "staticwebassets\\fontawesome\\css\\brands.min.css"
     },
     {
-      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\fontawesome\\css\\fontawesome.css",
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\fontawesome\\css\\fontawesome.css",
       "PackagePath": "staticwebassets\\fontawesome\\css\\fontawesome.css"
     },
     {
-      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\fontawesome\\css\\fontawesome.min.css",
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\fontawesome\\css\\fontawesome.min.css",
       "PackagePath": "staticwebassets\\fontawesome\\css\\fontawesome.min.css"
     },
     {
-      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\fontawesome\\css\\regular.css",
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\fontawesome\\css\\regular.css",
       "PackagePath": "staticwebassets\\fontawesome\\css\\regular.css"
     },
     {
-      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\fontawesome\\css\\regular.min.css",
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\fontawesome\\css\\regular.min.css",
       "PackagePath": "staticwebassets\\fontawesome\\css\\regular.min.css"
     },
     {
-      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\fontawesome\\css\\solid.css",
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\fontawesome\\css\\solid.css",
       "PackagePath": "staticwebassets\\fontawesome\\css\\solid.css"
     },
     {
-      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\fontawesome\\css\\solid.min.css",
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\fontawesome\\css\\solid.min.css",
       "PackagePath": "staticwebassets\\fontawesome\\css\\solid.min.css"
     },
     {
-      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\fontawesome\\css\\svg-with-js.css",
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\fontawesome\\css\\svg-with-js.css",
       "PackagePath": "staticwebassets\\fontawesome\\css\\svg-with-js.css"
     },
     {
-      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\fontawesome\\css\\svg-with-js.min.css",
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\fontawesome\\css\\svg-with-js.min.css",
       "PackagePath": "staticwebassets\\fontawesome\\css\\svg-with-js.min.css"
     },
     {
-      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\fontawesome\\css\\v4-font-face.css",
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\fontawesome\\css\\v4-font-face.css",
       "PackagePath": "staticwebassets\\fontawesome\\css\\v4-font-face.css"
     },
     {
-      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\fontawesome\\css\\v4-font-face.min.css",
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\fontawesome\\css\\v4-font-face.min.css",
       "PackagePath": "staticwebassets\\fontawesome\\css\\v4-font-face.min.css"
     },
     {
-      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\fontawesome\\css\\v4-shims.css",
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\fontawesome\\css\\v4-shims.css",
       "PackagePath": "staticwebassets\\fontawesome\\css\\v4-shims.css"
     },
     {
-      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\fontawesome\\css\\v4-shims.min.css",
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\fontawesome\\css\\v4-shims.min.css",
       "PackagePath": "staticwebassets\\fontawesome\\css\\v4-shims.min.css"
     },
     {
-      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\fontawesome\\css\\v5-font-face.css",
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\fontawesome\\css\\v5-font-face.css",
       "PackagePath": "staticwebassets\\fontawesome\\css\\v5-font-face.css"
     },
     {
-      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\fontawesome\\css\\v5-font-face.min.css",
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\fontawesome\\css\\v5-font-face.min.css",
       "PackagePath": "staticwebassets\\fontawesome\\css\\v5-font-face.min.css"
     },
     {
-      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\fontawesome\\webfonts\\fa-brands-400.ttf",
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\fontawesome\\webfonts\\fa-brands-400.ttf",
       "PackagePath": "staticwebassets\\fontawesome\\webfonts\\fa-brands-400.ttf"
     },
     {
-      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\fontawesome\\webfonts\\fa-brands-400.woff2",
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\fontawesome\\webfonts\\fa-brands-400.woff2",
       "PackagePath": "staticwebassets\\fontawesome\\webfonts\\fa-brands-400.woff2"
     },
     {
-      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\fontawesome\\webfonts\\fa-regular-400.ttf",
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\fontawesome\\webfonts\\fa-regular-400.ttf",
       "PackagePath": "staticwebassets\\fontawesome\\webfonts\\fa-regular-400.ttf"
     },
     {
-      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\fontawesome\\webfonts\\fa-regular-400.woff2",
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\fontawesome\\webfonts\\fa-regular-400.woff2",
       "PackagePath": "staticwebassets\\fontawesome\\webfonts\\fa-regular-400.woff2"
     },
     {
-      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\fontawesome\\webfonts\\fa-solid-900.ttf",
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\fontawesome\\webfonts\\fa-solid-900.ttf",
       "PackagePath": "staticwebassets\\fontawesome\\webfonts\\fa-solid-900.ttf"
     },
     {
-      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\fontawesome\\webfonts\\fa-solid-900.woff2",
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\fontawesome\\webfonts\\fa-solid-900.woff2",
       "PackagePath": "staticwebassets\\fontawesome\\webfonts\\fa-solid-900.woff2"
     },
     {
-      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\fontawesome\\webfonts\\fa-v4compatibility.ttf",
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\fontawesome\\webfonts\\fa-v4compatibility.ttf",
       "PackagePath": "staticwebassets\\fontawesome\\webfonts\\fa-v4compatibility.ttf"
     },
     {
-      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\fontawesome\\webfonts\\fa-v4compatibility.woff2",
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\fontawesome\\webfonts\\fa-v4compatibility.woff2",
       "PackagePath": "staticwebassets\\fontawesome\\webfonts\\fa-v4compatibility.woff2"
     },
     {
-      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\js\\alert.js",
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\js\\Login.js",
+      "PackagePath": "staticwebassets\\js\\Login.js"
+    },
+    {
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\js\\alert.js",
       "PackagePath": "staticwebassets\\js\\alert.js"
     },
     {
-      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\js\\boardDetail.js",
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\js\\boardDetail.js",
       "PackagePath": "staticwebassets\\js\\boardDetail.js"
     },
     {
-      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\js\\board\\board.js",
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\js\\board\\board.js",
       "PackagePath": "staticwebassets\\js\\board\\board.js"
     },
     {
-      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\js\\board\\cards.js",
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\js\\board\\cards.js",
       "PackagePath": "staticwebassets\\js\\board\\cards.js"
     },
     {
-      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\js\\board\\constants.js",
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\js\\board\\constants.js",
       "PackagePath": "staticwebassets\\js\\board\\constants.js"
     },
     {
-      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\js\\board\\events.js",
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\js\\board\\events.js",
       "PackagePath": "staticwebassets\\js\\board\\events.js"
     },
     {
-      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\js\\board\\lists.js",
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\js\\board\\lists.js",
       "PackagePath": "staticwebassets\\js\\board\\lists.js"
     },
     {
-      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\js\\board\\modals.js",
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\js\\board\\modals.js",
       "PackagePath": "staticwebassets\\js\\board\\modals.js"
     },
     {
-      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\js\\board\\permissions.js",
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\js\\board\\permissions.js",
       "PackagePath": "staticwebassets\\js\\board\\permissions.js"
     },
     {
-      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\js\\board\\sharing.js",
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\js\\board\\sharing.js",
       "PackagePath": "staticwebassets\\js\\board\\sharing.js"
     },
     {
-      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\js\\cardDetail.js",
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\js\\cardDetail.js",
       "PackagePath": "staticwebassets\\js\\cardDetail.js"
     },
     {
-      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\js\\header.js",
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\js\\header.js",
       "PackagePath": "staticwebassets\\js\\header.js"
     },
     {
-      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\js\\login.js",
-      "PackagePath": "staticwebassets\\js\\login.js"
-    },
-    {
-      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\js\\recentBoards.js",
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\js\\recentBoards.js",
       "PackagePath": "staticwebassets\\js\\recentBoards.js"
     },
     {
-      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\js\\site.js",
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
-      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\js\\starredBoards.js",
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\js\\starredBoards.js",
       "PackagePath": "staticwebassets\\js\\starredBoards.js"
     },
     {
-      "Id": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\wwwroot\\js\\user.js",
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\js\\user.js",
       "PackagePath": "staticwebassets\\js\\user.js"
     },
     {

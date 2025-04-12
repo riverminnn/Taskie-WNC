@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\TaskieWNC.csproj": {}
+    "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\TaskieWNC.csproj": {}
   },
   "projects": {
-    "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\TaskieWNC.csproj": {
+    "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\TaskieWNC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\TaskieWNC.csproj",
+        "projectUniqueName": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\TaskieWNC.csproj",
         "projectName": "TaskieWNC",
-        "projectPath": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\TaskieWNC.csproj",
+        "projectPath": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\TaskieWNC.csproj",
         "packagesPath": "C:\\Users\\hatru\\.nuget\\packages\\",
-        "outputPath": "D:\\University\\Year4\\HK2\\WebNC\\TaskieProject\\TaskieWNC\\obj\\",
+        "outputPath": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\hatru\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -46,17 +46,17 @@
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[9.0.3, )"
+              "version": "[9.0.4, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[9.0.3, )"
+              "version": "[9.0.4, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[9.0.3, )"
+              "version": "[9.0.4, )"
             }
           },
           "imports": [

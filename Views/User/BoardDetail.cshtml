@@ -238,3 +238,8 @@
 <script src="~/js/boardDetail.js" type="module" asp-append-version="true"></script>
 <script src="~/js/cardDetail.js" type="module" asp-append-version="true"></script>
 <script src="~/js/starredBoards.js" asp-append-version="true"></script>
+
+<!-- Include the New Board Modal -->
+@await Html.PartialAsync("User/NewBoard")
+
+<script src="~/js/user.js" asp-append-version="true"></script>

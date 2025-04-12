@@ -1,6 +1,79 @@
 // Maximum number of recent boards to store and display
 const MAX_RECENT_BOARDS = 5;
 
+/**
+ * Validates if a board exists on the server
+ * @param {number} boardId - The ID of the board to check
+ * @returns {Promise<boolean>} - True if board exists, false otherwise
+ */
+async function validateBoardExists(boardId) {
+    try {
+        const response = await fetch('/Board/GetBoards', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            }
+        });
+
+        const data = await response.json();
+
+        if (data.success) {
+            // Check if board exists in either owned or shared boards
+            return (
+                (data.ownedBoards?.some(b => b.boardID === boardId)) ||
+                (data.sharedBoards?.some(b => b.boardID === boardId))
+            );
+        }
+        return false;
+    } catch (error) {
+        console.error('Error validating board:', error);
+        return false;
+    }
+}
+
+/**
+ * Cleans up recent boards list by removing boards that no longer exist
+ * @returns {Promise<Array>} - Cleaned recent boards array
+ */
+async function cleanupRecentBoards() {
+    const recentBoards = JSON.parse(localStorage.getItem('recentBoards') || '[]');
+    if (recentBoards.length === 0) return recentBoards;
+
+    // Get all board IDs from the server for validation
+    try {
+        const response = await fetch('/Board/GetBoards', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            }
+        });
+
+        const data = await response.json();
+
+        if (data.success) {
+            // Collect all valid board IDs from owned and shared boards
+            const validBoardIds = [
+                ...(data.ownedBoards || []).map(b => b.boardID),
+                ...(data.sharedBoards || []).map(b => b.boardID)
+            ];
+
+            // Filter out boards that don't exist
+            const validRecentBoards = recentBoards.filter(board =>
+                validBoardIds.includes(parseInt(board.id))
+            );
+
+            // Save the cleaned list back to localStorage
+            localStorage.setItem('recentBoards', JSON.stringify(validRecentBoards));
+
+            return validRecentBoards;
+        }
+    } catch (error) {
+        console.error('Error cleaning up recent boards:', error);
+    }
+
+    return recentBoards;
+}
+
 // Track board visit when a board is opened
 function trackBoardVisit(boardId, boardName) {
     // Get existing recent boards from localStorage
@@ -32,12 +105,15 @@ function trackBoardVisit(boardId, boardName) {
 }
 
 // Update the recent boards dropdown with current data
-function updateRecentBoardsDropdown() {
+async function updateRecentBoardsDropdown() {
     const dropdownContent = document.getElementById('recentBoardsList');
     if (!dropdownContent) return;
 
-    // Get recent boards from localStorage
-    const recentBoards = JSON.parse(localStorage.getItem('recentBoards') || '[]');
+    // Show loading indicator
+    dropdownContent.innerHTML = '<div class="py-2 px-3 text-sm text-gray-500 text-center">Loading...</div>';
+
+    // Clean up recent boards to remove deleted ones
+    const recentBoards = await cleanupRecentBoards();
 
     // If no recent boards, show the empty message
     if (recentBoards.length === 0) {
