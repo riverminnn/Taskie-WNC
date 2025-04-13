@@ -103,6 +103,45 @@ public class BoardMemberRepository
             return false;
         }
     }
+    public List<BoardMemberWithDetails> GetAllBoardMembers()
+    {
+        // Join BoardMembers with Users and Boards to get all details
+        var boardMembers = _dbContext.BoardMembers
+            .Join(_dbContext.Users,
+                bm => bm.UserID,
+                u => u.UserID,
+                (bm, u) => new { bm, u })
+            .Join(_dbContext.Boards,
+                combined => combined.bm.BoardID,
+                b => b.BoardID,
+                (combined, b) => new BoardMemberWithDetails
+                {
+                    MemberID = combined.bm.MemberID,
+                    BoardID = combined.bm.BoardID,
+                    UserID = combined.bm.UserID,
+                    Role = combined.bm.Role,
+                    AddedAt = combined.bm.AddedAt,
+                    UserFullName = combined.u.FullName,
+                    UserEmail = combined.u.Email,
+                    BoardName = b.BoardName
+                })
+            .ToList();
+
+        return boardMembers;
+    }
+}
+
+// Add this model class at the bottom of the file
+public class BoardMemberWithDetails
+{
+    public int MemberID { get; set; }
+    public int BoardID { get; set; }
+    public int UserID { get; set; }
+    public string? Role { get; set; }
+    public DateTime AddedAt { get; set; }
+    public string UserFullName { get; set; } = string.Empty;
+    public string UserEmail { get; set; } = string.Empty;
+    public string BoardName { get; set; } = string.Empty;
 }
 
 // Add this view model to represent the result of joining BoardMembers with Users

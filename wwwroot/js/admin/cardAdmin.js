@@ -41,27 +41,6 @@ export async function loadCards() {
     `;
 }
 
-export async function updateCard(cardID, field, value) {
-    await fetch('/Admin/UpdateCard', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ cardID, field, value })
-    });
-    alert('Card updated successfully!');
-    loadCards();
-}
-
-export async function deleteCard(cardID) {
-    if (!confirm('Are you sure you want to delete this card?')) return;
-    await fetch('/Admin/DeleteCard', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ cardID })
-    });
-    alert('Card deleted successfully!');
-    loadCards();
-}
-
 export function showAddCardModal() {
     const modal = document.getElementById('addCardModal');
     modal.classList.remove('hidden');
@@ -84,13 +63,48 @@ export async function addCard() {
         return;
     }
 
-    await fetch('/Admin/AddCard', {
+    const response = await fetch('/Admin/AddCard', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ cardName, listID, status })
     });
 
-    alert('Card added successfully!');
-    closeAddCardModal();
-    loadCards();
+    const result = await response.json();
+    alert(result.message);
+    if (result.success) {
+        closeAddCardModal();
+        loadCards();
+    }
+}
+
+export async function updateCard(cardID, field, value) {
+    console.log(JSON.stringify({ cardID, field, value }));
+
+    const response = await fetch('/Admin/UpdateCard', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ cardID, field, value })
+    });
+
+    const result = await response.json();
+    alert(result.message);
+    if (result.success) {
+        loadCards();
+    }
+}
+
+export async function deleteCard(cardID) {
+    if (!confirm('Are you sure you want to delete this card?')) return;
+
+    const response = await fetch('/Admin/DeleteCard', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ cardID })
+    });
+
+    const result = await response.json();
+    alert(result.message);
+    if (result.success) {
+        loadCards();
+    }
 }

@@ -36,27 +36,6 @@ export async function loadComments() {
     `;
 }
 
-export async function updateComment(commentID, content) {
-    await fetch('/Admin/UpdateComment', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ commentID, content })
-    });
-    alert('Comment updated successfully!');
-    loadComments();
-}
-
-export async function deleteComment(commentID) {
-    if (!confirm('Are you sure you want to delete this comment?')) return;
-    await fetch('/Admin/DeleteComment', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ commentID })
-    });
-    alert('Comment deleted successfully!');
-    loadComments();
-}
-
 export function showAddCommentModal() {
     const modal = document.getElementById('addCommentModal');
     modal.classList.remove('hidden');
@@ -70,22 +49,55 @@ export function closeAddCommentModal() {
 }
 
 export async function addComment() {
-    const cardID = document.getElementById('newCommentCardID').value.trim();
     const userID = document.getElementById('newCommentUserID').value.trim();
+    const cardID = document.getElementById('newCommentCardID').value.trim();
     const content = document.getElementById('newCommentContent').value.trim();
 
-    if (!cardID || !userID || !content) {
+    if (!cardID || !content || !userID) {
         alert('All fields are required!');
         return;
     }
 
-    await fetch('/Admin/AddComment', {
+    const response = await fetch('/Admin/AddComment', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ cardID, userID, content })
+        body: JSON.stringify({ userID, cardID, content })
     });
 
-    alert('Comment added successfully!');
-    closeAddCommentModal();
-    loadComments();
+    const result = await response.json();
+    alert(result.message);
+    if (result.success) {
+        closeAddCommentModal();
+        loadComments();
+    }
+}
+
+export async function updateComment(commentID, content) {
+    const response = await fetch('/Admin/UpdateComment', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ commentID, content })
+    });
+
+    const result = await response.json();
+    alert(result.message);
+    if (result.success) {
+        loadComments();
+    }
+}
+
+export async function deleteComment(commentID) {
+    if (!confirm('Are you sure you want to delete this comment?')) return;
+
+    const response = await fetch('/Admin/DeleteComment', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ commentID })
+    });
+
+    const result = await response.json();
+    alert(result.message);
+    if (result.success) {
+        loadComments();
+    }
 }

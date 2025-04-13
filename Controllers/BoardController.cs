@@ -23,7 +23,7 @@ namespace TaskieWNC.Controllers
         public IActionResult Detail(int boardId, string boardName)
         {
             var loginCheck = RequireLogin();
-            if (loginCheck != null) return loginCheck;
+            if (!(loginCheck is EmptyResult)) return loginCheck;
 
             if (!TryGetUserId(out int userId))
             {

@@ -35,27 +35,6 @@ export async function loadLists() {
     `;
 }
 
-export async function updateList(listID, listName) {
-    await fetch('/Admin/UpdateList', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ listID, listName })
-    });
-    alert('List updated successfully!');
-    loadLists();
-}
-
-export async function deleteList(listID) {
-    if (!confirm('Are you sure you want to delete this list?')) return;
-    await fetch('/Admin/DeleteList', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ listID })
-    });
-    alert('List deleted successfully!');
-    loadLists();
-}
-
 export function showAddListModal() {
     const modal = document.getElementById('addListModal');
     modal.classList.remove('hidden');
@@ -77,13 +56,46 @@ export async function addList() {
         return;
     }
 
-    await fetch('/Admin/AddList', {
+    const response = await fetch('/Admin/AddList', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ listName, boardID })
     });
 
-    alert('List added successfully!');
-    closeAddListModal();
-    loadLists();
+    const result = await response.json();
+    alert(result.message);
+    if (result.success) {
+        closeAddListModal();
+        loadLists();
+    }
+}
+
+export async function updateList(listID, listName) {
+    const response = await fetch('/Admin/UpdateList', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ listID, listName })
+    });
+
+    const result = await response.json();
+    alert(result.message);
+    if (result.success) {
+        loadLists();
+    }
+}
+
+export async function deleteList(listID) {
+    if (!confirm('Are you sure you want to delete this list?')) return;
+
+    const response = await fetch('/Admin/DeleteList', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ listID })
+    });
+
+    const result = await response.json();
+    alert(result.message);
+    if (result.success) {
+        loadLists();
+    }
 }

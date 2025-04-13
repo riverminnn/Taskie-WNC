@@ -12,7 +12,7 @@ namespace TaskieWNC.Controllers
 
         protected readonly UserRepository _userRepository;
 
-        public BaseController(UserRepository userRepository)
+        protected BaseController(UserRepository userRepository)
         {
             _userRepository = userRepository;
         }
@@ -36,7 +36,7 @@ namespace TaskieWNC.Controllers
             {
                 return View(VIEW_NOT_FOUND);
             }
-            return null;
+            return new EmptyResult();  // Return EmptyResult instead of null
         }
     }
 }

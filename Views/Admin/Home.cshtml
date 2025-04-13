@@ -5,7 +5,7 @@
 <div class="flex mt-15 w-full h-full">
     @await Html.PartialAsync("_Sidebar")
     <div id="adminContent" class="p-6 w-full flex flex-col justify-start">
-        <h1 class="text-2xl font-bold mb-4">Welcome to the Admin Panel</h1>
+        <h1 class="text-2xl font-bold mb-4">Admin Panel</h1>
         <div id="contentArea">
             <!-- Content will be dynamically loaded here -->
         </div>
@@ -134,6 +134,34 @@
             <button onclick="closeAddBoardModal()"
                 class="px-4 py-2 text-sm text-gray-700 hover:text-gray-900">Cancel</button>
             <button onclick="addBoard()"
+                class="px-4 py-2 bg-blue-500 text-white text-sm rounded hover:bg-blue-700">Add</button>
+        </div>
+    </div>
+</div>
+
+<!-- Add BoardMember Modal -->
+<div id="addBoardMemberModal" class="hidden fixed inset-0 bg-black/50 z-50 flex items-center justify-center">
+    <div class="bg-white rounded-lg shadow-lg w-96 p-6 relative">
+        <h2 class="text-lg font-semibold mb-4">Add New Board Member</h2>
+        <div class="mb-4">
+            <label for="newBoardMemberBoardID" class="block text-sm font-medium mb-1">Board ID</label>
+            <input type="text" id="newBoardMemberBoardID" class="w-full px-3 py-2 border rounded text-sm" />
+        </div>
+        <div class="mb-4">
+            <label for="newBoardMemberUserID" class="block text-sm font-medium mb-1">User ID</label>
+            <input type="text" id="newBoardMemberUserID" class="w-full px-3 py-2 border rounded text-sm" />
+        </div>
+        <div class="mb-4">
+            <label for="newBoardMemberRole" class="block text-sm font-medium mb-1">Role</label>
+            <select id="newBoardMemberRole" class="w-full px-3 py-2 border rounded text-sm">
+                <option value="Viewer">Viewer</option>
+                <option value="Editor">Editor</option>
+            </select>
+        </div>
+        <div class="flex justify-end">
+            <button onclick="closeAddBoardMemberModal()"
+                class="px-4 py-2 text-sm text-gray-700 hover:text-gray-900">Cancel</button>
+            <button onclick="addBoardMember()"
                 class="px-4 py-2 bg-blue-500 text-white text-sm rounded hover:bg-blue-700">Add</button>
         </div>
     </div>

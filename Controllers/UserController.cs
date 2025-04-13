@@ -14,8 +14,7 @@ namespace TaskieWNC.Controllers
         public IActionResult Home()
         {
             var loginCheck = RequireLogin();
-            if (loginCheck != null) return loginCheck;
-
+            if (!(loginCheck is EmptyResult)) return loginCheck;
             return View();
         }
 

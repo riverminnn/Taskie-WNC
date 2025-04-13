@@ -165,8 +165,32 @@
       "PackagePath": "staticwebassets\\js\\Login.js"
     },
     {
-      "Id": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\js\\admin.js",
-      "PackagePath": "staticwebassets\\js\\admin.js"
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\js\\admin\\admin.js",
+      "PackagePath": "staticwebassets\\js\\admin\\admin.js"
+    },
+    {
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\js\\admin\\boardAdmin.js",
+      "PackagePath": "staticwebassets\\js\\admin\\boardAdmin.js"
+    },
+    {
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\js\\admin\\boardMember.js",
+      "PackagePath": "staticwebassets\\js\\admin\\boardMember.js"
+    },
+    {
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\js\\admin\\cardAdmin.js",
+      "PackagePath": "staticwebassets\\js\\admin\\cardAdmin.js"
+    },
+    {
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\js\\admin\\commentAdmin.js",
+      "PackagePath": "staticwebassets\\js\\admin\\commentAdmin.js"
+    },
+    {
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\js\\admin\\listAdmin.js",
+      "PackagePath": "staticwebassets\\js\\admin\\listAdmin.js"
+    },
+    {
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\js\\admin\\userAdmin.js",
+      "PackagePath": "staticwebassets\\js\\admin\\userAdmin.js"
     },
     {
       "Id": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\js\\alert.js",

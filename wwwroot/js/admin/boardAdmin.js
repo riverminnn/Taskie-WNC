@@ -36,27 +36,6 @@ export async function loadBoards() {
     `;
 }
 
-export async function updateBoard(boardID, boardName) {
-    await fetch('/Admin/UpdateBoard', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ boardID, boardName })
-    });
-    alert('Board updated successfully!');
-    loadBoards();
-}
-
-export async function deleteBoard(boardID) {
-    if (!confirm('Are you sure you want to delete this board?')) return;
-    await fetch('/Admin/DeleteBoard', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ boardID })
-    });
-    alert('Board deleted successfully!');
-    loadBoards();
-}
-
 export function showAddBoardModal() {
     const modal = document.getElementById('addBoardModal');
     modal.classList.remove('hidden');
@@ -78,13 +57,46 @@ export async function addBoard() {
         return;
     }
 
-    await fetch('/Admin/AddBoard', {
+    const response = await fetch('/Admin/AddBoard', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ boardName, userID })
     });
 
-    alert('Board added successfully!');
-    closeAddBoardModal();
-    loadBoards();
+    const result = await response.json();
+    alert(result.message);
+    if (result.success) {
+        closeAddBoardModal();
+        loadBoards();
+    }
+}
+
+export async function updateBoard(boardID, boardName) {
+    const response = await fetch('/Admin/UpdateBoard', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ boardID, boardName })
+    });
+
+    const result = await response.json();
+    alert(result.message);
+    if (result.success) {
+        loadBoards();
+    }
+}
+
+export async function deleteBoard(boardID) {
+    if (!confirm('Are you sure you want to delete this board?')) return;
+
+    const response = await fetch('/Admin/DeleteBoard', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ boardID })
+    });
+
+    const result = await response.json();
+    alert(result.message);
+    if (result.success) {
+        loadBoards();
+    }
 }

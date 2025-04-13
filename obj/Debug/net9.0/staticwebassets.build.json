@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "vthWQjC6knw7WDuHsTT1HgXLrE7E/DwTH1ifW3bkLaQ=",
+  "Hash": "CUEzcR+CNNUIjAjYmE3NZ3IUQXw9DPcIbx96S1VK3W8=",
   "Source": "TaskieWNC",
   "BasePath": "_content/TaskieWNC",
   "Mode": "Default",
@@ -122,33 +122,12 @@
       "OriginalItemSpec": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\fontawesome\\css\\v5-font-face.css"
     },
     {
-      "Identity": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\obj\\Debug\\net9.0\\compressed\\3kg7w4y1ac-qchcq2b3py.gz",
+      "Identity": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\obj\\Debug\\net9.0\\compressed\\6b87t54u6f-49yuep8k0d.gz",
       "SourceId": "TaskieWNC",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/TaskieWNC",
-      "RelativePath": "js/admin#[.{fingerprint=qchcq2b3py}]?.js.gz",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\js\\admin.js",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "Fingerprint": "0ryeaekfjw",
-      "Integrity": "bOmFP7LpwA9yv+Fcjv3r46+cz32BY09Dg3lqAlfqpqM=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\js\\admin.js"
-    },
-    {
-      "Identity": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\obj\\Debug\\net9.0\\compressed\\6b87t54u6f-1bgz1g2kzq.gz",
-      "SourceId": "TaskieWNC",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\obj\\Debug\\net9.0\\compressed\\",
-      "BasePath": "_content/TaskieWNC",
-      "RelativePath": "css/tailwind#[.{fingerprint=1bgz1g2kzq}]?.css.gz",
+      "RelativePath": "css/tailwind#[.{fingerprint=49yuep8k0d}]?.css.gz",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -157,8 +136,8 @@
       "RelatedAsset": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\css\\tailwind.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "eudz9critz",
-      "Integrity": "1rn/RLv4scYAgs/Ck0usf4rguMMPYQFBRRB0mXUGWRs=",
+      "Fingerprint": "yvbeg43rsk",
+      "Integrity": "rsOoZLTjhQg6r4q3Fd7tzB/SSZfHwqnr3LweYMBJy+U=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\css\\tailwind.css"
@@ -227,6 +206,48 @@
       "OriginalItemSpec": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\js\\board\\cards.js"
     },
     {
+      "Identity": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\obj\\Debug\\net9.0\\compressed\\72jr6sxt5p-y4srri4jy4.gz",
+      "SourceId": "TaskieWNC",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/TaskieWNC",
+      "RelativePath": "js/admin/listAdmin#[.{fingerprint=y4srri4jy4}]?.js.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\js\\admin\\listAdmin.js",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "atd5it8s67",
+      "Integrity": "0sSg/6UCCuyezSjE+3Xlf+wafJBvxwLdM2psB4KG+L8=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\js\\admin\\listAdmin.js"
+    },
+    {
+      "Identity": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\obj\\Debug\\net9.0\\compressed\\7v80aq6xsa-u9oa2r9yl0.gz",
+      "SourceId": "TaskieWNC",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/TaskieWNC",
+      "RelativePath": "js/admin/userAdmin#[.{fingerprint=u9oa2r9yl0}]?.js.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\js\\admin\\userAdmin.js",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "x3bwbsii2z",
+      "Integrity": "PXvoSzjqMbZQLAMzLUTh3DmvoXftpzXQ7XBU1kmJ4CU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\js\\admin\\userAdmin.js"
+    },
+    {
       "Identity": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\obj\\Debug\\net9.0\\compressed\\8ai5z2uf32-s5o43h1otk.gz",
       "SourceId": "TaskieWNC",
       "SourceType": "Discovered",
@@ -246,6 +267,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\js\\board\\sharing.js"
+    },
+    {
+      "Identity": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\obj\\Debug\\net9.0\\compressed\\8p7vh7jio1-rrx2t326cn.gz",
+      "SourceId": "TaskieWNC",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/TaskieWNC",
+      "RelativePath": "js/admin/commentAdmin#[.{fingerprint=rrx2t326cn}]?.js.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\js\\admin\\commentAdmin.js",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "st19icjmg2",
+      "Integrity": "gNwcbwK9+YnWx9iPSQbsrZbShho4PkpDxm+yYxWIqs0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\js\\admin\\commentAdmin.js"
     },
     {
       "Identity": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\obj\\Debug\\net9.0\\compressed\\8yuddrct4z-rnsfjnslng.gz",
@@ -309,6 +351,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\fontawesome\\css\\v4-font-face.css"
+    },
+    {
+      "Identity": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\obj\\Debug\\net9.0\\compressed\\bccsi8ks72-1wmnilgdh6.gz",
+      "SourceId": "TaskieWNC",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/TaskieWNC",
+      "RelativePath": "js/admin/cardAdmin#[.{fingerprint=1wmnilgdh6}]?.js.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\js\\admin\\cardAdmin.js",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "5biy54o8ks",
+      "Integrity": "zzkdpUE0S822Djw6L0g2bDdEtjb/NdHRRGLcU/ZPtCg=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\js\\admin\\cardAdmin.js"
     },
     {
       "Identity": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\obj\\Debug\\net9.0\\compressed\\bj4ugqehfz-olbl3c12ii.gz",
@@ -456,6 +519,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\js\\boardDetail.js"
+    },
+    {
+      "Identity": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\obj\\Debug\\net9.0\\compressed\\j75jllytz1-vq90seu6r3.gz",
+      "SourceId": "TaskieWNC",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/TaskieWNC",
+      "RelativePath": "js/admin/boardAdmin#[.{fingerprint=vq90seu6r3}]?.js.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\js\\admin\\boardAdmin.js",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "pxrpknmvee",
+      "Integrity": "rcnSizCEdbRzhzRsb11+UC+yNKBjyhKJAO+NwIFMrlg=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\js\\admin\\boardAdmin.js"
     },
     {
       "Identity": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\obj\\Debug\\net9.0\\compressed\\k1wqj0dk4x-m3i9f6419i.gz",
@@ -668,6 +752,27 @@
       "OriginalItemSpec": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\fontawesome\\css\\solid.css"
     },
     {
+      "Identity": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\obj\\Debug\\net9.0\\compressed\\q0pfju853l-3d0u6pzkp4.gz",
+      "SourceId": "TaskieWNC",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/TaskieWNC",
+      "RelativePath": "js/admin/boardMember#[.{fingerprint=3d0u6pzkp4}]?.js.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\js\\admin\\boardMember.js",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "t9ghyepg1v",
+      "Integrity": "X6ndJEa1Y3vil7tzI+1Yv+p8eMyzUURalzyZu2o+nNs=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\js\\admin\\boardMember.js"
+    },
+    {
       "Identity": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\obj\\Debug\\net9.0\\compressed\\qqzy41vnt5-wb4wtcicy8.gz",
       "SourceId": "TaskieWNC",
       "SourceType": "Discovered",
@@ -834,6 +939,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\js\\alert.js"
+    },
+    {
+      "Identity": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\obj\\Debug\\net9.0\\compressed\\zlqk38tc40-ec2xizij36.gz",
+      "SourceId": "TaskieWNC",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/TaskieWNC",
+      "RelativePath": "js/admin/admin#[.{fingerprint=ec2xizij36}]?.js.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\js\\admin\\admin.js",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "qycq7rjmlt",
+      "Integrity": "3tgpW34+OFC2vAC7V2jocnIDmjWGwM3L7JxE7apudqA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\js\\admin\\admin.js"
     },
     {
       "Identity": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\obj\\Debug\\net9.0\\compressed\\zt1njoplgg-o0oxivnc56.gz",
@@ -1123,8 +1249,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "1bgz1g2kzq",
-      "Integrity": "TT4jPZ9b+gBtXBcw7HQAi/Z6UFeqf5XoRjSCmk7x+Io=",
+      "Fingerprint": "49yuep8k0d",
+      "Integrity": "GKU/PAPQlv/LgVtUUZXf7CA0XOgueM0QC2onbaK2BAU=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\tailwind.css"
@@ -1697,12 +1823,12 @@
       "OriginalItemSpec": "wwwroot\\fontawesome\\webfonts\\fa-v4compatibility.woff2"
     },
     {
-      "Identity": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\js\\admin.js",
+      "Identity": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\js\\admin\\admin.js",
       "SourceId": "TaskieWNC",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\",
       "BasePath": "_content/TaskieWNC",
-      "RelativePath": "js/admin#[.{fingerprint}]?.js",
+      "RelativePath": "js/admin/admin#[.{fingerprint}]?.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1711,11 +1837,137 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "qchcq2b3py",
-      "Integrity": "2vSZLYSysgR3rww/eHUSlJEj9/SFRQf+nx4kDmX65mg=",
+      "Fingerprint": "ec2xizij36",
+      "Integrity": "Hiiya0mXCspL1zIpabhH+1PApHhuSBjdLar6CGJ1y54=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\admin.js"
+      "OriginalItemSpec": "wwwroot\\js\\admin\\admin.js"
+    },
+    {
+      "Identity": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\js\\admin\\boardAdmin.js",
+      "SourceId": "TaskieWNC",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\",
+      "BasePath": "_content/TaskieWNC",
+      "RelativePath": "js/admin/boardAdmin#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "vq90seu6r3",
+      "Integrity": "VyXjKLEsy5VFaNmyK1CAhOptsOCgf2I+ezVzUCujcjU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\admin\\boardAdmin.js"
+    },
+    {
+      "Identity": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\js\\admin\\boardMember.js",
+      "SourceId": "TaskieWNC",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\",
+      "BasePath": "_content/TaskieWNC",
+      "RelativePath": "js/admin/boardMember#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "3d0u6pzkp4",
+      "Integrity": "qajBXYyEpAfVgcEvn4yV8MkBrghqq0v540wiHUdMStQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\admin\\boardMember.js"
+    },
+    {
+      "Identity": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\js\\admin\\cardAdmin.js",
+      "SourceId": "TaskieWNC",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\",
+      "BasePath": "_content/TaskieWNC",
+      "RelativePath": "js/admin/cardAdmin#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "1wmnilgdh6",
+      "Integrity": "XyZvMoyAtti6T6iMpsR+Lhbrz47BTPAS92OXA7D37LY=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\admin\\cardAdmin.js"
+    },
+    {
+      "Identity": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\js\\admin\\commentAdmin.js",
+      "SourceId": "TaskieWNC",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\",
+      "BasePath": "_content/TaskieWNC",
+      "RelativePath": "js/admin/commentAdmin#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "rrx2t326cn",
+      "Integrity": "d+DkJ1qNgMJYCaPbwYWkNHmF6CPv96GB+GtT+Vrz9Ck=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\admin\\commentAdmin.js"
+    },
+    {
+      "Identity": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\js\\admin\\listAdmin.js",
+      "SourceId": "TaskieWNC",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\",
+      "BasePath": "_content/TaskieWNC",
+      "RelativePath": "js/admin/listAdmin#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "y4srri4jy4",
+      "Integrity": "zrVbGlMvf328hJiL0WDlhDRuI3Co15/FXnQX6VVQ6ec=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\admin\\listAdmin.js"
+    },
+    {
+      "Identity": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\js\\admin\\userAdmin.js",
+      "SourceId": "TaskieWNC",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\",
+      "BasePath": "_content/TaskieWNC",
+      "RelativePath": "js/admin/userAdmin#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "u9oa2r9yl0",
+      "Integrity": "nsiUktwly0nERoOrJngmn+9dxaWFj34kjZZIE3Rv7bU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\admin\\userAdmin.js"
     },
     {
       "Identity": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\js\\alert.js",
@@ -3298,13 +3550,13 @@
       ]
     },
     {
-      "Route": "css/tailwind.1bgz1g2kzq.css",
-      "AssetFile": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\obj\\Debug\\net9.0\\compressed\\6b87t54u6f-1bgz1g2kzq.gz",
+      "Route": "css/tailwind.49yuep8k0d.css",
+      "AssetFile": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\obj\\Debug\\net9.0\\compressed\\6b87t54u6f-49yuep8k0d.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000080064051"
+          "Quality": "0.000079636856"
         }
       ],
       "ResponseHeaders": [
@@ -3314,15 +3566,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "12489"
+          "Value": "12556"
         },
         {
           "Name": "ETag",
-          "Value": "\"1rn/RLv4scYAgs/Ck0usf4rguMMPYQFBRRB0mXUGWRs=\""
+          "Value": "\"rsOoZLTjhQg6r4q3Fd7tzB/SSZfHwqnr3LweYMBJy+U=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 13 Apr 2025 04:01:30 GMT"
+          "Value": "Sun, 13 Apr 2025 04:33:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3342,13 +3594,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"TT4jPZ9b+gBtXBcw7HQAi/Z6UFeqf5XoRjSCmk7x+Io=\""
+          "Value": "W/\"GKU/PAPQlv/LgVtUUZXf7CA0XOgueM0QC2onbaK2BAU=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "1bgz1g2kzq"
+          "Value": "49yuep8k0d"
         },
         {
           "Name": "label",
@@ -3356,12 +3608,12 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-TT4jPZ9b+gBtXBcw7HQAi/Z6UFeqf5XoRjSCmk7x+Io="
+          "Value": "sha256-GKU/PAPQlv/LgVtUUZXf7CA0XOgueM0QC2onbaK2BAU="
         }
       ]
     },
     {
-      "Route": "css/tailwind.1bgz1g2kzq.css",
+      "Route": "css/tailwind.49yuep8k0d.css",
       "AssetFile": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\css\\tailwind.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -3371,7 +3623,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "83939"
+          "Value": "84516"
         },
         {
           "Name": "Content-Type",
@@ -3379,11 +3631,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"TT4jPZ9b+gBtXBcw7HQAi/Z6UFeqf5XoRjSCmk7x+Io=\""
+          "Value": "\"GKU/PAPQlv/LgVtUUZXf7CA0XOgueM0QC2onbaK2BAU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 13 Apr 2025 04:01:30 GMT"
+          "Value": "Sun, 13 Apr 2025 04:33:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3393,7 +3645,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "1bgz1g2kzq"
+          "Value": "49yuep8k0d"
         },
         {
           "Name": "label",
@@ -3401,13 +3653,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-TT4jPZ9b+gBtXBcw7HQAi/Z6UFeqf5XoRjSCmk7x+Io="
+          "Value": "sha256-GKU/PAPQlv/LgVtUUZXf7CA0XOgueM0QC2onbaK2BAU="
         }
       ]
     },
     {
-      "Route": "css/tailwind.1bgz1g2kzq.css.gz",
-      "AssetFile": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\obj\\Debug\\net9.0\\compressed\\6b87t54u6f-1bgz1g2kzq.gz",
+      "Route": "css/tailwind.49yuep8k0d.css.gz",
+      "AssetFile": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\obj\\Debug\\net9.0\\compressed\\6b87t54u6f-49yuep8k0d.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3416,7 +3668,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "12489"
+          "Value": "12556"
         },
         {
           "Name": "Content-Type",
@@ -3424,11 +3676,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"1rn/RLv4scYAgs/Ck0usf4rguMMPYQFBRRB0mXUGWRs=\""
+          "Value": "\"rsOoZLTjhQg6r4q3Fd7tzB/SSZfHwqnr3LweYMBJy+U=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 13 Apr 2025 04:01:30 GMT"
+          "Value": "Sun, 13 Apr 2025 04:33:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3446,7 +3698,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "1bgz1g2kzq"
+          "Value": "49yuep8k0d"
         },
         {
           "Name": "label",
@@ -3454,18 +3706,18 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-1rn/RLv4scYAgs/Ck0usf4rguMMPYQFBRRB0mXUGWRs="
+          "Value": "sha256-rsOoZLTjhQg6r4q3Fd7tzB/SSZfHwqnr3LweYMBJy+U="
         }
       ]
     },
     {
       "Route": "css/tailwind.css",
-      "AssetFile": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\obj\\Debug\\net9.0\\compressed\\6b87t54u6f-1bgz1g2kzq.gz",
+      "AssetFile": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\obj\\Debug\\net9.0\\compressed\\6b87t54u6f-49yuep8k0d.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000080064051"
+          "Quality": "0.000079636856"
         }
       ],
       "ResponseHeaders": [
@@ -3475,15 +3727,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "12489"
+          "Value": "12556"
         },
         {
           "Name": "ETag",
-          "Value": "\"1rn/RLv4scYAgs/Ck0usf4rguMMPYQFBRRB0mXUGWRs=\""
+          "Value": "\"rsOoZLTjhQg6r4q3Fd7tzB/SSZfHwqnr3LweYMBJy+U=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 13 Apr 2025 04:01:30 GMT"
+          "Value": "Sun, 13 Apr 2025 04:33:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3503,13 +3755,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"TT4jPZ9b+gBtXBcw7HQAi/Z6UFeqf5XoRjSCmk7x+Io=\""
+          "Value": "W/\"GKU/PAPQlv/LgVtUUZXf7CA0XOgueM0QC2onbaK2BAU=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-TT4jPZ9b+gBtXBcw7HQAi/Z6UFeqf5XoRjSCmk7x+Io="
+          "Value": "sha256-GKU/PAPQlv/LgVtUUZXf7CA0XOgueM0QC2onbaK2BAU="
         }
       ]
     },
@@ -3524,7 +3776,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "83939"
+          "Value": "84516"
         },
         {
           "Name": "Content-Type",
@@ -3532,11 +3784,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"TT4jPZ9b+gBtXBcw7HQAi/Z6UFeqf5XoRjSCmk7x+Io=\""
+          "Value": "\"GKU/PAPQlv/LgVtUUZXf7CA0XOgueM0QC2onbaK2BAU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 13 Apr 2025 04:01:30 GMT"
+          "Value": "Sun, 13 Apr 2025 04:33:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3546,13 +3798,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-TT4jPZ9b+gBtXBcw7HQAi/Z6UFeqf5XoRjSCmk7x+Io="
+          "Value": "sha256-GKU/PAPQlv/LgVtUUZXf7CA0XOgueM0QC2onbaK2BAU="
         }
       ]
     },
     {
       "Route": "css/tailwind.css.gz",
-      "AssetFile": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\obj\\Debug\\net9.0\\compressed\\6b87t54u6f-1bgz1g2kzq.gz",
+      "AssetFile": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\obj\\Debug\\net9.0\\compressed\\6b87t54u6f-49yuep8k0d.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3561,7 +3813,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "12489"
+          "Value": "12556"
         },
         {
           "Name": "Content-Type",
@@ -3569,11 +3821,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"1rn/RLv4scYAgs/Ck0usf4rguMMPYQFBRRB0mXUGWRs=\""
+          "Value": "\"rsOoZLTjhQg6r4q3Fd7tzB/SSZfHwqnr3LweYMBJy+U=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 13 Apr 2025 04:01:30 GMT"
+          "Value": "Sun, 13 Apr 2025 04:33:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3591,7 +3843,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-1rn/RLv4scYAgs/Ck0usf4rguMMPYQFBRRB0mXUGWRs="
+          "Value": "sha256-rsOoZLTjhQg6r4q3Fd7tzB/SSZfHwqnr3LweYMBJy+U="
         }
       ]
     },
@@ -9914,13 +10166,13 @@
       ]
     },
     {
-      "Route": "js/admin.js",
-      "AssetFile": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\obj\\Debug\\net9.0\\compressed\\3kg7w4y1ac-qchcq2b3py.gz",
+      "Route": "js/admin/admin.ec2xizij36.js",
+      "AssetFile": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\obj\\Debug\\net9.0\\compressed\\zlqk38tc40-ec2xizij36.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000851788756"
+          "Quality": "0.001818181818"
         }
       ],
       "ResponseHeaders": [
@@ -9930,19 +10182,19 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1173"
+          "Value": "549"
         },
         {
           "Name": "ETag",
-          "Value": "\"bOmFP7LpwA9yv+Fcjv3r46+cz32BY09Dg3lqAlfqpqM=\""
+          "Value": "\"3tgpW34+OFC2vAC7V2jocnIDmjWGwM3L7JxE7apudqA=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 13 Apr 2025 04:01:30 GMT"
+          "Value": "Sun, 13 Apr 2025 06:37:45 GMT"
         },
         {
           "Name": "Cache-Control",
-          "Value": "no-cache"
+          "Value": "max-age=31536000, immutable"
         },
         {
           "Name": "Content-Encoding",
@@ -9958,19 +10210,27 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"2vSZLYSysgR3rww/eHUSlJEj9/SFRQf+nx4kDmX65mg=\""
+          "Value": "W/\"Hiiya0mXCspL1zIpabhH+1PApHhuSBjdLar6CGJ1y54=\""
         }
       ],
       "EndpointProperties": [
         {
+          "Name": "fingerprint",
+          "Value": "ec2xizij36"
+        },
+        {
+          "Name": "label",
+          "Value": "js/admin/admin.js"
+        },
+        {
           "Name": "integrity",
-          "Value": "sha256-2vSZLYSysgR3rww/eHUSlJEj9/SFRQf+nx4kDmX65mg="
+          "Value": "sha256-Hiiya0mXCspL1zIpabhH+1PApHhuSBjdLar6CGJ1y54="
         }
       ]
     },
     {
-      "Route": "js/admin.js",
-      "AssetFile": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\js\\admin.js",
+      "Route": "js/admin/admin.ec2xizij36.js",
+      "AssetFile": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\js\\admin\\admin.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -9979,7 +10239,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "6068"
+          "Value": "2290"
         },
         {
           "Name": "Content-Type",
@@ -9987,27 +10247,35 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"2vSZLYSysgR3rww/eHUSlJEj9/SFRQf+nx4kDmX65mg=\""
+          "Value": "\"Hiiya0mXCspL1zIpabhH+1PApHhuSBjdLar6CGJ1y54=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 13 Apr 2025 04:01:30 GMT"
+          "Value": "Sun, 13 Apr 2025 06:37:45 GMT"
         },
         {
           "Name": "Cache-Control",
-          "Value": "no-cache"
+          "Value": "max-age=31536000, immutable"
         }
       ],
       "EndpointProperties": [
         {
+          "Name": "fingerprint",
+          "Value": "ec2xizij36"
+        },
+        {
+          "Name": "label",
+          "Value": "js/admin/admin.js"
+        },
+        {
           "Name": "integrity",
-          "Value": "sha256-2vSZLYSysgR3rww/eHUSlJEj9/SFRQf+nx4kDmX65mg="
+          "Value": "sha256-Hiiya0mXCspL1zIpabhH+1PApHhuSBjdLar6CGJ1y54="
         }
       ]
     },
     {
-      "Route": "js/admin.js.gz",
-      "AssetFile": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\obj\\Debug\\net9.0\\compressed\\3kg7w4y1ac-qchcq2b3py.gz",
+      "Route": "js/admin/admin.ec2xizij36.js.gz",
+      "AssetFile": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\obj\\Debug\\net9.0\\compressed\\zlqk38tc40-ec2xizij36.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -10016,7 +10284,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1173"
+          "Value": "549"
         },
         {
           "Name": "Content-Type",
@@ -10024,15 +10292,15 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"bOmFP7LpwA9yv+Fcjv3r46+cz32BY09Dg3lqAlfqpqM=\""
+          "Value": "\"3tgpW34+OFC2vAC7V2jocnIDmjWGwM3L7JxE7apudqA=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 13 Apr 2025 04:01:30 GMT"
+          "Value": "Sun, 13 Apr 2025 06:37:45 GMT"
         },
         {
           "Name": "Cache-Control",
-          "Value": "no-cache"
+          "Value": "max-age=31536000, immutable"
         },
         {
           "Name": "Content-Encoding",
@@ -10045,19 +10313,27 @@
       ],
       "EndpointProperties": [
         {
+          "Name": "fingerprint",
+          "Value": "ec2xizij36"
+        },
+        {
+          "Name": "label",
+          "Value": "js/admin/admin.js.gz"
+        },
+        {
           "Name": "integrity",
-          "Value": "sha256-bOmFP7LpwA9yv+Fcjv3r46+cz32BY09Dg3lqAlfqpqM="
+          "Value": "sha256-3tgpW34+OFC2vAC7V2jocnIDmjWGwM3L7JxE7apudqA="
         }
       ]
     },
     {
-      "Route": "js/admin.qchcq2b3py.js",
-      "AssetFile": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\obj\\Debug\\net9.0\\compressed\\3kg7w4y1ac-qchcq2b3py.gz",
+      "Route": "js/admin/admin.js",
+      "AssetFile": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\obj\\Debug\\net9.0\\compressed\\zlqk38tc40-ec2xizij36.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000851788756"
+          "Quality": "0.001818181818"
         }
       ],
       "ResponseHeaders": [
@@ -10067,15 +10343,289 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1173"
+          "Value": "549"
         },
         {
           "Name": "ETag",
-          "Value": "\"bOmFP7LpwA9yv+Fcjv3r46+cz32BY09Dg3lqAlfqpqM=\""
+          "Value": "\"3tgpW34+OFC2vAC7V2jocnIDmjWGwM3L7JxE7apudqA=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 13 Apr 2025 04:01:30 GMT"
+          "Value": "Sun, 13 Apr 2025 06:37:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"Hiiya0mXCspL1zIpabhH+1PApHhuSBjdLar6CGJ1y54=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Hiiya0mXCspL1zIpabhH+1PApHhuSBjdLar6CGJ1y54="
+        }
+      ]
+    },
+    {
+      "Route": "js/admin/admin.js",
+      "AssetFile": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\js\\admin\\admin.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2290"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Hiiya0mXCspL1zIpabhH+1PApHhuSBjdLar6CGJ1y54=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 13 Apr 2025 06:37:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Hiiya0mXCspL1zIpabhH+1PApHhuSBjdLar6CGJ1y54="
+        }
+      ]
+    },
+    {
+      "Route": "js/admin/admin.js.gz",
+      "AssetFile": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\obj\\Debug\\net9.0\\compressed\\zlqk38tc40-ec2xizij36.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "549"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"3tgpW34+OFC2vAC7V2jocnIDmjWGwM3L7JxE7apudqA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 13 Apr 2025 06:37:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-3tgpW34+OFC2vAC7V2jocnIDmjWGwM3L7JxE7apudqA="
+        }
+      ]
+    },
+    {
+      "Route": "js/admin/boardAdmin.js",
+      "AssetFile": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\obj\\Debug\\net9.0\\compressed\\j75jllytz1-vq90seu6r3.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.001015228426"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "984"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"rcnSizCEdbRzhzRsb11+UC+yNKBjyhKJAO+NwIFMrlg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 13 Apr 2025 05:56:52 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"VyXjKLEsy5VFaNmyK1CAhOptsOCgf2I+ezVzUCujcjU=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-VyXjKLEsy5VFaNmyK1CAhOptsOCgf2I+ezVzUCujcjU="
+        }
+      ]
+    },
+    {
+      "Route": "js/admin/boardAdmin.js",
+      "AssetFile": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\js\\admin\\boardAdmin.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3859"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"VyXjKLEsy5VFaNmyK1CAhOptsOCgf2I+ezVzUCujcjU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 13 Apr 2025 05:56:52 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-VyXjKLEsy5VFaNmyK1CAhOptsOCgf2I+ezVzUCujcjU="
+        }
+      ]
+    },
+    {
+      "Route": "js/admin/boardAdmin.js.gz",
+      "AssetFile": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\obj\\Debug\\net9.0\\compressed\\j75jllytz1-vq90seu6r3.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "984"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"rcnSizCEdbRzhzRsb11+UC+yNKBjyhKJAO+NwIFMrlg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 13 Apr 2025 05:56:52 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-rcnSizCEdbRzhzRsb11+UC+yNKBjyhKJAO+NwIFMrlg="
+        }
+      ]
+    },
+    {
+      "Route": "js/admin/boardAdmin.vq90seu6r3.js",
+      "AssetFile": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\obj\\Debug\\net9.0\\compressed\\j75jllytz1-vq90seu6r3.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.001015228426"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "984"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"rcnSizCEdbRzhzRsb11+UC+yNKBjyhKJAO+NwIFMrlg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 13 Apr 2025 05:56:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -10095,27 +10645,27 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"2vSZLYSysgR3rww/eHUSlJEj9/SFRQf+nx4kDmX65mg=\""
+          "Value": "W/\"VyXjKLEsy5VFaNmyK1CAhOptsOCgf2I+ezVzUCujcjU=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "qchcq2b3py"
+          "Value": "vq90seu6r3"
         },
         {
           "Name": "label",
-          "Value": "js/admin.js"
+          "Value": "js/admin/boardAdmin.js"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-2vSZLYSysgR3rww/eHUSlJEj9/SFRQf+nx4kDmX65mg="
+          "Value": "sha256-VyXjKLEsy5VFaNmyK1CAhOptsOCgf2I+ezVzUCujcjU="
         }
       ]
     },
     {
-      "Route": "js/admin.qchcq2b3py.js",
-      "AssetFile": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\js\\admin.js",
+      "Route": "js/admin/boardAdmin.vq90seu6r3.js",
+      "AssetFile": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\js\\admin\\boardAdmin.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -10124,7 +10674,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "6068"
+          "Value": "3859"
         },
         {
           "Name": "Content-Type",
@@ -10132,11 +10682,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"2vSZLYSysgR3rww/eHUSlJEj9/SFRQf+nx4kDmX65mg=\""
+          "Value": "\"VyXjKLEsy5VFaNmyK1CAhOptsOCgf2I+ezVzUCujcjU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 13 Apr 2025 04:01:30 GMT"
+          "Value": "Sun, 13 Apr 2025 05:56:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -10146,21 +10696,21 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "qchcq2b3py"
+          "Value": "vq90seu6r3"
         },
         {
           "Name": "label",
-          "Value": "js/admin.js"
+          "Value": "js/admin/boardAdmin.js"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-2vSZLYSysgR3rww/eHUSlJEj9/SFRQf+nx4kDmX65mg="
+          "Value": "sha256-VyXjKLEsy5VFaNmyK1CAhOptsOCgf2I+ezVzUCujcjU="
         }
       ]
     },
     {
-      "Route": "js/admin.qchcq2b3py.js.gz",
-      "AssetFile": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\obj\\Debug\\net9.0\\compressed\\3kg7w4y1ac-qchcq2b3py.gz",
+      "Route": "js/admin/boardAdmin.vq90seu6r3.js.gz",
+      "AssetFile": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\obj\\Debug\\net9.0\\compressed\\j75jllytz1-vq90seu6r3.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -10169,7 +10719,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1173"
+          "Value": "984"
         },
         {
           "Name": "Content-Type",
@@ -10177,11 +10727,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"bOmFP7LpwA9yv+Fcjv3r46+cz32BY09Dg3lqAlfqpqM=\""
+          "Value": "\"rcnSizCEdbRzhzRsb11+UC+yNKBjyhKJAO+NwIFMrlg=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 13 Apr 2025 04:01:30 GMT"
+          "Value": "Sun, 13 Apr 2025 05:56:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -10199,15 +10749,1505 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "qchcq2b3py"
+          "Value": "vq90seu6r3"
         },
         {
           "Name": "label",
-          "Value": "js/admin.js.gz"
+          "Value": "js/admin/boardAdmin.js.gz"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-bOmFP7LpwA9yv+Fcjv3r46+cz32BY09Dg3lqAlfqpqM="
+          "Value": "sha256-rcnSizCEdbRzhzRsb11+UC+yNKBjyhKJAO+NwIFMrlg="
+        }
+      ]
+    },
+    {
+      "Route": "js/admin/boardMember.3d0u6pzkp4.js",
+      "AssetFile": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\obj\\Debug\\net9.0\\compressed\\q0pfju853l-3d0u6pzkp4.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000881834215"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1133"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"X6ndJEa1Y3vil7tzI+1Yv+p8eMyzUURalzyZu2o+nNs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 13 Apr 2025 06:37:53 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"qajBXYyEpAfVgcEvn4yV8MkBrghqq0v540wiHUdMStQ=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "3d0u6pzkp4"
+        },
+        {
+          "Name": "label",
+          "Value": "js/admin/boardMember.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-qajBXYyEpAfVgcEvn4yV8MkBrghqq0v540wiHUdMStQ="
+        }
+      ]
+    },
+    {
+      "Route": "js/admin/boardMember.3d0u6pzkp4.js",
+      "AssetFile": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\js\\admin\\boardMember.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4668"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"qajBXYyEpAfVgcEvn4yV8MkBrghqq0v540wiHUdMStQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 13 Apr 2025 06:37:53 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "3d0u6pzkp4"
+        },
+        {
+          "Name": "label",
+          "Value": "js/admin/boardMember.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-qajBXYyEpAfVgcEvn4yV8MkBrghqq0v540wiHUdMStQ="
+        }
+      ]
+    },
+    {
+      "Route": "js/admin/boardMember.3d0u6pzkp4.js.gz",
+      "AssetFile": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\obj\\Debug\\net9.0\\compressed\\q0pfju853l-3d0u6pzkp4.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1133"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"X6ndJEa1Y3vil7tzI+1Yv+p8eMyzUURalzyZu2o+nNs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 13 Apr 2025 06:37:53 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "3d0u6pzkp4"
+        },
+        {
+          "Name": "label",
+          "Value": "js/admin/boardMember.js.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-X6ndJEa1Y3vil7tzI+1Yv+p8eMyzUURalzyZu2o+nNs="
+        }
+      ]
+    },
+    {
+      "Route": "js/admin/boardMember.js",
+      "AssetFile": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\obj\\Debug\\net9.0\\compressed\\q0pfju853l-3d0u6pzkp4.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000881834215"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1133"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"X6ndJEa1Y3vil7tzI+1Yv+p8eMyzUURalzyZu2o+nNs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 13 Apr 2025 06:37:53 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"qajBXYyEpAfVgcEvn4yV8MkBrghqq0v540wiHUdMStQ=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-qajBXYyEpAfVgcEvn4yV8MkBrghqq0v540wiHUdMStQ="
+        }
+      ]
+    },
+    {
+      "Route": "js/admin/boardMember.js",
+      "AssetFile": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\js\\admin\\boardMember.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4668"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"qajBXYyEpAfVgcEvn4yV8MkBrghqq0v540wiHUdMStQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 13 Apr 2025 06:37:53 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-qajBXYyEpAfVgcEvn4yV8MkBrghqq0v540wiHUdMStQ="
+        }
+      ]
+    },
+    {
+      "Route": "js/admin/boardMember.js.gz",
+      "AssetFile": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\obj\\Debug\\net9.0\\compressed\\q0pfju853l-3d0u6pzkp4.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1133"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"X6ndJEa1Y3vil7tzI+1Yv+p8eMyzUURalzyZu2o+nNs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 13 Apr 2025 06:37:53 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-X6ndJEa1Y3vil7tzI+1Yv+p8eMyzUURalzyZu2o+nNs="
+        }
+      ]
+    },
+    {
+      "Route": "js/admin/cardAdmin.1wmnilgdh6.js",
+      "AssetFile": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\obj\\Debug\\net9.0\\compressed\\bccsi8ks72-1wmnilgdh6.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000934579439"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1069"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"zzkdpUE0S822Djw6L0g2bDdEtjb/NdHRRGLcU/ZPtCg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 13 Apr 2025 06:05:00 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"XyZvMoyAtti6T6iMpsR+Lhbrz47BTPAS92OXA7D37LY=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "1wmnilgdh6"
+        },
+        {
+          "Name": "label",
+          "Value": "js/admin/cardAdmin.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-XyZvMoyAtti6T6iMpsR+Lhbrz47BTPAS92OXA7D37LY="
+        }
+      ]
+    },
+    {
+      "Route": "js/admin/cardAdmin.1wmnilgdh6.js",
+      "AssetFile": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\js\\admin\\cardAdmin.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4322"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"XyZvMoyAtti6T6iMpsR+Lhbrz47BTPAS92OXA7D37LY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 13 Apr 2025 06:05:00 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "1wmnilgdh6"
+        },
+        {
+          "Name": "label",
+          "Value": "js/admin/cardAdmin.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-XyZvMoyAtti6T6iMpsR+Lhbrz47BTPAS92OXA7D37LY="
+        }
+      ]
+    },
+    {
+      "Route": "js/admin/cardAdmin.1wmnilgdh6.js.gz",
+      "AssetFile": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\obj\\Debug\\net9.0\\compressed\\bccsi8ks72-1wmnilgdh6.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1069"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"zzkdpUE0S822Djw6L0g2bDdEtjb/NdHRRGLcU/ZPtCg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 13 Apr 2025 06:05:00 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "1wmnilgdh6"
+        },
+        {
+          "Name": "label",
+          "Value": "js/admin/cardAdmin.js.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-zzkdpUE0S822Djw6L0g2bDdEtjb/NdHRRGLcU/ZPtCg="
+        }
+      ]
+    },
+    {
+      "Route": "js/admin/cardAdmin.js",
+      "AssetFile": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\obj\\Debug\\net9.0\\compressed\\bccsi8ks72-1wmnilgdh6.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000934579439"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1069"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"zzkdpUE0S822Djw6L0g2bDdEtjb/NdHRRGLcU/ZPtCg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 13 Apr 2025 06:05:00 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"XyZvMoyAtti6T6iMpsR+Lhbrz47BTPAS92OXA7D37LY=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-XyZvMoyAtti6T6iMpsR+Lhbrz47BTPAS92OXA7D37LY="
+        }
+      ]
+    },
+    {
+      "Route": "js/admin/cardAdmin.js",
+      "AssetFile": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\js\\admin\\cardAdmin.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4322"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"XyZvMoyAtti6T6iMpsR+Lhbrz47BTPAS92OXA7D37LY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 13 Apr 2025 06:05:00 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-XyZvMoyAtti6T6iMpsR+Lhbrz47BTPAS92OXA7D37LY="
+        }
+      ]
+    },
+    {
+      "Route": "js/admin/cardAdmin.js.gz",
+      "AssetFile": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\obj\\Debug\\net9.0\\compressed\\bccsi8ks72-1wmnilgdh6.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1069"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"zzkdpUE0S822Djw6L0g2bDdEtjb/NdHRRGLcU/ZPtCg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 13 Apr 2025 06:05:00 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-zzkdpUE0S822Djw6L0g2bDdEtjb/NdHRRGLcU/ZPtCg="
+        }
+      ]
+    },
+    {
+      "Route": "js/admin/commentAdmin.js",
+      "AssetFile": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\obj\\Debug\\net9.0\\compressed\\8p7vh7jio1-rrx2t326cn.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.001034126163"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "966"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"gNwcbwK9+YnWx9iPSQbsrZbShho4PkpDxm+yYxWIqs0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 13 Apr 2025 06:27:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"d+DkJ1qNgMJYCaPbwYWkNHmF6CPv96GB+GtT+Vrz9Ck=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-d+DkJ1qNgMJYCaPbwYWkNHmF6CPv96GB+GtT+Vrz9Ck="
+        }
+      ]
+    },
+    {
+      "Route": "js/admin/commentAdmin.js",
+      "AssetFile": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\js\\admin\\commentAdmin.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3993"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"d+DkJ1qNgMJYCaPbwYWkNHmF6CPv96GB+GtT+Vrz9Ck=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 13 Apr 2025 06:27:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-d+DkJ1qNgMJYCaPbwYWkNHmF6CPv96GB+GtT+Vrz9Ck="
+        }
+      ]
+    },
+    {
+      "Route": "js/admin/commentAdmin.js.gz",
+      "AssetFile": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\obj\\Debug\\net9.0\\compressed\\8p7vh7jio1-rrx2t326cn.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "966"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"gNwcbwK9+YnWx9iPSQbsrZbShho4PkpDxm+yYxWIqs0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 13 Apr 2025 06:27:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-gNwcbwK9+YnWx9iPSQbsrZbShho4PkpDxm+yYxWIqs0="
+        }
+      ]
+    },
+    {
+      "Route": "js/admin/commentAdmin.rrx2t326cn.js",
+      "AssetFile": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\obj\\Debug\\net9.0\\compressed\\8p7vh7jio1-rrx2t326cn.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.001034126163"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "966"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"gNwcbwK9+YnWx9iPSQbsrZbShho4PkpDxm+yYxWIqs0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 13 Apr 2025 06:27:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"d+DkJ1qNgMJYCaPbwYWkNHmF6CPv96GB+GtT+Vrz9Ck=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "rrx2t326cn"
+        },
+        {
+          "Name": "label",
+          "Value": "js/admin/commentAdmin.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-d+DkJ1qNgMJYCaPbwYWkNHmF6CPv96GB+GtT+Vrz9Ck="
+        }
+      ]
+    },
+    {
+      "Route": "js/admin/commentAdmin.rrx2t326cn.js",
+      "AssetFile": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\js\\admin\\commentAdmin.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3993"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"d+DkJ1qNgMJYCaPbwYWkNHmF6CPv96GB+GtT+Vrz9Ck=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 13 Apr 2025 06:27:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "rrx2t326cn"
+        },
+        {
+          "Name": "label",
+          "Value": "js/admin/commentAdmin.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-d+DkJ1qNgMJYCaPbwYWkNHmF6CPv96GB+GtT+Vrz9Ck="
+        }
+      ]
+    },
+    {
+      "Route": "js/admin/commentAdmin.rrx2t326cn.js.gz",
+      "AssetFile": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\obj\\Debug\\net9.0\\compressed\\8p7vh7jio1-rrx2t326cn.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "966"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"gNwcbwK9+YnWx9iPSQbsrZbShho4PkpDxm+yYxWIqs0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 13 Apr 2025 06:27:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "rrx2t326cn"
+        },
+        {
+          "Name": "label",
+          "Value": "js/admin/commentAdmin.js.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-gNwcbwK9+YnWx9iPSQbsrZbShho4PkpDxm+yYxWIqs0="
+        }
+      ]
+    },
+    {
+      "Route": "js/admin/listAdmin.js",
+      "AssetFile": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\obj\\Debug\\net9.0\\compressed\\72jr6sxt5p-y4srri4jy4.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.001060445387"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "942"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"0sSg/6UCCuyezSjE+3Xlf+wafJBvxwLdM2psB4KG+L8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 13 Apr 2025 05:57:57 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"zrVbGlMvf328hJiL0WDlhDRuI3Co15/FXnQX6VVQ6ec=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-zrVbGlMvf328hJiL0WDlhDRuI3Co15/FXnQX6VVQ6ec="
+        }
+      ]
+    },
+    {
+      "Route": "js/admin/listAdmin.js",
+      "AssetFile": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\js\\admin\\listAdmin.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3629"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"zrVbGlMvf328hJiL0WDlhDRuI3Co15/FXnQX6VVQ6ec=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 13 Apr 2025 05:57:57 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-zrVbGlMvf328hJiL0WDlhDRuI3Co15/FXnQX6VVQ6ec="
+        }
+      ]
+    },
+    {
+      "Route": "js/admin/listAdmin.js.gz",
+      "AssetFile": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\obj\\Debug\\net9.0\\compressed\\72jr6sxt5p-y4srri4jy4.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "942"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"0sSg/6UCCuyezSjE+3Xlf+wafJBvxwLdM2psB4KG+L8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 13 Apr 2025 05:57:57 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-0sSg/6UCCuyezSjE+3Xlf+wafJBvxwLdM2psB4KG+L8="
+        }
+      ]
+    },
+    {
+      "Route": "js/admin/listAdmin.y4srri4jy4.js",
+      "AssetFile": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\obj\\Debug\\net9.0\\compressed\\72jr6sxt5p-y4srri4jy4.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.001060445387"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "942"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"0sSg/6UCCuyezSjE+3Xlf+wafJBvxwLdM2psB4KG+L8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 13 Apr 2025 05:57:57 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"zrVbGlMvf328hJiL0WDlhDRuI3Co15/FXnQX6VVQ6ec=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "y4srri4jy4"
+        },
+        {
+          "Name": "label",
+          "Value": "js/admin/listAdmin.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-zrVbGlMvf328hJiL0WDlhDRuI3Co15/FXnQX6VVQ6ec="
+        }
+      ]
+    },
+    {
+      "Route": "js/admin/listAdmin.y4srri4jy4.js",
+      "AssetFile": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\js\\admin\\listAdmin.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3629"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"zrVbGlMvf328hJiL0WDlhDRuI3Co15/FXnQX6VVQ6ec=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 13 Apr 2025 05:57:57 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "y4srri4jy4"
+        },
+        {
+          "Name": "label",
+          "Value": "js/admin/listAdmin.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-zrVbGlMvf328hJiL0WDlhDRuI3Co15/FXnQX6VVQ6ec="
+        }
+      ]
+    },
+    {
+      "Route": "js/admin/listAdmin.y4srri4jy4.js.gz",
+      "AssetFile": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\obj\\Debug\\net9.0\\compressed\\72jr6sxt5p-y4srri4jy4.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "942"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"0sSg/6UCCuyezSjE+3Xlf+wafJBvxwLdM2psB4KG+L8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 13 Apr 2025 05:57:57 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "y4srri4jy4"
+        },
+        {
+          "Name": "label",
+          "Value": "js/admin/listAdmin.js.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-0sSg/6UCCuyezSjE+3Xlf+wafJBvxwLdM2psB4KG+L8="
+        }
+      ]
+    },
+    {
+      "Route": "js/admin/userAdmin.js",
+      "AssetFile": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\obj\\Debug\\net9.0\\compressed\\7v80aq6xsa-u9oa2r9yl0.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000887311446"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1126"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"PXvoSzjqMbZQLAMzLUTh3DmvoXftpzXQ7XBU1kmJ4CU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 13 Apr 2025 06:15:29 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"nsiUktwly0nERoOrJngmn+9dxaWFj34kjZZIE3Rv7bU=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-nsiUktwly0nERoOrJngmn+9dxaWFj34kjZZIE3Rv7bU="
+        }
+      ]
+    },
+    {
+      "Route": "js/admin/userAdmin.js",
+      "AssetFile": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\js\\admin\\userAdmin.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4595"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"nsiUktwly0nERoOrJngmn+9dxaWFj34kjZZIE3Rv7bU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 13 Apr 2025 06:15:29 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-nsiUktwly0nERoOrJngmn+9dxaWFj34kjZZIE3Rv7bU="
+        }
+      ]
+    },
+    {
+      "Route": "js/admin/userAdmin.js.gz",
+      "AssetFile": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\obj\\Debug\\net9.0\\compressed\\7v80aq6xsa-u9oa2r9yl0.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1126"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"PXvoSzjqMbZQLAMzLUTh3DmvoXftpzXQ7XBU1kmJ4CU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 13 Apr 2025 06:15:29 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-PXvoSzjqMbZQLAMzLUTh3DmvoXftpzXQ7XBU1kmJ4CU="
+        }
+      ]
+    },
+    {
+      "Route": "js/admin/userAdmin.u9oa2r9yl0.js",
+      "AssetFile": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\obj\\Debug\\net9.0\\compressed\\7v80aq6xsa-u9oa2r9yl0.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000887311446"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1126"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"PXvoSzjqMbZQLAMzLUTh3DmvoXftpzXQ7XBU1kmJ4CU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 13 Apr 2025 06:15:29 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"nsiUktwly0nERoOrJngmn+9dxaWFj34kjZZIE3Rv7bU=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "u9oa2r9yl0"
+        },
+        {
+          "Name": "label",
+          "Value": "js/admin/userAdmin.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-nsiUktwly0nERoOrJngmn+9dxaWFj34kjZZIE3Rv7bU="
+        }
+      ]
+    },
+    {
+      "Route": "js/admin/userAdmin.u9oa2r9yl0.js",
+      "AssetFile": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\js\\admin\\userAdmin.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4595"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"nsiUktwly0nERoOrJngmn+9dxaWFj34kjZZIE3Rv7bU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 13 Apr 2025 06:15:29 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "u9oa2r9yl0"
+        },
+        {
+          "Name": "label",
+          "Value": "js/admin/userAdmin.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-nsiUktwly0nERoOrJngmn+9dxaWFj34kjZZIE3Rv7bU="
+        }
+      ]
+    },
+    {
+      "Route": "js/admin/userAdmin.u9oa2r9yl0.js.gz",
+      "AssetFile": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\obj\\Debug\\net9.0\\compressed\\7v80aq6xsa-u9oa2r9yl0.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1126"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"PXvoSzjqMbZQLAMzLUTh3DmvoXftpzXQ7XBU1kmJ4CU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 13 Apr 2025 06:15:29 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "u9oa2r9yl0"
+        },
+        {
+          "Name": "label",
+          "Value": "js/admin/userAdmin.js.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-PXvoSzjqMbZQLAMzLUTh3DmvoXftpzXQ7XBU1kmJ4CU="
         }
       ]
     },

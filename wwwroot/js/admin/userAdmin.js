@@ -43,26 +43,6 @@ export async function loadUsers() {
     `;
 }
 
-export async function updateUser(userID, field, value) {
-    await fetch('/Admin/UpdateUser', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ userID, field, value })
-    });
-    alert('User updated successfully!');
-}
-
-export async function deleteUser(userID) {
-    if (!confirm('Are you sure you want to delete this user?')) return;
-    await fetch('/Admin/DeleteUser', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ userID })
-    });
-    alert('User deleted successfully!');
-    loadUsers();
-}
-
 export function showAddUserModal() {
     const modal = document.getElementById('addUserModal');
     modal.classList.remove('hidden');
@@ -86,13 +66,48 @@ export async function addUser() {
         return;
     }
 
-    await fetch('/Admin/AddUser', {
+    const response = await fetch('/Admin/AddUser', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ fullName, email, passwordHash: password, role })
+        body: JSON.stringify({ fullName, email, password, role })
     });
 
-    alert('User added successfully!');
-    closeAddUserModal();
-    loadUsers();
+    const result = await response.json();
+    alert(result.message);
+    if (result.success) {
+        closeAddUserModal();
+        loadUsers();
+    }
+}
+
+export async function updateUser(userID, field, value) {
+    console.log(JSON.stringify({ userID, field, value }));
+
+    const response = await fetch('/Admin/UpdateUser', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ userID, field, value })
+    });
+
+    const result = await response.json();
+    alert(result.message);
+    if (result.success) {
+        loadUsers();
+    }
+}
+
+export async function deleteUser(userID) {
+    if (!confirm('Are you sure you want to delete this user?')) return;
+
+    const response = await fetch('/Admin/DeleteUser', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ userID })
+    });
+
+    const result = await response.json();
+    alert(result.message);
+    if (result.success) {
+        loadUsers();
+    }
 }
