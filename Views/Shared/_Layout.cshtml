@@ -23,20 +23,20 @@
             @await Html.PartialAsync("_Header")
         }
 
-        <div class="flex-grow flex justify-center w-full aligns-center">
-            <main role="main" class="w-full">
+        <div class="flex-grow flex justify-center w-full h-full aligns-center">
+            <main role="main" class="w-full h-full">
                 @RenderBody()
             </main>
         </div>
 
         @if (Context.Session.GetString("Email") == null && !Context.Request.Path.StartsWithSegments("/User")
-                && !Context.Request.Path.StartsWithSegments("/Board"))
+                && !Context.Request.Path.StartsWithSegments("/Board") && !Context.Request.Path.StartsWithSegments("/Admin"))
         {
             <!-- Show _Footer only for non-User pages -->
             @await Html.PartialAsync("_Footer")
         }
         @if (Context.Session.GetString("Email") != null && !Context.Request.Path.StartsWithSegments("/User")
-                && !Context.Request.Path.StartsWithSegments("/Board"))
+                && !Context.Request.Path.StartsWithSegments("/Board") && !Context.Request.Path.StartsWithSegments("/Admin"))
         {
             <!-- Show _Footer only for non-User pages -->
             @await Html.PartialAsync("_Footer")

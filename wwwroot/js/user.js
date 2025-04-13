@@ -67,7 +67,14 @@ async function createBoard() {
 
         if (data.success) {
             closeNewBoardModal();
-            fetchBoards(); // Refresh the boards
+
+            // Check if we're on the User Home page
+            if (isUserHomePage()) {
+                fetchBoards(); // Refresh the boards list if we're on the home page
+            } else {
+                // If not on home page, redirect to home page
+                window.location.href = '/User/Home';
+            }
         } else {
             alert(data.message || 'Failed to create board');
         }

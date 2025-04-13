@@ -58,7 +58,7 @@ namespace TaskieWNC.Controllers
 
                 var list = new ListModel
                 {
-                    ListName = request.ListName,
+                    ListName = request.ListName ?? "Unknown Listname",
                     BoardID = request.BoardId,
                     Position = request.Position // Use the position from the request
                 };

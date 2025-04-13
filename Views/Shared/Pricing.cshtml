@@ -1,0 +1,336 @@
+@{
+    ViewData["Title"] = "Pricing - Taskie";
+}
+
+<!-- Pricing Header -->
+<section class="bg-gradient-to-r from-blue-500 to-cyan-500 text-white pt-20 pb-16 md:py-24">
+    <div class="container mx-auto px-4 md:px-8">
+        <div class="max-w-4xl mx-auto text-center">
+            <h1 class="text-3xl md:text-5xl font-bold mb-4">Simple, Transparent Pricing</h1>
+            <p class="text-lg md:text-xl opacity-90 mb-6">Choose the plan that fits your needs. No hidden fees, cancel
+                anytime.</p>
+            <div class="flex justify-center items-center space-x-2 mb-4">
+                <span class="text-sm font-medium">Monthly</span>
+                <button id="pricingToggle"
+                    class="relative inline-flex h-6 w-12 items-center rounded-full bg-white/30 transition-colors">
+                    <span
+                        class="inline-block h-4 w-4 transform rounded-full bg-white shadow-lg transition-transform translate-x-7"></span>
+                </button>
+                <span class="text-sm font-medium">Yearly <span
+                        class="text-xs bg-white/30 text-white px-2 py-0.5 rounded-full">Save 20%</span></span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Pricing Plans -->
+<section class="py-12 md:py-20 bg-white">
+    <div class="container mx-auto px-4 md:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <!-- Free Plan -->
+            <div
+                class="border border-gray-200 rounded-lg shadow-md hover:shadow-xl transition-shadow p-6 flex flex-col">
+                <div class="mb-6">
+                    <span class="text-sm font-medium text-gray-500 uppercase tracking-wider">Free</span>
+                    <div class="mt-2 flex items-baseline">
+                        <span class="text-4xl font-bold text-gray-900">$0</span>
+                        <span class="text-gray-500 font-medium ml-1">/forever</span>
+                    </div>
+                    <p class="mt-4 text-gray-600">Perfect for individuals getting started with personal projects.</p>
+                </div>
+                <ul class="space-y-3 mb-8 flex-grow">
+                    <li class="flex items-center text-sm text-gray-600">
+                        <i class="fa-solid fa-check text-green-500 mr-2"></i>
+                        <span>Up to 5 boards</span>
+                    </li>
+                    <li class="flex items-center text-sm text-gray-600">
+                        <i class="fa-solid fa-check text-green-500 mr-2"></i>
+                        <span>Basic templates</span>
+                    </li>
+                    <li class="flex items-center text-sm text-gray-600">
+                        <i class="fa-solid fa-check text-green-500 mr-2"></i>
+                        <span>Limited storage (100MB)</span>
+                    </li>
+                    <li class="flex items-center text-sm text-gray-600">
+                        <i class="fa-solid fa-check text-green-500 mr-2"></i>
+                        <span>Single user only</span>
+                    </li>
+                </ul>
+                <a href="/Auth/Register"
+                    class="text-center py-2 px-4 border border-blue-500 text-blue-500 hover:bg-blue-50 rounded-md transition-colors font-medium">
+                    Get Started
+                </a>
+            </div>
+
+            <!-- Pro Plan -->
+            <div
+                class="border border-blue-500 rounded-lg shadow-md hover:shadow-xl transition-shadow p-6 bg-white relative flex flex-col">
+                <div class="absolute -top-3 right-4 bg-blue-500 text-white text-xs font-bold px-3 py-1 rounded-full">
+                    Popular</div>
+                <div class="mb-6">
+                    <span class="text-sm font-medium text-gray-500 uppercase tracking-wider">Pro</span>
+                    <div class="mt-2 flex items-baseline">
+                        <span class="text-4xl font-bold text-gray-900" id="proPrice">$9</span>
+                        <span class="text-gray-500 font-medium ml-1" id="proPeriod">/month</span>
+                    </div>
+                    <p class="mt-4 text-gray-600">For professionals and small teams to boost productivity.</p>
+                </div>
+                <ul class="space-y-3 mb-8 flex-grow">
+                    <li class="flex items-center text-sm text-gray-600">
+                        <i class="fa-solid fa-check text-green-500 mr-2"></i>
+                        <span>Unlimited boards</span>
+                    </li>
+                    <li class="flex items-center text-sm text-gray-600">
+                        <i class="fa-solid fa-check text-green-500 mr-2"></i>
+                        <span>Advanced templates</span>
+                    </li>
+                    <li class="flex items-center text-sm text-gray-600">
+                        <i class="fa-solid fa-check text-green-500 mr-2"></i>
+                        <span>1GB storage</span>
+                    </li>
+                    <li class="flex items-center text-sm text-gray-600">
+                        <i class="fa-solid fa-check text-green-500 mr-2"></i>
+                        <span>Up to 5 team members</span>
+                    </li>
+                    <li class="flex items-center text-sm text-gray-600">
+                        <i class="fa-solid fa-check text-green-500 mr-2"></i>
+                        <span>Priority support</span>
+                    </li>
+                </ul>
+                <a href="/Auth/Register"
+                    class="text-center py-2 px-4 bg-blue-500 text-white hover:bg-blue-600 rounded-md transition-colors font-medium">
+                    Start 14-day Free Trial
+                </a>
+            </div>
+
+            <!-- Business Plan -->
+            <div
+                class="border border-gray-200 rounded-lg shadow-md hover:shadow-xl transition-shadow p-6 flex flex-col">
+                <div class="mb-6">
+                    <span class="text-sm font-medium text-gray-500 uppercase tracking-wider">Business</span>
+                    <div class="mt-2 flex items-baseline">
+                        <span class="text-4xl font-bold text-gray-900" id="businessPrice">$24</span>
+                        <span class="text-gray-500 font-medium ml-1" id="businessPeriod">/month</span>
+                    </div>
+                    <p class="mt-4 text-gray-600">For growing teams that need more power and flexibility.</p>
+                </div>
+                <ul class="space-y-3 mb-8 flex-grow">
+                    <li class="flex items-center text-sm text-gray-600">
+                        <i class="fa-solid fa-check text-green-500 mr-2"></i>
+                        <span>Everything in Pro</span>
+                    </li>
+                    <li class="flex items-center text-sm text-gray-600">
+                        <i class="fa-solid fa-check text-green-500 mr-2"></i>
+                        <span>10GB storage</span>
+                    </li>
+                    <li class="flex items-center text-sm text-gray-600">
+                        <i class="fa-solid fa-check text-green-500 mr-2"></i>
+                        <span>Unlimited team members</span>
+                    </li>
+                    <li class="flex items-center text-sm text-gray-600">
+                        <i class="fa-solid fa-check text-green-500 mr-2"></i>
+                        <span>Advanced security</span>
+                    </li>
+                    <li class="flex items-center text-sm text-gray-600">
+                        <i class="fa-solid fa-check text-green-500 mr-2"></i>
+                        <span>Admin controls</span>
+                    </li>
+                    <li class="flex items-center text-sm text-gray-600">
+                        <i class="fa-solid fa-check text-green-500 mr-2"></i>
+                        <span>24/7 dedicated support</span>
+                    </li>
+                </ul>
+                <a href="/Auth/Register"
+                    class="text-center py-2 px-4 border border-blue-500 text-blue-500 hover:bg-blue-50 rounded-md transition-colors font-medium">
+                    Contact Sales
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Feature Comparison -->
+<section class="py-12 md:py-20 bg-gray-50">
+    <div class="container mx-auto px-4 md:px-8">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-2xl md:text-3xl font-bold text-center mb-12">Compare All Features</h2>
+
+            <!-- Mobile comparison (accordion style) -->
+            <div class="md:hidden space-y-4">
+                <div class="border border-gray-200 rounded-lg bg-white overflow-hidden">
+                    <button class="w-full flex justify-between items-center p-4 text-left font-medium"
+                        onclick="toggleAccordion('basicFeatures')">
+                        <span>Basic Features</span>
+                        <i class="fa-solid fa-chevron-down transition-transform" id="basicFeaturesIcon"></i>
+                    </button>
+                    <div id="basicFeatures" class="hidden px-4 pb-4">
+                        <div class="space-y-3">
+                            <div class="grid grid-cols-4 items-center">
+                                <span class="col-span-2 text-sm text-gray-600">Task Management</span>
+                                <span class="text-center text-green-500"><i class="fa-solid fa-check"></i></span>
+                                <span class="text-center text-green-500"><i class="fa-solid fa-check"></i></span>
+                                <span class="text-center text-green-500"><i class="fa-solid fa-check"></i></span>
+                            </div>
+                            <!-- More features... -->
+                        </div>
+                    </div>
+                </div>
+                <!-- More accordion sections... -->
+            </div>
+
+            <!-- Desktop comparison (table) -->
+            <div class="hidden md:block overflow-x-auto">
+                <table class="w-full border-collapse">
+                    <thead>
+                        <tr class="bg-gray-100">
+                            <th class="py-4 px-6 text-left w-1/3">Features</th>
+                            <th class="py-4 px-6 text-center">Free</th>
+                            <th class="py-4 px-6 text-center">Pro</th>
+                            <th class="py-4 px-6 text-center">Business</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b border-gray-200">
+                            <td class="py-4 px-6 font-medium">Boards</td>
+                            <td class="py-4 px-6 text-center">5</td>
+                            <td class="py-4 px-6 text-center">Unlimited</td>
+                            <td class="py-4 px-6 text-center">Unlimited</td>
+                        </tr>
+                        <tr class="border-b border-gray-200">
+                            <td class="py-4 px-6 font-medium">Storage</td>
+                            <td class="py-4 px-6 text-center">100MB</td>
+                            <td class="py-4 px-6 text-center">1GB</td>
+                            <td class="py-4 px-6 text-center">10GB</td>
+                        </tr>
+                        <tr class="border-b border-gray-200">
+                            <td class="py-4 px-6 font-medium">Team Members</td>
+                            <td class="py-4 px-6 text-center">1</td>
+                            <td class="py-4 px-6 text-center">5</td>
+                            <td class="py-4 px-6 text-center">Unlimited</td>
+                        </tr>
+                        <!-- More rows... -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="py-12 md:py-20 bg-white">
+    <div class="container mx-auto px-4 md:px-8">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-2xl md:text-3xl font-bold text-center mb-12">Frequently Asked Questions</h2>
+
+            <div class="space-y-6">
+                <!-- FAQ Item -->
+                <div class="border border-gray-200 rounded-lg">
+                    <button class="w-full flex justify-between items-center p-4 text-left font-medium"
+                        onclick="toggleFaq(1)">
+                        <span>Can I upgrade or downgrade my plan?</span>
+                        <i class="fa-solid fa-chevron-down transition-transform" id="faq-icon-1"></i>
+                    </button>
+                    <div id="faq-1" class="hidden px-4 pb-4">
+                        <p class="text-gray-600">Yes, you can upgrade or downgrade your plan at any time. Changes to
+                            your subscription will be applied immediately, with any price difference prorated.</p>
+                    </div>
+                </div>
+
+                <!-- More FAQ items... -->
+                <div class="border border-gray-200 rounded-lg">
+                    <button class="w-full flex justify-between items-center p-4 text-left font-medium"
+                        onclick="toggleFaq(2)">
+                        <span>What payment methods do you accept?</span>
+                        <i class="fa-solid fa-chevron-down transition-transform" id="faq-icon-2"></i>
+                    </button>
+                    <div id="faq-2" class="hidden px-4 pb-4">
+                        <p class="text-gray-600">We accept all major credit cards, including Visa, Mastercard, and
+                            American Express. We also support PayPal for payment.</p>
+                    </div>
+                </div>
+
+                <div class="border border-gray-200 rounded-lg">
+                    <button class="w-full flex justify-between items-center p-4 text-left font-medium"
+                        onclick="toggleFaq(3)">
+                        <span>Is there a free trial available?</span>
+                        <i class="fa-solid fa-chevron-down transition-transform" id="faq-icon-3"></i>
+                    </button>
+                    <div id="faq-3" class="hidden px-4 pb-4">
+                        <p class="text-gray-600">Yes, we offer a 14-day free trial on our Pro plan. No credit card is
+                            required to start your trial.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-12 md:py-20 bg-blue-500 text-white">
+    <div class="container mx-auto px-4 md:px-8 text-center">
+        <h2 class="text-2xl md:text-3xl font-bold mb-4">Ready to boost your productivity?</h2>
+        <p class="text-lg mb-8 max-w-2xl mx-auto">Join thousands of professionals who use Taskie to organize their work
+            and streamline their processes.</p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+            <a href="/Auth/Register"
+                class="bg-white text-blue-600 hover:bg-blue-50 font-medium py-3 px-6 rounded-md transition-colors">
+                Start Your Free Trial
+            </a>
+            <a href="/Home/Contact"
+                class="bg-transparent border border-white text-white hover:bg-white/10 font-medium py-3 px-6 rounded-md transition-colors">
+                Contact Sales
+            </a>
+        </div>
+    </div>
+</section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const toggle = document.getElementById('pricingToggle');
+        const proPrice = document.getElementById('proPrice');
+        const proPeriod = document.getElementById('proPeriod');
+        const businessPrice = document.getElementById('businessPrice');
+        const businessPeriod = document.getElementById('businessPeriod');
+
+        // Toggle between monthly and yearly pricing
+        toggle.addEventListener('click', function () {
+            const isYearly = toggle.querySelector('span').classList.contains('translate-x-7');
+
+            if (isYearly) {
+                // Switch to monthly
+                toggle.querySelector('span').classList.remove('translate-x-7');
+                toggle.querySelector('span').classList.add('translate-x-1');
+                proPrice.textContent = '$9';
+                proPeriod.textContent = '/month';
+                businessPrice.textContent = '$24';
+                businessPeriod.textContent = '/month';
+            } else {
+                // Switch to yearly
+                toggle.querySelector('span').classList.remove('translate-x-1');
+                toggle.querySelector('span').classList.add('translate-x-7');
+                proPrice.textContent = '$87';
+                proPeriod.textContent = '/year';
+                businessPrice.textContent = '$230';
+                businessPeriod.textContent = '/year';
+            }
+        });
+    });
+
+    // FAQ toggles
+    function toggleFaq(id) {
+        const content = document.getElementById(`faq-${id}`);
+        const icon = document.getElementById(`faq-icon-${id}`);
+
+        content.classList.toggle('hidden');
+        icon.classList.toggle('rotate-180');
+    }
+
+    // Accordion toggle for mobile feature comparison
+    function toggleAccordion(id) {
+        const content = document.getElementById(id);
+        const icon = document.getElementById(`${id}Icon`);
+
+        content.classList.toggle('hidden');
+        icon.classList.toggle('rotate-180');
+    }
+</script>

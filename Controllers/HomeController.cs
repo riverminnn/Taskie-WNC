@@ -103,6 +103,10 @@ namespace TaskieWNC.Controllers
         {
             return View("Contact");
         }
+        public IActionResult Pricing()
+        {
+            return View("Pricing");
+        }
     }
 }
 

@@ -53,16 +53,9 @@
 </header>
 
 <!-- Main board content -->
-<main class="bg-gradient-to-r from-blue-500 to-cyan-500 w-full min-h-screen border-b border-gray-100 pt-24 mt-12">
+<main class="bg-gradient-to-r from-blue-500 to-cyan-500 w-full h-screen border-b border-gray-100 pt-12 mt-12">
     <input type="hidden" id="boardId" value="@ViewData["BoardID"]" />
-
-    <!-- Add floating action button for mobile - easy add list -->
-    <button onclick="openNewListModal(event)"
-        class="fixed bottom-4 right-4 md:hidden z-10 bg-blue-600 hover:bg-blue-700 text-white rounded-full p-4 shadow-lg transition-colors">
-        <i class="fa-solid fa-plus"></i>
-    </button>
-
-    <div class="lists-col flex gap-4 h-full w-full p-4  scrollbar-thin">
+    <div class="lists-col flex gap-4 h-full w-full py-2 px-6 scrollbar-thin">
         <!-- Lists will be dynamically rendered here -->
     </div>
 </main>

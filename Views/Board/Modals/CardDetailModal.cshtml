@@ -1,52 +1,54 @@
-<!-- Card Detail Modal -->
-<div id="cardDetailModal" class="hidden fixed inset-0 bg-black/30 z-50 flex items-center justify-center">
-    <div id="cardDetailModalContent" class="bg-white rounded-lg shadow-lg w-full max-w-3xl p-6 relative">
+<!-- Card Detail Modal - Responsive Version -->
+<div id="cardDetailModal"
+    class="hidden fixed inset-0 bg-black/50 backdrop-blur-sm z-50 p-4 md:p-0 flex items-center justify-center overflow-auto">
+    <div id="cardDetailModalContent"
+        class="bg-white rounded-lg shadow-lg w-full max-w-[95vw] md:max-w-3xl p-4 md:p-6 relative">
         <!-- Header section -->
-        <div class="flex items-center justify-between mb-4 relative">
+        <div class="flex items-center justify-around mb-3 md:mb-4 relative">
             <div class="flex items-center flex-grow">
-                <button id="cardStatusToggle" class="mr-3 text-lg">
+                <button id="cardStatusToggle" class="mr-2 md:mr-3 text-base md:text-lg flex-shrink-0">
                     <i class="fa-regular fa-circle-check text-gray-400"></i>
                 </button>
                 <input type="text" id="cardDetailName"
-                    class="text-xl font-bold flex-grow border-none focus:outline-none focus:ring-1 focus:ring-blue-500 rounded px-2 py-1 mr-4" />
+                    class="text-lg md:text-xl font-bold flex-grow border-none focus:outline-none focus:ring-1 focus:ring-blue-500 rounded px-2 py-1 mr-2 md:mr-4" />
             </div>
-            <button id="closeCardDetailModal" class="text-gray-500 hover:text-gray-700">
-                <i class="fa-solid fa-times text-lg"></i>
+            <button id="closeCardDetailModal"
+                class="text-gray-500 hover:text-gray-700 p-1.5 rounded-full hover:bg-gray-100">
+                <i class="fa-solid fa-times text-base md:text-lg"></i>
             </button>
         </div>
 
         <!-- Content section -->
-        <div class="flex flex-col md:flex-row gap-6">
+        <div class="flex flex-col md:flex-row gap-4 md:gap-6">
             <!-- Left column - Description and Comments -->
             <div class="flex-grow">
-
                 <!-- Description -->
-                <div class="mb-6">
+                <div class="mb-4 md:mb-6">
                     <div class="flex items-center mb-2">
                         <i class="fa-solid fa-align-left mr-2 text-gray-500"></i>
-                        <h3 class="text-lg font-semibold">Description</h3>
+                        <h3 class="text-base md:text-lg font-semibold">Description</h3>
                     </div>
                     <textarea id="cardDescription"
-                        class="w-full min-h-[80px] max-h-[300px] overflow-y-auto bg-gray-100 border-none rounded p-2 focus:outline-none focus:ring-1 focus:ring-blue-500 text-slate-800 resize-y transition-all duration-200 ease-in-out scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-transparent"
+                        class="w-full min-h-[80px] md:min-h-[100px] max-h-[200px] md:max-h-[300px] overflow-y-auto bg-gray-100 border-none rounded p-2 focus:outline-none focus:ring-1 focus:ring-blue-500 text-slate-800 resize-y transition-all duration-200 ease-in-out scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-transparent"
                         placeholder="Add a more detailed description..."></textarea>
                 </div>
 
                 <!-- Comments section -->
-                <div class="mt-6">
+                <div class="mt-4 md:mt-6">
                     <div class="flex items-center mb-2">
                         <i class="fa-regular fa-comment mr-2 text-gray-500"></i>
-                        <h3 class="text-lg font-semibold">Comments</h3>
+                        <h3 class="text-base md:text-lg font-semibold">Comments</h3>
                     </div>
                     <div id="commentForm" class="mb-3">
                         <textarea id="cardComment"
-                            class="w-full min-h-[40px] border rounded p-2 focus:outline-none focus:ring-1 focus:ring-blue-500 mb-2"
+                            class="w-full min-h-[40px] md:min-h-[60px] border rounded p-2 focus:outline-none focus:ring-1 focus:ring-blue-500 mb-2"
                             placeholder="Write a comment..."></textarea>
                         <button id="addCommentButton"
-                            class="px-3 py-1 bg-blue-500 text-white text-sm rounded hover:bg-blue-600">
+                            class="px-3 py-1.5 md:py-1 bg-blue-500 text-white text-sm rounded hover:bg-blue-600 min-h-[36px]">
                             Save
                         </button>
                     </div>
-                    <div id="commentsContainer" class="max-h-[250px] overflow-y-auto space-y-3">
+                    <div id="commentsContainer" class="max-h-[150px] md:max-h-[250px] overflow-y-auto space-y-3">
                         <!-- Comments will be rendered here dynamically -->
                         <div class="text-sm text-gray-500 italic">Loading comments...</div>
                     </div>
@@ -54,34 +56,34 @@
             </div>
 
             <!-- Right column - Actions -->
-            <div class="w-full md:w-1/4">
+            <div class="w-full md:w-1/4 md:pt-0 md:mt-0">
                 <!-- Add to card -->
-                <div class="mb-4 *:cursor-pointer">
-                    <button class="w-full flex items-center text-gray-600 hover:bg-gray-100 p-2 rounded mb-1">
+                <div class="mb-4 *:cursor-pointer grid grid-cols-2 md:grid-cols-1 gap-2 md:gap-0">
+                    <button class="flex items-center text-gray-600 hover:bg-gray-100 p-2 rounded">
                         <i class="fa-solid fa-user-plus mr-2"></i> Members
                     </button>
-                    <button class="w-full flex items-center text-gray-600 hover:bg-gray-100 p-2 rounded mb-1">
+                    <button class="flex items-center text-gray-600 hover:bg-gray-100 p-2 rounded">
                         <i class="fa-solid fa-tag mr-2"></i> Labels
                     </button>
-                    <button class="w-full flex items-center text-gray-600 hover:bg-gray-100 p-2 rounded mb-1">
+                    <button class="flex items-center text-gray-600 hover:bg-gray-100 p-2 rounded">
                         <i class="fa-solid fa-check-square mr-2"></i> Checklist
                     </button>
                     <!-- Dates button and picker -->
-                    <div class="relative w-full">
+                    <div class="relative">
                         <button id="datesButton"
-                            class="w-full flex items-center text-gray-600 hover:bg-gray-100 p-2 rounded mb-1">
+                            class="w-full flex items-center text-gray-600 hover:bg-gray-100 p-2 rounded">
                             <i class="fa-regular fa-clock mr-2"></i> Dates
                         </button>
                         <div id="datePickerContainer"
-                            class="hidden absolute right-0 top-full mt-1 p-2 bg-white border border-gray-200 rounded shadow-md z-20 w-64">
+                            class="hidden absolute right-0 md:right-0 top-full mt-1 p-2 bg-white border border-gray-200 rounded shadow-md z-20 w-full md:w-64">
                             <label for="cardDueDate" class="block text-sm font-medium text-gray-700 mb-1">Due
                                 Date</label>
-                            <input type="date" id="cardDueDate" class="w-full border rounded p-2" />
+                            <input type="date" id="cardDueDate" class="w-full border rounded p-2 min-h-[36px]" />
                             <div class="flex justify-end mt-2">
                                 <button onclick="removeDueDate()"
-                                    class="text-sm text-gray-600 hover:text-gray-800 mr-2">Remove</button>
+                                    class="text-sm text-gray-600 hover:text-gray-800 mr-2 py-1 px-2 min-h-[32px]">Remove</button>
                                 <button onclick="saveDueDate()"
-                                    class="text-sm bg-blue-500 text-white px-2 py-1 rounded hover:bg-blue-600">Save</button>
+                                    class="text-sm bg-blue-500 text-white px-2 py-1 rounded hover:bg-blue-600 min-h-[32px]">Save</button>
                             </div>
                         </div>
                     </div>
@@ -90,14 +92,16 @@
                 <!-- Actions -->
                 <div class="mb-4 *:cursor-pointer">
                     <h4 class="text-sm font-semibold text-gray-700 mb-2">Actions</h4>
-                    <button class="w-full flex items-center text-gray-600 hover:bg-gray-100 p-2 rounded mb-1">
-                        <i class="fa-solid fa-arrow-right mr-2"></i> Move
-                    </button>
-                    <button class="w-full flex items-center text-gray-600 hover:bg-gray-100 p-2 rounded mb-1">
-                        <i class="fa-solid fa-copy mr-2"></i> Copy
-                    </button>
+                    <div class="grid grid-cols-2 md:grid-cols-1 gap-2 md:gap-0">
+                        <button class="flex items-center text-gray-600 hover:bg-gray-100 p-2 rounded">
+                            <i class="fa-solid fa-arrow-right mr-2"></i> Move
+                        </button>
+                        <button class="flex items-center text-gray-600 hover:bg-gray-100 p-2 rounded">
+                            <i class="fa-solid fa-copy mr-2"></i> Copy
+                        </button>
+                    </div>
                     <button id="deleteCardButton" onclick="deleteCard()"
-                        class="w-full flex items-center text-gray-600 hover:bg-gray-100 p-2 rounded mb-1">
+                        class="w-full flex items-center justify-center text-red-600 hover:bg-red-50 p-2 md:p-2 rounded mt-4 border border-red-100">
                         <i class="fa-solid fa-trash mr-2"></i> Delete
                     </button>
                 </div>

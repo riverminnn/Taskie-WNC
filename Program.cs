@@ -53,6 +53,11 @@ app.MapControllerRoute(
     pattern: "contact",
     defaults: new { controller = "Home", action = "Contact" });
 
+app.MapControllerRoute(
+    name: "pricing",
+    pattern: "pricing",
+    defaults: new { controller = "Home", action = "Pricing" });
+
 // Default route
 app.MapControllerRoute(
     name: "default",

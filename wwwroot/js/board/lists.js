@@ -67,33 +67,33 @@ export function renderLists(lists) {
 
             // Render card with appropriate status indicators
             cardsHTML += `
-<div id="card-item-${card.cardID}" 
-    class="bg-white rounded shadow p-1.5 md:p-2 mb-1.5 md:mb-2 w-full hover:border-blue-500 border-solid border-2 border-transparent group relative"
-    data-card-id="${card.cardID}" 
-    data-status="${card.status}"
-    data-position="${card.position || 0}"
-    onclick="openCardDetailModal(event, ${card.cardID})">
-<div class="flex items-center relative">
-    ${isEditor ? `
-        <button onclick="toggleCardStatus(${card.cardID}); event.stopPropagation();" 
-            class="flex items-center status-toggle transition-all duration-400 mr-1 md:mr-2 ${buttonClass}">
-            <i class="fa-${iconType} fa-circle-check text-base md:text-lg"></i>
-        </button>
-    ` : `
-        <div class="flex items-center mr-1 md:mr-2 ${isCompleted ? 'text-green-500 opacity-100 relative' : 'hidden'}">
-            <i class="fa-${iconType} fa-circle-check text-base md:text-lg"></i>
-        </div>
-    `}
-    <span class="w-full block text-xs md:text-sm font-medium transition-all duration-400 truncate overflow-hidden ${textClass}" title="${card.cardName}">${card.cardName}</span>
-</div>
-</div>
-`;
+                <div id="card-item-${card.cardID}" 
+                    class="bg-white rounded shadow p-1.5 md:p-2 mb-1.5 md:mb-2 w-full hover:border-blue-500 border-solid border-2 border-transparent group relative"
+                    data-card-id="${card.cardID}" 
+                    data-status="${card.status}"
+                    data-position="${card.position || 0}"
+                    onclick="openCardDetailModal(event, ${card.cardID})">
+                <div class="flex items-center relative">
+                    ${isEditor ? `
+                        <button onclick="toggleCardStatus(${card.cardID}); event.stopPropagation();" 
+                            class="flex items-center status-toggle transition-all duration-400 mr-1 md:mr-2 ${buttonClass}">
+                            <i class="fa-${iconType} fa-circle-check text-base md:text-lg cursor-pointer"></i>
+                        </button>
+                    ` : `
+                        <div class="flex items-center mr-1 md:mr-2 ${isCompleted ? 'text-green-500 opacity-100 relative' : 'hidden'}">
+                            <i class="fa-${iconType} fa-circle-check text-base md:text-lg cursor-pointer"></i>
+                        </div>
+                    `}
+                    <span class="w-full block text-xs md:text-sm font-medium transition-all duration-400 truncate overflow-hidden ${textClass}" title="${card.cardName}">${card.cardName}</span>
+                </div>
+                </div>
+                `;
         });
 
         // Render the list with its cards - using mobile-first approach for full-width on mobile
         listsContainer.innerHTML += `
             <div id="list-item-${list.listID}" 
-                class="list-none transition-opacity duration-500 flex flex-col items-center justify-start bg-[#F1F3F4] gap-1 md:gap-2 rounded shadow p-2 md:p-3 cursor-pointer h-fit w-[90vw] min-w-[85vw] md:w-auto md:min-w-0 md:max-w-[300px] shrink-0 relative" 
+                class="list-none transition-opacity duration-500 flex flex-col items-center justify-start bg-[#F1F3F4] gap-1 md:gap-2 rounded shadow p-2 md:p-3 cursor-pointer h-fit w-[80vw] min-w-[85vw] md:w-auto md:min-w-0 md:max-w-[300px] shrink-0 relative" 
                 data-list-id="${list.listID}"
                 data-list-position="${list.position || 0}"
                 draggable="true">

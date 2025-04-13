@@ -108,7 +108,7 @@ function renderComments(comments) {
 
         // Create comment element
         const commentEl = document.createElement('div');
-        commentEl.className = 'border-b pb-3 mb-3'; // Added mb-3 for spacing
+        commentEl.className = 'border-b border-gray-200 pb-3 mb-3'; // Added mb-3 for spacing
         commentEl.innerHTML = `
             <div class="flex items-start">
                 <div class="flex-shrink-0 mr-3">
