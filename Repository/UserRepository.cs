@@ -26,7 +26,7 @@ public class UserRepository
         return user;
     }
 
-    public List<UserModel> GetAllUser()
+    public List<UserModel> GetAllUsers()
     {
         return _dbContext.Users.ToList();
     }

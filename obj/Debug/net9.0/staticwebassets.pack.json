@@ -165,6 +165,10 @@
       "PackagePath": "staticwebassets\\js\\Login.js"
     },
     {
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\js\\admin.js",
+      "PackagePath": "staticwebassets\\js\\admin.js"
+    },
+    {
       "Id": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\js\\alert.js",
       "PackagePath": "staticwebassets\\js\\alert.js"
     },
@@ -227,6 +231,10 @@
     {
       "Id": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\js\\user.js",
       "PackagePath": "staticwebassets\\js\\user.js"
+    },
+    {
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\lib\\microsoft\\signalr\\dist\\browser\\signalr.min.js",
+      "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\browser\\signalr.min.js"
     },
     {
       "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.TaskieWNC.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",

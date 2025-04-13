@@ -1,0 +1,142 @@
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="flex mt-15 w-full h-full">
+    @await Html.PartialAsync("_Sidebar")
+    <div id="adminContent" class="p-6 w-full flex flex-col justify-start">
+        <h1 class="text-2xl font-bold mb-4">Welcome to the Admin Panel</h1>
+        <div id="contentArea">
+            <!-- Content will be dynamically loaded here -->
+        </div>
+    </div>
+</div>
+
+<!-- Add User Modal -->
+<div id="addUserModal" class="hidden fixed inset-0 bg-black/50 z-50 flex items-center justify-center">
+    <div class="bg-white rounded-lg shadow-lg w-96 p-6 relative">
+        <h2 class="text-lg font-semibold mb-4">Add New User</h2>
+        <div class="mb-4">
+            <label for="newUserFullName" class="block text-sm font-medium mb-1">Full Name</label>
+            <input type="text" id="newUserFullName" class="w-full px-3 py-2 border rounded text-sm" />
+        </div>
+        <div class="mb-4">
+            <label for="newUserEmail" class="block text-sm font-medium mb-1">Email</label>
+            <input type="email" id="newUserEmail" class="w-full px-3 py-2 border rounded text-sm" />
+        </div>
+        <div class="mb-4">
+            <label for="newUserPassword" class="block text-sm font-medium mb-1">Password</label>
+            <input type="password" id="newUserPassword" class="w-full px-3 py-2 border rounded text-sm" />
+        </div>
+        <div class="mb-4">
+            <label for="newUserRole" class="block text-sm font-medium mb-1">Role</label>
+            <select id="newUserRole" class="w-full px-3 py-2 border rounded text-sm">
+                <option value="User">User</option>
+                <option value="Admin">Admin</option>
+            </select>
+        </div>
+        <div class="flex justify-end">
+            <button onclick="closeAddUserModal()"
+                class="px-4 py-2 text-sm text-gray-700 hover:text-gray-900">Cancel</button>
+            <button onclick="addUser()"
+                class="px-4 py-2 bg-blue-500 text-white text-sm rounded hover:bg-blue-700">Add</button>
+        </div>
+    </div>
+</div>
+
+<!-- Add List Modal -->
+<div id="addListModal" class="hidden fixed inset-0 bg-black/50 z-50 flex items-center justify-center">
+    <div class="bg-white rounded-lg shadow-lg w-96 p-6 relative">
+        <h2 class="text-lg font-semibold mb-4">Add New List</h2>
+        <div class="mb-4">
+            <label for="newListName" class="block text-sm font-medium mb-1">List Name</label>
+            <input type="text" id="newListName" class="w-full px-3 py-2 border rounded text-sm" />
+        </div>
+        <div class="mb-4">
+            <label for="newListBoardID" class="block text-sm font-medium mb-1">Board ID</label>
+            <input type="text" id="newListBoardID" class="w-full px-3 py-2 border rounded text-sm" />
+        </div>
+        <div class="flex justify-end">
+            <button onclick="closeAddListModal()"
+                class="px-4 py-2 text-sm text-gray-700 hover:text-gray-900">Cancel</button>
+            <button onclick="addList()"
+                class="px-4 py-2 bg-blue-500 text-white text-sm rounded hover:bg-blue-700">Add</button>
+        </div>
+    </div>
+</div>
+
+<!-- Add Comment Modal -->
+<div id="addCommentModal" class="hidden fixed inset-0 bg-black/50 z-50 flex items-center justify-center">
+    <div class="bg-white rounded-lg shadow-lg w-96 p-6 relative">
+        <h2 class="text-lg font-semibold mb-4">Add New Comment</h2>
+        <div class="mb-4">
+            <label for="newCommentCardID" class="block text-sm font-medium mb-1">Card ID</label>
+            <input type="text" id="newCommentCardID" class="w-full px-3 py-2 border rounded text-sm" />
+        </div>
+        <div class="mb-4">
+            <label for="newCommentUserID" class="block text-sm font-medium mb-1">User ID</label>
+            <input type="text" id="newCommentUserID" class="w-full px-3 py-2 border rounded text-sm" />
+        </div>
+        <div class="mb-4">
+            <label for="newCommentContent" class="block text-sm font-medium mb-1">Content</label>
+            <textarea id="newCommentContent" class="w-full px-3 py-2 border rounded text-sm"></textarea>
+        </div>
+        <div class="flex justify-end">
+            <button onclick="closeAddCommentModal()"
+                class="px-4 py-2 text-sm text-gray-700 hover:text-gray-900">Cancel</button>
+            <button onclick="addComment()"
+                class="px-4 py-2 bg-blue-500 text-white text-sm rounded hover:bg-blue-700">Add</button>
+        </div>
+    </div>
+</div>
+
+<!-- Add Card Modal -->
+<div id="addCardModal" class="hidden fixed inset-0 bg-black/50 z-50 flex items-center justify-center">
+    <div class="bg-white rounded-lg shadow-lg w-96 p-6 relative">
+        <h2 class="text-lg font-semibold mb-4">Add New Card</h2>
+        <div class="mb-4">
+            <label for="newCardName" class="block text-sm font-medium mb-1">Card Name</label>
+            <input type="text" id="newCardName" class="w-full px-3 py-2 border rounded text-sm" />
+        </div>
+        <div class="mb-4">
+            <label for="newCardListID" class="block text-sm font-medium mb-1">List ID</label>
+            <input type="text" id="newCardListID" class="w-full px-3 py-2 border rounded text-sm" />
+        </div>
+        <div class="mb-4">
+            <label for="newCardStatus" class="block text-sm font-medium mb-1">Status</label>
+            <select id="newCardStatus" class="w-full px-3 py-2 border rounded text-sm">
+                <option value="To Do">To Do</option>
+                <option value="Done">Done</option>
+            </select>
+        </div>
+        <div class="flex justify-end">
+            <button onclick="closeAddCardModal()"
+                class="px-4 py-2 text-sm text-gray-700 hover:text-gray-900">Cancel</button>
+            <button onclick="addCard()"
+                class="px-4 py-2 bg-blue-500 text-white text-sm rounded hover:bg-blue-700">Add</button>
+        </div>
+    </div>
+</div>
+
+<!-- Add Board Modal -->
+<div id="addBoardModal" class="hidden fixed inset-0 bg-black/50 z-50 flex items-center justify-center">
+    <div class="bg-white rounded-lg shadow-lg w-96 p-6 relative">
+        <h2 class="text-lg font-semibold mb-4">Add New Board</h2>
+        <div class="mb-4">
+            <label for="newBoardName" class="block text-sm font-medium mb-1">Board Name</label>
+            <input type="text" id="newBoardName" class="w-full px-3 py-2 border rounded text-sm" />
+        </div>
+        <div class="mb-4">
+            <label for="newBoardUserID" class="block text-sm font-medium mb-1">Owner User ID</label>
+            <input type="text" id="newBoardUserID" class="w-full px-3 py-2 border rounded text-sm" />
+        </div>
+        <div class="flex justify-end">
+            <button onclick="closeAddBoardModal()"
+                class="px-4 py-2 text-sm text-gray-700 hover:text-gray-900">Cancel</button>
+            <button onclick="addBoard()"
+                class="px-4 py-2 bg-blue-500 text-white text-sm rounded hover:bg-blue-700">Add</button>
+        </div>
+    </div>
+</div>
+
+<script src="~/js/admin/admin.js" type="module" asp-append-version="true"></script>

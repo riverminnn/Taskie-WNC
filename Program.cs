@@ -1,5 +1,4 @@
 using Microsoft.EntityFrameworkCore;
-using TaskieWNC.Hubs;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,7 +16,6 @@ builder.Services.AddScoped<BoardMemberRepository>();
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddSession();
 builder.Services.AddControllersWithViews();
-builder.Services.AddSignalR();
 
 var app = builder.Build();
 
@@ -32,7 +30,6 @@ app.UseStaticFiles(); // Serve static files (e.g., CSS, JS, images)
 app.UseRouting();
 app.UseSession();
 app.UseAuthorization();
-app.MapHub<CardHub>("/cardHub");
 
 // Configure routing
 // Route for board details
