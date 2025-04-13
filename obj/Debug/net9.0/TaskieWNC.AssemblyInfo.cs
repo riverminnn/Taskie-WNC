@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TaskieWNC")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b47f4298a20311c659986b01833ce33f40e85c1c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f6e9fde2c5805a7273b570d53d2e64ec3f50f11d")]
 [assembly: System.Reflection.AssemblyProductAttribute("TaskieWNC")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TaskieWNC")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

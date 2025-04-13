@@ -1,21 +1,39 @@
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Admin Panel - Taskie";
 }
 
-<div class="flex mt-15 w-full h-full">
+<!-- Mobile header with menu toggle -->
+<div class="md:hidden fixed top-15 left-0 right-0 bg-white shadow-md z-40 px-4 py-2 flex items-center justify-between">
+    <h1 class="text-xl font-bold">Admin Panel</h1>
+    <button id="sidebarToggle" class="p-2 rounded-md hover:bg-gray-100">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+</div>
+
+<div class="flex flex-col md:flex-row pb-15 mt-15 md:mt-24 md:pb-15 w-full h-full">
     @await Html.PartialAsync("_Sidebar")
-    <div id="adminContent" class="p-6 w-full flex flex-col justify-start">
-        <h1 class="text-2xl font-bold mb-4">Admin Panel</h1>
-        <div id="contentArea">
+    <div id="adminContent" class="p-4 md:p-6 w-full flex flex-col justify-start mt-12 md:mt-0">
+        <h1 class="text-xl md:text-2xl font-bold mb-4 md:block hidden">Admin Panel</h1>
+        <div id="contentArea" class="overflow-x-auto">
             <!-- Content will be dynamically loaded here -->
+            <div class="flex flex-col items-center justify-center p-8 text-center text-gray-500">
+                <i class="fa-solid fa-gear text-6xl mb-4 animate-spin-slow"></i>
+                <h2 class="text-xl font-semibold mb-2">Welcome to Admin Dashboard</h2>
+                <p>Select an option from the sidebar to manage your data.</p>
+            </div>
         </div>
     </div>
 </div>
 
-<!-- Add User Modal -->
-<div id="addUserModal" class="hidden fixed inset-0 bg-black/50 z-50 flex items-center justify-center">
-    <div class="bg-white rounded-lg shadow-lg w-96 p-6 relative">
+<!-- ADD USER MODAL -->
+<div id="addUserModal"
+    class="hidden fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+    <div class="bg-white rounded-lg shadow-lg w-[90vw] md:w-96 p-4 md:p-6 relative max-h-[90vh] overflow-y-auto">
         <h2 class="text-lg font-semibold mb-4">Add New User</h2>
+        <button onclick="closeAddUserModal()" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
         <form autocomplete="off">
             <!-- Hidden fields to prevent autofill -->
             <input type="text" style="display:none" aria-hidden="true">
@@ -24,177 +42,281 @@
             <div class="mb-4">
                 <label for="newUserFullName" class="block text-sm font-medium mb-1">Full Name</label>
                 <input type="text" id="newUserFullName" name="admin_fullname" autocomplete="off"
-                    class="w-full px-3 py-2 border rounded text-sm" />
+                    class="w-full px-3 py-2 border rounded text-sm min-h-[40px]" />
             </div>
             <div class="mb-4">
                 <label for="newUserEmail" class="block text-sm font-medium mb-1">Email</label>
                 <input type="email" id="newUserEmail" name="admin_email" autocomplete="off"
-                    class="w-full px-3 py-2 border rounded text-sm" />
+                    class="w-full px-3 py-2 border rounded text-sm min-h-[40px]" />
             </div>
             <div class="mb-4">
                 <label for="newUserPassword" class="block text-sm font-medium mb-1">Password</label>
-                <input type="password" id="newUserPassword" name="admin_password" autocomplete="new-password"
-                    class="w-full px-3 py-2 border rounded text-sm" />
+                <input type="password" id="newUserPassword" name="admin_password" autocomplete="off"
+                    class="w-full px-3 py-2 border rounded text-sm min-h-[40px]" />
             </div>
             <div class="mb-4">
                 <label for="newUserRole" class="block text-sm font-medium mb-1">Role</label>
-                <select id="newUserRole" name="admin_role" class="w-full px-3 py-2 border rounded text-sm">
+                <select id="newUserRole" name="admin_role" class="w-full px-3 py-2 border rounded text-sm min-h-[40px]">
                     <option value="User">User</option>
                     <option value="Admin">Admin</option>
                 </select>
             </div>
-            <div class="flex justify-end">
+            <div class="flex justify-end space-x-2">
                 <button type="button" onclick="closeAddUserModal()"
-                    class="px-4 py-2 text-sm text-gray-700 hover:text-gray-900">Cancel</button>
+                    class="px-4 py-2 text-sm text-gray-700 hover:text-gray-900 min-h-[40px]">Cancel</button>
                 <button type="button" onclick="addUser()"
-                    class="px-4 py-2 bg-blue-500 text-white text-sm rounded hover:bg-blue-700">Add</button>
+                    class="px-4 py-2 bg-blue-500 text-white text-sm rounded hover:bg-blue-700 min-h-[40px]">Add</button>
             </div>
         </form>
     </div>
 </div>
 
-<!-- Add List Modal -->
-<div id="addListModal" class="hidden fixed inset-0 bg-black/50 z-50 flex items-center justify-center">
-    <div class="bg-white rounded-lg shadow-lg w-96 p-6 relative">
-        <h2 class="text-lg font-semibold mb-4">Add New List</h2>
-        <form autocomplete="off">
-            <div class="mb-4">
-                <label for="newListName" class="block text-sm font-medium mb-1">List Name</label>
-                <input type="text" id="newListName" name="admin_listname" autocomplete="off"
-                    class="w-full px-3 py-2 border rounded text-sm" />
-            </div>
-            <div class="mb-4">
-                <label for="newListBoardID" class="block text-sm font-medium mb-1">Board ID</label>
-                <input type="text" id="newListBoardID" name="admin_boardid" autocomplete="off"
-                    class="w-full px-3 py-2 border rounded text-sm" />
-            </div>
-            <div class="flex justify-end">
-                <button type="button" onclick="closeAddListModal()"
-                    class="px-4 py-2 text-sm text-gray-700 hover:text-gray-900">Cancel</button>
-                <button type="button" onclick="addList()"
-                    class="px-4 py-2 bg-blue-500 text-white text-sm rounded hover:bg-blue-700">Add</button>
-            </div>
-        </form>
-    </div>
-</div>
-
-<!-- Add Comment Modal -->
-<div id="addCommentModal" class="hidden fixed inset-0 bg-black/50 z-50 flex items-center justify-center">
-    <div class="bg-white rounded-lg shadow-lg w-96 p-6 relative">
-        <h2 class="text-lg font-semibold mb-4">Add New Comment</h2>
-        <form autocomplete="off">
-            <div class="mb-4">
-                <label for="newCommentCardID" class="block text-sm font-medium mb-1">Card ID</label>
-                <input type="text" id="newCommentCardID" name="admin_cardid" autocomplete="off"
-                    class="w-full px-3 py-2 border rounded text-sm" />
-            </div>
-            <div class="mb-4">
-                <label for="newCommentUserID" class="block text-sm font-medium mb-1">User ID</label>
-                <input type="text" id="newCommentUserID" name="admin_userid" autocomplete="off"
-                    class="w-full px-3 py-2 border rounded text-sm" />
-            </div>
-            <div class="mb-4">
-                <label for="newCommentContent" class="block text-sm font-medium mb-1">Content</label>
-                <textarea id="newCommentContent" name="admin_content" autocomplete="off"
-                    class="w-full px-3 py-2 border rounded text-sm"></textarea>
-            </div>
-            <div class="flex justify-end">
-                <button type="button" onclick="closeAddCommentModal()"
-                    class="px-4 py-2 text-sm text-gray-700 hover:text-gray-900">Cancel</button>
-                <button type="button" onclick="addComment()"
-                    class="px-4 py-2 bg-blue-500 text-white text-sm rounded hover:bg-blue-700">Add</button>
-            </div>
-        </form>
-    </div>
-</div>
-
-<!-- Add Card Modal -->
-<div id="addCardModal" class="hidden fixed inset-0 bg-black/50 z-50 flex items-center justify-center">
-    <div class="bg-white rounded-lg shadow-lg w-96 p-6 relative">
-        <h2 class="text-lg font-semibold mb-4">Add New Card</h2>
-        <form autocomplete="off">
-            <div class="mb-4">
-                <label for="newCardName" class="block text-sm font-medium mb-1">Card Name</label>
-                <input type="text" id="newCardName" name="admin_cardname" autocomplete="off"
-                    class="w-full px-3 py-2 border rounded text-sm" />
-            </div>
-            <div class="mb-4">
-                <label for="newCardListID" class="block text-sm font-medium mb-1">List ID</label>
-                <input type="text" id="newCardListID" name="admin_listid" autocomplete="off"
-                    class="w-full px-3 py-2 border rounded text-sm" />
-            </div>
-            <div class="mb-4">
-                <label for="newCardStatus" class="block text-sm font-medium mb-1">Status</label>
-                <select id="newCardStatus" name="admin_status" class="w-full px-3 py-2 border rounded text-sm">
-                    <option value="To Do">To Do</option>
-                    <option value="Done">Done</option>
-                </select>
-            </div>
-            <div class="flex justify-end">
-                <button type="button" onclick="closeAddCardModal()"
-                    class="px-4 py-2 text-sm text-gray-700 hover:text-gray-900">Cancel</button>
-                <button type="button" onclick="addCard()"
-                    class="px-4 py-2 bg-blue-500 text-white text-sm rounded hover:bg-blue-700">Add</button>
-            </div>
-        </form>
-    </div>
-</div>
-
-<!-- Add Board Modal -->
-<div id="addBoardModal" class="hidden fixed inset-0 bg-black/50 z-50 flex items-center justify-center">
-    <div class="bg-white rounded-lg shadow-lg w-96 p-6 relative">
+<!-- ADD BOARD MODAL -->
+<div id="addBoardModal"
+    class="hidden fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+    <div class="bg-white rounded-lg shadow-lg w-[90vw] md:w-96 p-4 md:p-6 relative max-h-[90vh] overflow-y-auto">
         <h2 class="text-lg font-semibold mb-4">Add New Board</h2>
+        <button onclick="closeAddBoardModal()" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
         <form autocomplete="off">
             <div class="mb-4">
                 <label for="newBoardName" class="block text-sm font-medium mb-1">Board Name</label>
                 <input type="text" id="newBoardName" name="admin_boardname" autocomplete="off"
-                    class="w-full px-3 py-2 border rounded text-sm" />
+                    class="w-full px-3 py-2 border rounded text-sm min-h-[40px]" />
             </div>
             <div class="mb-4">
                 <label for="newBoardUserID" class="block text-sm font-medium mb-1">Owner User ID</label>
-                <input type="text" id="newBoardUserID" name="admin_ownerid" autocomplete="off"
-                    class="w-full px-3 py-2 border rounded text-sm" />
+                <input type="text" id="newBoardUserID" name="admin_boarduserid" autocomplete="off"
+                    class="w-full px-3 py-2 border rounded text-sm min-h-[40px]" />
             </div>
-            <div class="flex justify-end">
+            <div class="flex justify-end space-x-2">
                 <button type="button" onclick="closeAddBoardModal()"
-                    class="px-4 py-2 text-sm text-gray-700 hover:text-gray-900">Cancel</button>
+                    class="px-4 py-2 text-sm text-gray-700 hover:text-gray-900 min-h-[40px]">Cancel</button>
                 <button type="button" onclick="addBoard()"
-                    class="px-4 py-2 bg-blue-500 text-white text-sm rounded hover:bg-blue-700">Add</button>
+                    class="px-4 py-2 bg-blue-500 text-white text-sm rounded hover:bg-blue-700 min-h-[40px]">Add</button>
             </div>
         </form>
     </div>
 </div>
 
-<!-- Add BoardMember Modal -->
-<div id="addBoardMemberModal" class="hidden fixed inset-0 bg-black/50 z-50 flex items-center justify-center">
-    <div class="bg-white rounded-lg shadow-lg w-96 p-6 relative">
+<!-- ADD LIST MODAL -->
+<div id="addListModal"
+    class="hidden fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+    <div class="bg-white rounded-lg shadow-lg w-[90vw] md:w-96 p-4 md:p-6 relative max-h-[90vh] overflow-y-auto">
+        <h2 class="text-lg font-semibold mb-4">Add New List</h2>
+        <button onclick="closeAddListModal()" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <form autocomplete="off">
+            <div class="mb-4">
+                <label for="newListName" class="block text-sm font-medium mb-1">List Name</label>
+                <input type="text" id="newListName" name="admin_listname" autocomplete="off"
+                    class="w-full px-3 py-2 border rounded text-sm min-h-[40px]" />
+            </div>
+            <div class="mb-4">
+                <label for="newListBoardID" class="block text-sm font-medium mb-1">Board ID</label>
+                <input type="text" id="newListBoardID" name="admin_listboardid" autocomplete="off"
+                    class="w-full px-3 py-2 border rounded text-sm min-h-[40px]" />
+            </div>
+            <div class="flex justify-end space-x-2">
+                <button type="button" onclick="closeAddListModal()"
+                    class="px-4 py-2 text-sm text-gray-700 hover:text-gray-900 min-h-[40px]">Cancel</button>
+                <button type="button" onclick="addList()"
+                    class="px-4 py-2 bg-blue-500 text-white text-sm rounded hover:bg-blue-700 min-h-[40px]">Add</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- ADD CARD MODAL -->
+<div id="addCardModal"
+    class="hidden fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+    <div class="bg-white rounded-lg shadow-lg w-[90vw] md:w-96 p-4 md:p-6 relative max-h-[90vh] overflow-y-auto">
+        <h2 class="text-lg font-semibold mb-4">Add New Card</h2>
+        <button onclick="closeAddCardModal()" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <form autocomplete="off">
+            <div class="mb-4">
+                <label for="newCardName" class="block text-sm font-medium mb-1">Card Name</label>
+                <input type="text" id="newCardName" name="admin_cardname" autocomplete="off"
+                    class="w-full px-3 py-2 border rounded text-sm min-h-[40px]" />
+            </div>
+            <div class="mb-4">
+                <label for="newCardListID" class="block text-sm font-medium mb-1">List ID</label>
+                <input type="text" id="newCardListID" name="admin_cardlistid" autocomplete="off"
+                    class="w-full px-3 py-2 border rounded text-sm min-h-[40px]" />
+            </div>
+            <div class="mb-4">
+                <label for="newCardStatus" class="block text-sm font-medium mb-1">Status</label>
+                <select id="newCardStatus" name="admin_cardstatus"
+                    class="w-full px-3 py-2 border rounded text-sm min-h-[40px]">
+                    <option value="To Do">To Do</option>
+                    <option value="Done">Done</option>
+                </select>
+            </div>
+            <div class="flex justify-end space-x-2">
+                <button type="button" onclick="closeAddCardModal()"
+                    class="px-4 py-2 text-sm text-gray-700 hover:text-gray-900 min-h-[40px]">Cancel</button>
+                <button type="button" onclick="addCard()"
+                    class="px-4 py-2 bg-blue-500 text-white text-sm rounded hover:bg-blue-700 min-h-[40px]">Add</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- ADD COMMENT MODAL -->
+<div id="addCommentModal"
+    class="hidden fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+    <div class="bg-white rounded-lg shadow-lg w-[90vw] md:w-96 p-4 md:p-6 relative max-h-[90vh] overflow-y-auto">
+        <h2 class="text-lg font-semibold mb-4">Add New Comment</h2>
+        <button onclick="closeAddCommentModal()" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <form autocomplete="off">
+            <div class="mb-4">
+                <label for="newCommentCardID" class="block text-sm font-medium mb-1">Card ID</label>
+                <input type="text" id="newCommentCardID" name="admin_commentcardid" autocomplete="off"
+                    class="w-full px-3 py-2 border rounded text-sm min-h-[40px]" />
+            </div>
+            <div class="mb-4">
+                <label for="newCommentUserID" class="block text-sm font-medium mb-1">User ID</label>
+                <input type="text" id="newCommentUserID" name="admin_commentuserid" autocomplete="off"
+                    class="w-full px-3 py-2 border rounded text-sm min-h-[40px]" />
+            </div>
+            <div class="mb-4">
+                <label for="newCommentContent" class="block text-sm font-medium mb-1">Content</label>
+                <textarea id="newCommentContent" name="admin_commentcontent" autocomplete="off"
+                    class="w-full px-3 py-2 border rounded text-sm min-h-[80px] resize-y"></textarea>
+            </div>
+            <div class="flex justify-end space-x-2">
+                <button type="button" onclick="closeAddCommentModal()"
+                    class="px-4 py-2 text-sm text-gray-700 hover:text-gray-900 min-h-[40px]">Cancel</button>
+                <button type="button" onclick="addComment()"
+                    class="px-4 py-2 bg-blue-500 text-white text-sm rounded hover:bg-blue-700 min-h-[40px]">Add</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- ADD BOARD MEMBER MODAL -->
+<div id="addBoardMemberModal"
+    class="hidden fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+    <div class="bg-white rounded-lg shadow-lg w-[90vw] md:w-96 p-4 md:p-6 relative max-h-[90vh] overflow-y-auto">
         <h2 class="text-lg font-semibold mb-4">Add New Board Member</h2>
+        <button onclick="closeAddBoardMemberModal()" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
         <form autocomplete="off">
             <div class="mb-4">
                 <label for="newBoardMemberBoardID" class="block text-sm font-medium mb-1">Board ID</label>
                 <input type="text" id="newBoardMemberBoardID" name="admin_memberboardid" autocomplete="off"
-                    class="w-full px-3 py-2 border rounded text-sm" />
+                    class="w-full px-3 py-2 border rounded text-sm min-h-[40px]" />
             </div>
             <div class="mb-4">
                 <label for="newBoardMemberUserID" class="block text-sm font-medium mb-1">User ID</label>
                 <input type="text" id="newBoardMemberUserID" name="admin_memberuserid" autocomplete="off"
-                    class="w-full px-3 py-2 border rounded text-sm" />
+                    class="w-full px-3 py-2 border rounded text-sm min-h-[40px]" />
             </div>
             <div class="mb-4">
                 <label for="newBoardMemberRole" class="block text-sm font-medium mb-1">Role</label>
-                <select id="newBoardMemberRole" name="admin_memberrole" class="w-full px-3 py-2 border rounded text-sm">
+                <select id="newBoardMemberRole" name="admin_memberrole"
+                    class="w-full px-3 py-2 border rounded text-sm min-h-[40px]">
                     <option value="Viewer">Viewer</option>
                     <option value="Editor">Editor</option>
                 </select>
             </div>
-            <div class="flex justify-end">
+            <div class="flex justify-end space-x-2">
                 <button type="button" onclick="closeAddBoardMemberModal()"
-                    class="px-4 py-2 text-sm text-gray-700 hover:text-gray-900">Cancel</button>
+                    class="px-4 py-2 text-sm text-gray-700 hover:text-gray-900 min-h-[40px]">Cancel</button>
                 <button type="button" onclick="addBoardMember()"
-                    class="px-4 py-2 bg-blue-500 text-white text-sm rounded hover:bg-blue-700">Add</button>
+                    class="px-4 py-2 bg-blue-500 text-white text-sm rounded hover:bg-blue-700 min-h-[40px]">Add</button>
             </div>
         </form>
     </div>
 </div>
 
 <script src="~/js/admin/admin.js" type="module" asp-append-version="true"></script>
+
+<!-- Mobile sidebar toggle script - fixed version -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const sidebar = document.getElementById('adminSidebar');
+        const sidebarToggle = document.getElementById('sidebarToggle');
+        const closeSidebarButton = document.getElementById('closeSidebarButton');
+
+        // Function to toggle sidebar
+        function toggleSidebar() {
+            if (!sidebar) return;
+
+            // Check if sidebar is currently visible
+            const isVisible = !sidebar.classList.contains('translate-x-full');
+
+            if (isVisible) {
+                // If visible, hide it
+                sidebar.classList.add('translate-x-full');
+                document.body.classList.remove('overflow-hidden');
+            } else {
+                // If hidden, show it
+                sidebar.classList.remove('translate-x-full');
+                document.body.classList.add('overflow-hidden');
+            }
+        }
+
+        // Function to close sidebar
+        function closeSidebar() {
+            if (!sidebar) return;
+            sidebar.classList.add('translate-x-full');
+            document.body.classList.remove('overflow-hidden');
+        }
+
+        // Setup toggle button event
+        if (sidebarToggle) {
+            sidebarToggle.addEventListener('click', toggleSidebar);
+        }
+
+        // Setup close button event
+        if (closeSidebarButton) {
+            closeSidebarButton.addEventListener('click', closeSidebar);
+        }
+
+        // Close sidebar when clicking outside
+        document.addEventListener('click', function (e) {
+            // If sidebar is open and click is outside sidebar and not on the toggle button
+            if (!sidebar.classList.contains('translate-x-full') &&
+                !sidebar.contains(e.target) &&
+                e.target !== sidebarToggle &&
+                !sidebarToggle.contains(e.target)) {
+                closeSidebar();
+            }
+        });
+
+        // Close sidebar when clicking menu items (on mobile only)
+        if (sidebar) {
+            sidebar.querySelectorAll('button').forEach(button => {
+                if (button.id !== 'closeSidebarButton') {  // Skip the close button itself
+                    button.addEventListener('click', function () {
+                        if (window.innerWidth < 768) {
+                            closeSidebar();
+                        }
+                    });
+                }
+            });
+        }
+
+        // Close sidebar when pressing escape key
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape' && sidebar && !sidebar.classList.contains('translate-x-full') && window.innerWidth < 768) {
+                closeSidebar();
+            }
+        });
+
+        // Close sidebar when window is resized to desktop size
+        window.addEventListener('resize', function () {
+            if (window.innerWidth >= 768 && sidebar && !sidebar.classList.contains('translate-x-full')) {
+                closeSidebar();
+            }
+        });
+    });
+</script>

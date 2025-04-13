@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\assets\\about-team.jpg"
     },
     {
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\assets\\amazon.svg",
+      "PackagePath": "staticwebassets\\assets\\amazon.svg"
+    },
+    {
       "Id": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\assets\\fonts\\GoogleSans-Bold.ttf",
       "PackagePath": "staticwebassets\\assets\\fonts\\GoogleSans-Bold.ttf"
     },
@@ -29,6 +33,10 @@
       "PackagePath": "staticwebassets\\assets\\fonts\\GoogleSans-Regular.ttf"
     },
     {
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\assets\\google.svg",
+      "PackagePath": "staticwebassets\\assets\\google.svg"
+    },
+    {
       "Id": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\assets\\images\\default.png",
       "PackagePath": "staticwebassets\\assets\\images\\default.png"
     },
@@ -49,8 +57,28 @@
       "PackagePath": "staticwebassets\\assets\\logo.png"
     },
     {
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\assets\\meta.svg",
+      "PackagePath": "staticwebassets\\assets\\meta.svg"
+    },
+    {
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\assets\\microsoft.svg",
+      "PackagePath": "staticwebassets\\assets\\microsoft.svg"
+    },
+    {
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\assets\\netflix.svg",
+      "PackagePath": "staticwebassets\\assets\\netflix.svg"
+    },
+    {
       "Id": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\assets\\review.png",
       "PackagePath": "staticwebassets\\assets\\review.png"
+    },
+    {
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\assets\\review2.png",
+      "PackagePath": "staticwebassets\\assets\\review2.png"
+    },
+    {
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\assets\\taskie-board.png",
+      "PackagePath": "staticwebassets\\assets\\taskie-board.png"
     },
     {
       "Id": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\css\\site.css",
@@ -247,6 +275,14 @@
     {
       "Id": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\js\\header.js",
       "PackagePath": "staticwebassets\\js\\header.js"
+    },
+    {
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\js\\mobileHeader.js",
+      "PackagePath": "staticwebassets\\js\\mobileHeader.js"
+    },
+    {
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\js\\profileDropdown.js",
+      "PackagePath": "staticwebassets\\js\\profileDropdown.js"
     },
     {
       "Id": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\js\\recentBoards.js",

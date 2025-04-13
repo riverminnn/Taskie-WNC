@@ -1,33 +1,44 @@
-<div class="sidebar bg-gray-800 text-white h-full w-[16rem] flex flex-grow flex-col">
-    <div class="p-4 text-lg font-bold">Admin Panel</div>
-    <ul class="">
+<div class="sidebar bg-gray-800 pt-10 text-white min-h-[42rem] h-full w-full md:w-[16rem] flex-none md:flex flex-col fixed md:static bottom-0 left-0 z-30 transform translate-x-full md:translate-x-0 transition-transform duration-300"
+    id="adminSidebar">
+    <div class="p-4 text-lg font-bold flex justify-between items-center">
+        <span>Admin Panel</span>
+        <button class="md:hidden p-2 rounded-full hover:bg-gray-700" id="closeSidebarButton">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+    </div>
+    <ul class="overflow-y-auto">
         <li class="w-full">
-            <button class="p-2 hover:bg-gray-700 cursor-pointer w-full text-left font-bold" onclick="loadUsers()">
+            <button class="p-3 md:p-2 hover:bg-gray-700 cursor-pointer w-full text-left font-bold"
+                onclick="loadUsers()">
                 Manage Users
             </button>
         </li>
         <li class="w-full">
-            <button class="p-2 hover:bg-gray-700 cursor-pointer w-full text-left font-bold" onclick="loadLists()">
+            <button class="p-3 md:p-2 hover:bg-gray-700 cursor-pointer w-full text-left font-bold"
+                onclick="loadLists()">
                 Manage Lists
             </button>
         </li>
         <li class="w-full">
-            <button class="p-2 hover:bg-gray-700 cursor-pointer w-full text-left font-bold" onclick="loadComments()">
+            <button class="p-3 md:p-2 hover:bg-gray-700 cursor-pointer w-full text-left font-bold"
+                onclick="loadComments()">
                 Manage Comments
             </button>
         </li>
         <li class="w-full">
-            <button class="p-2 hover:bg-gray-700 cursor-pointer w-full text-left font-bold" onclick="loadCards()">
+            <button class="p-3 md:p-2 hover:bg-gray-700 cursor-pointer w-full text-left font-bold"
+                onclick="loadCards()">
                 Manage Cards
             </button>
         </li>
         <li class="w-full">
-            <button class="p-2 hover:bg-gray-700 cursor-pointer w-full text-left font-bold" onclick="loadBoards()">
+            <button class="p-3 md:p-2 hover:bg-gray-700 cursor-pointer w-full text-left font-bold"
+                onclick="loadBoards()">
                 Manage Boards
             </button>
         </li>
         <li class="w-full">
-            <button class="p-2 hover:bg-gray-700 cursor-pointer w-full text-left font-bold"
+            <button class="p-3 md:p-2 hover:bg-gray-700 cursor-pointer w-full text-left font-bold"
                 onclick="loadBoardMembers()">
                 Manage Board Members
             </button>
