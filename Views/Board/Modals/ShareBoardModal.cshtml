@@ -1,0 +1,41 @@
+<!-- Board Sharing Modal -->
+<div id="shareBoardModal" class="hidden fixed inset-0 bg-black/30 z-50 items-center justify-center">
+    <div class="bg-white rounded-lg shadow-lg w-full max-w-lg p-6">
+        <!-- Modal Header -->
+        <div class="flex justify-between items-center mb-4">
+            <h2 class="text-lg font-semibold">Share Board</h2>
+            <button onclick="closeShareModal()" class="text-gray-500 hover:text-gray-700">
+                <i class="fa-solid fa-times"></i>
+            </button>
+        </div>
+
+        <!-- Invite Form -->
+        <div class="mb-6">
+            <label for="inviteEmail" class="block text-sm font-medium mb-1">Invite people</label>
+            <div class="flex gap-2">
+                <input type="email" id="inviteEmail" placeholder="Email address"
+                    class="flex-grow px-3 py-2 border rounded text-sm" />
+                <select id="inviteRole" class="border rounded px-3 py-2 text-sm">
+                    <option value="Editor">Editor</option>
+                    <option value="Viewer">Viewer</option>
+                </select>
+                <button onclick="inviteUser()"
+                    class="px-4 py-2 bg-blue-500 text-white text-sm rounded hover:bg-blue-700">
+                    Invite
+                </button>
+            </div>
+            <p id="inviteError" class="text-sm text-red-500 mt-1 hidden"></p>
+        </div>
+
+        <!-- Current Members -->
+        <div>
+            <h3 class="text-md font-medium mb-2">Board members</h3>
+            <div id="boardOwner" class="py-2 px-1 border-b flex items-center justify-between">
+                <!-- Owner info will be rendered here -->
+            </div>
+            <div id="boardMembers" class="max-h-60 overflow-y-auto">
+                <!-- Members will be rendered here -->
+            </div>
+        </div>
+    </div>
+</div>

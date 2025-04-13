@@ -141,13 +141,12 @@ namespace TaskieWNC.Migrations
                         column: x => x.CardID,
                         principalTable: "Cards",
                         principalColumn: "CardID",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_Comments_Users_UserID",
                         column: x => x.UserID,
                         principalTable: "Users",
-                        principalColumn: "UserID",
-                        onDelete: ReferentialAction.Restrict);
+                        principalColumn: "UserID");
                 });
 
             migrationBuilder.CreateIndex(

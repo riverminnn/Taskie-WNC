@@ -317,11 +317,17 @@
   .right-0 {
     right: calc(var(--spacing) * 0);
   }
+  .right-2 {
+    right: calc(var(--spacing) * 2);
+  }
   .right-4 {
     right: calc(var(--spacing) * 4);
   }
   .bottom-0 {
     bottom: calc(var(--spacing) * 0);
+  }
+  .bottom-1 {
+    bottom: calc(var(--spacing) * 1);
   }
   .bottom-4 {
     bottom: calc(var(--spacing) * 4);
@@ -946,6 +952,9 @@
   }
   .cursor-default {
     cursor: default;
+  }
+  .cursor-not-allowed {
+    cursor: not-allowed;
   }
   .cursor-pointer {
     cursor: pointer;
@@ -2334,6 +2343,9 @@
   .opacity-0 {
     opacity: 0%;
   }
+  .opacity-50 {
+    opacity: 50%;
+  }
   .opacity-90 {
     opacity: 90%;
   }
@@ -2598,6 +2610,10 @@
   .outline-solid {
     --tw-outline-style: solid;
     outline-style: solid;
+  }
+  .select-none {
+    -webkit-user-select: none;
+    user-select: none;
   }
   .backface-hidden {
     backface-visibility: hidden;
@@ -2938,6 +2954,13 @@
       }
     }
   }
+  .hover\:shadow-slate-300\/50 {
+    &:hover {
+      @media (hover: hover) {
+        --tw-shadow-color: color-mix(in oklab, var(--color-slate-300) 50%, transparent);
+      }
+    }
+  }
   .focus\:border-blue-500 {
     &:focus {
       border-color: var(--color-blue-500);
@@ -3157,6 +3180,18 @@
 * {
   box-sizing: border-box;
   font-family: 'Google Sans', sans-serif;
+}
+.read-only-card {
+  position: relative;
+}
+.read-only-card:hover {
+  background-color: #f9f9f9 !important;
+  transform: none !important;
+  box-shadow: none !important;
+}
+.read-only-card .status-toggle {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 @property --tw-translate-x {
   syntax: "*";

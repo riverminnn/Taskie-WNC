@@ -68,6 +68,15 @@ namespace TaskieWNC.Controllers
         {
             try
             {
+                // Get the board ID for this list
+                var list = _listRepository.GetListById(listID);
+                if (list == null)
+                    return Json(new { success = false, message = "List not found." });
+
+                // Check if user has edit permission
+                if (!UserCanEdit(list.BoardID))
+                    return Json(new { success = false, message = "You don't have permission to delete this list." });
+
                 _listRepository.DeleteList(listID);
                 return Json(new { success = true, message = "List deleted successfully!" });
             }

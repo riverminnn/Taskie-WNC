@@ -64,3 +64,19 @@
     box-sizing: border-box;
     font-family: 'Google Sans', sans-serif;
 }
+
+/* Add this to your CSS */
+.read-only-card {
+    position: relative;
+}
+
+.read-only-card:hover {
+    background-color: #f9f9f9 !important;
+    transform: none !important;
+    box-shadow: none !important;
+}
+
+.read-only-card .status-toggle {
+    opacity: 0.5;
+    cursor: not-allowed;
+}

@@ -14,21 +14,34 @@ public class MyDbContext : DbContext
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);
-        // Explicitly map CommentModel to the "Comment" table
-        modelBuilder.Entity<CommentModel>().ToTable("Comments");
 
-        // Configure the foreign key relationships for CommentModel
+        // Configure Card -> List relationship
+        modelBuilder.Entity<CardModel>()
+            .HasOne(c => c.List)
+            .WithMany()
+            .HasForeignKey(c => c.ListID)
+            .OnDelete(DeleteBehavior.Cascade);
+
+        // Configure List -> Board relationship
+        modelBuilder.Entity<ListModel>()
+            .HasOne(l => l.Board)
+            .WithMany()
+            .HasForeignKey(l => l.BoardID)
+            .OnDelete(DeleteBehavior.Cascade);
+
+        // Configure Comment -> Card relationship
         modelBuilder.Entity<CommentModel>()
             .HasOne(c => c.Card)
-            .WithMany() // No navigation property in CardModel for comments
+            .WithMany()
             .HasForeignKey(c => c.CardID)
-            .OnDelete(DeleteBehavior.Restrict); // Disable cascade delete for Card
+            .OnDelete(DeleteBehavior.Cascade);
 
+        // Configure Comment -> User relationship 
         modelBuilder.Entity<CommentModel>()
             .HasOne(c => c.User)
-            .WithMany() // No navigation property in UserModel for comments
+            .WithMany()
             .HasForeignKey(c => c.UserID)
-            .OnDelete(DeleteBehavior.Restrict); // Disable cascade delete for User
+            .OnDelete(DeleteBehavior.NoAction); // Changed to NoAction
 
         // Configure Board -> User relationship
         modelBuilder.Entity<BoardModel>()
@@ -44,11 +57,11 @@ public class MyDbContext : DbContext
             .HasForeignKey(bm => bm.BoardID)
             .OnDelete(DeleteBehavior.Cascade);
 
-        // Configure BoardMember -> User relationship with NO ACTION on delete
+        // Configure BoardMember -> User relationship
         modelBuilder.Entity<BoardMemberModel>()
             .HasOne<UserModel>()
             .WithMany()
             .HasForeignKey(bm => bm.UserID)
-            .OnDelete(DeleteBehavior.NoAction);
+            .OnDelete(DeleteBehavior.NoAction); // Changed from Cascade to NoAction
     }
 }

@@ -146,7 +146,7 @@ namespace TaskieWNC.Migrations
 
                     b.HasIndex("UserID");
 
-                    b.ToTable("Comments", (string)null);
+                    b.ToTable("Comments");
                 });
 
             modelBuilder.Entity("TaskieWNC.Models.ListModel", b =>
@@ -253,13 +253,13 @@ namespace TaskieWNC.Migrations
                     b.HasOne("TaskieWNC.Models.CardModel", "Card")
                         .WithMany()
                         .HasForeignKey("CardID")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("TaskieWNC.Models.UserModel", "User")
                         .WithMany()
                         .HasForeignKey("UserID")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("Card");

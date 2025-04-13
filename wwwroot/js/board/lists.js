@@ -113,7 +113,7 @@ export function renderLists(lists) {
                 </div>
                 <!-- Add Card Button -->
                 <button onclick="openNewCardModal(event, ${list.listID})" id="addCardButton-${list.listID}"
-                    class="flex items-center justify-start gap-2 rounded p-4 cursor-pointer hover:bg-gray-300 h-12 w-full max-w-[300px] outline-none">
+                    class="new-card flex items-center justify-start gap-2 rounded p-4 cursor-pointer hover:bg-gray-300 h-12 w-full max-w-[300px] outline-none">
                     <i class="fa-solid fa-plus text-gray-600 text-base"></i>
                     <span class="block text-base font-semibold text-gray-600">Add a card</span>
                 </button>

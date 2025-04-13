@@ -16,31 +16,40 @@
 <div id="addUserModal" class="hidden fixed inset-0 bg-black/50 z-50 flex items-center justify-center">
     <div class="bg-white rounded-lg shadow-lg w-96 p-6 relative">
         <h2 class="text-lg font-semibold mb-4">Add New User</h2>
-        <div class="mb-4">
-            <label for="newUserFullName" class="block text-sm font-medium mb-1">Full Name</label>
-            <input type="text" id="newUserFullName" class="w-full px-3 py-2 border rounded text-sm" />
-        </div>
-        <div class="mb-4">
-            <label for="newUserEmail" class="block text-sm font-medium mb-1">Email</label>
-            <input type="email" id="newUserEmail" class="w-full px-3 py-2 border rounded text-sm" />
-        </div>
-        <div class="mb-4">
-            <label for="newUserPassword" class="block text-sm font-medium mb-1">Password</label>
-            <input type="password" id="newUserPassword" class="w-full px-3 py-2 border rounded text-sm" />
-        </div>
-        <div class="mb-4">
-            <label for="newUserRole" class="block text-sm font-medium mb-1">Role</label>
-            <select id="newUserRole" class="w-full px-3 py-2 border rounded text-sm">
-                <option value="User">User</option>
-                <option value="Admin">Admin</option>
-            </select>
-        </div>
-        <div class="flex justify-end">
-            <button onclick="closeAddUserModal()"
-                class="px-4 py-2 text-sm text-gray-700 hover:text-gray-900">Cancel</button>
-            <button onclick="addUser()"
-                class="px-4 py-2 bg-blue-500 text-white text-sm rounded hover:bg-blue-700">Add</button>
-        </div>
+        <form autocomplete="off">
+            <!-- Hidden fields to prevent autofill -->
+            <input type="text" style="display:none" aria-hidden="true">
+            <input type="password" style="display:none" aria-hidden="true">
+
+            <div class="mb-4">
+                <label for="newUserFullName" class="block text-sm font-medium mb-1">Full Name</label>
+                <input type="text" id="newUserFullName" name="admin_fullname" autocomplete="off"
+                    class="w-full px-3 py-2 border rounded text-sm" />
+            </div>
+            <div class="mb-4">
+                <label for="newUserEmail" class="block text-sm font-medium mb-1">Email</label>
+                <input type="email" id="newUserEmail" name="admin_email" autocomplete="off"
+                    class="w-full px-3 py-2 border rounded text-sm" />
+            </div>
+            <div class="mb-4">
+                <label for="newUserPassword" class="block text-sm font-medium mb-1">Password</label>
+                <input type="password" id="newUserPassword" name="admin_password" autocomplete="new-password"
+                    class="w-full px-3 py-2 border rounded text-sm" />
+            </div>
+            <div class="mb-4">
+                <label for="newUserRole" class="block text-sm font-medium mb-1">Role</label>
+                <select id="newUserRole" name="admin_role" class="w-full px-3 py-2 border rounded text-sm">
+                    <option value="User">User</option>
+                    <option value="Admin">Admin</option>
+                </select>
+            </div>
+            <div class="flex justify-end">
+                <button type="button" onclick="closeAddUserModal()"
+                    class="px-4 py-2 text-sm text-gray-700 hover:text-gray-900">Cancel</button>
+                <button type="button" onclick="addUser()"
+                    class="px-4 py-2 bg-blue-500 text-white text-sm rounded hover:bg-blue-700">Add</button>
+            </div>
+        </form>
     </div>
 </div>
 
@@ -48,20 +57,24 @@
 <div id="addListModal" class="hidden fixed inset-0 bg-black/50 z-50 flex items-center justify-center">
     <div class="bg-white rounded-lg shadow-lg w-96 p-6 relative">
         <h2 class="text-lg font-semibold mb-4">Add New List</h2>
-        <div class="mb-4">
-            <label for="newListName" class="block text-sm font-medium mb-1">List Name</label>
-            <input type="text" id="newListName" class="w-full px-3 py-2 border rounded text-sm" />
-        </div>
-        <div class="mb-4">
-            <label for="newListBoardID" class="block text-sm font-medium mb-1">Board ID</label>
-            <input type="text" id="newListBoardID" class="w-full px-3 py-2 border rounded text-sm" />
-        </div>
-        <div class="flex justify-end">
-            <button onclick="closeAddListModal()"
-                class="px-4 py-2 text-sm text-gray-700 hover:text-gray-900">Cancel</button>
-            <button onclick="addList()"
-                class="px-4 py-2 bg-blue-500 text-white text-sm rounded hover:bg-blue-700">Add</button>
-        </div>
+        <form autocomplete="off">
+            <div class="mb-4">
+                <label for="newListName" class="block text-sm font-medium mb-1">List Name</label>
+                <input type="text" id="newListName" name="admin_listname" autocomplete="off"
+                    class="w-full px-3 py-2 border rounded text-sm" />
+            </div>
+            <div class="mb-4">
+                <label for="newListBoardID" class="block text-sm font-medium mb-1">Board ID</label>
+                <input type="text" id="newListBoardID" name="admin_boardid" autocomplete="off"
+                    class="w-full px-3 py-2 border rounded text-sm" />
+            </div>
+            <div class="flex justify-end">
+                <button type="button" onclick="closeAddListModal()"
+                    class="px-4 py-2 text-sm text-gray-700 hover:text-gray-900">Cancel</button>
+                <button type="button" onclick="addList()"
+                    class="px-4 py-2 bg-blue-500 text-white text-sm rounded hover:bg-blue-700">Add</button>
+            </div>
+        </form>
     </div>
 </div>
 
@@ -69,24 +82,29 @@
 <div id="addCommentModal" class="hidden fixed inset-0 bg-black/50 z-50 flex items-center justify-center">
     <div class="bg-white rounded-lg shadow-lg w-96 p-6 relative">
         <h2 class="text-lg font-semibold mb-4">Add New Comment</h2>
-        <div class="mb-4">
-            <label for="newCommentCardID" class="block text-sm font-medium mb-1">Card ID</label>
-            <input type="text" id="newCommentCardID" class="w-full px-3 py-2 border rounded text-sm" />
-        </div>
-        <div class="mb-4">
-            <label for="newCommentUserID" class="block text-sm font-medium mb-1">User ID</label>
-            <input type="text" id="newCommentUserID" class="w-full px-3 py-2 border rounded text-sm" />
-        </div>
-        <div class="mb-4">
-            <label for="newCommentContent" class="block text-sm font-medium mb-1">Content</label>
-            <textarea id="newCommentContent" class="w-full px-3 py-2 border rounded text-sm"></textarea>
-        </div>
-        <div class="flex justify-end">
-            <button onclick="closeAddCommentModal()"
-                class="px-4 py-2 text-sm text-gray-700 hover:text-gray-900">Cancel</button>
-            <button onclick="addComment()"
-                class="px-4 py-2 bg-blue-500 text-white text-sm rounded hover:bg-blue-700">Add</button>
-        </div>
+        <form autocomplete="off">
+            <div class="mb-4">
+                <label for="newCommentCardID" class="block text-sm font-medium mb-1">Card ID</label>
+                <input type="text" id="newCommentCardID" name="admin_cardid" autocomplete="off"
+                    class="w-full px-3 py-2 border rounded text-sm" />
+            </div>
+            <div class="mb-4">
+                <label for="newCommentUserID" class="block text-sm font-medium mb-1">User ID</label>
+                <input type="text" id="newCommentUserID" name="admin_userid" autocomplete="off"
+                    class="w-full px-3 py-2 border rounded text-sm" />
+            </div>
+            <div class="mb-4">
+                <label for="newCommentContent" class="block text-sm font-medium mb-1">Content</label>
+                <textarea id="newCommentContent" name="admin_content" autocomplete="off"
+                    class="w-full px-3 py-2 border rounded text-sm"></textarea>
+            </div>
+            <div class="flex justify-end">
+                <button type="button" onclick="closeAddCommentModal()"
+                    class="px-4 py-2 text-sm text-gray-700 hover:text-gray-900">Cancel</button>
+                <button type="button" onclick="addComment()"
+                    class="px-4 py-2 bg-blue-500 text-white text-sm rounded hover:bg-blue-700">Add</button>
+            </div>
+        </form>
     </div>
 </div>
 
@@ -94,27 +112,31 @@
 <div id="addCardModal" class="hidden fixed inset-0 bg-black/50 z-50 flex items-center justify-center">
     <div class="bg-white rounded-lg shadow-lg w-96 p-6 relative">
         <h2 class="text-lg font-semibold mb-4">Add New Card</h2>
-        <div class="mb-4">
-            <label for="newCardName" class="block text-sm font-medium mb-1">Card Name</label>
-            <input type="text" id="newCardName" class="w-full px-3 py-2 border rounded text-sm" />
-        </div>
-        <div class="mb-4">
-            <label for="newCardListID" class="block text-sm font-medium mb-1">List ID</label>
-            <input type="text" id="newCardListID" class="w-full px-3 py-2 border rounded text-sm" />
-        </div>
-        <div class="mb-4">
-            <label for="newCardStatus" class="block text-sm font-medium mb-1">Status</label>
-            <select id="newCardStatus" class="w-full px-3 py-2 border rounded text-sm">
-                <option value="To Do">To Do</option>
-                <option value="Done">Done</option>
-            </select>
-        </div>
-        <div class="flex justify-end">
-            <button onclick="closeAddCardModal()"
-                class="px-4 py-2 text-sm text-gray-700 hover:text-gray-900">Cancel</button>
-            <button onclick="addCard()"
-                class="px-4 py-2 bg-blue-500 text-white text-sm rounded hover:bg-blue-700">Add</button>
-        </div>
+        <form autocomplete="off">
+            <div class="mb-4">
+                <label for="newCardName" class="block text-sm font-medium mb-1">Card Name</label>
+                <input type="text" id="newCardName" name="admin_cardname" autocomplete="off"
+                    class="w-full px-3 py-2 border rounded text-sm" />
+            </div>
+            <div class="mb-4">
+                <label for="newCardListID" class="block text-sm font-medium mb-1">List ID</label>
+                <input type="text" id="newCardListID" name="admin_listid" autocomplete="off"
+                    class="w-full px-3 py-2 border rounded text-sm" />
+            </div>
+            <div class="mb-4">
+                <label for="newCardStatus" class="block text-sm font-medium mb-1">Status</label>
+                <select id="newCardStatus" name="admin_status" class="w-full px-3 py-2 border rounded text-sm">
+                    <option value="To Do">To Do</option>
+                    <option value="Done">Done</option>
+                </select>
+            </div>
+            <div class="flex justify-end">
+                <button type="button" onclick="closeAddCardModal()"
+                    class="px-4 py-2 text-sm text-gray-700 hover:text-gray-900">Cancel</button>
+                <button type="button" onclick="addCard()"
+                    class="px-4 py-2 bg-blue-500 text-white text-sm rounded hover:bg-blue-700">Add</button>
+            </div>
+        </form>
     </div>
 </div>
 
@@ -122,20 +144,24 @@
 <div id="addBoardModal" class="hidden fixed inset-0 bg-black/50 z-50 flex items-center justify-center">
     <div class="bg-white rounded-lg shadow-lg w-96 p-6 relative">
         <h2 class="text-lg font-semibold mb-4">Add New Board</h2>
-        <div class="mb-4">
-            <label for="newBoardName" class="block text-sm font-medium mb-1">Board Name</label>
-            <input type="text" id="newBoardName" class="w-full px-3 py-2 border rounded text-sm" />
-        </div>
-        <div class="mb-4">
-            <label for="newBoardUserID" class="block text-sm font-medium mb-1">Owner User ID</label>
-            <input type="text" id="newBoardUserID" class="w-full px-3 py-2 border rounded text-sm" />
-        </div>
-        <div class="flex justify-end">
-            <button onclick="closeAddBoardModal()"
-                class="px-4 py-2 text-sm text-gray-700 hover:text-gray-900">Cancel</button>
-            <button onclick="addBoard()"
-                class="px-4 py-2 bg-blue-500 text-white text-sm rounded hover:bg-blue-700">Add</button>
-        </div>
+        <form autocomplete="off">
+            <div class="mb-4">
+                <label for="newBoardName" class="block text-sm font-medium mb-1">Board Name</label>
+                <input type="text" id="newBoardName" name="admin_boardname" autocomplete="off"
+                    class="w-full px-3 py-2 border rounded text-sm" />
+            </div>
+            <div class="mb-4">
+                <label for="newBoardUserID" class="block text-sm font-medium mb-1">Owner User ID</label>
+                <input type="text" id="newBoardUserID" name="admin_ownerid" autocomplete="off"
+                    class="w-full px-3 py-2 border rounded text-sm" />
+            </div>
+            <div class="flex justify-end">
+                <button type="button" onclick="closeAddBoardModal()"
+                    class="px-4 py-2 text-sm text-gray-700 hover:text-gray-900">Cancel</button>
+                <button type="button" onclick="addBoard()"
+                    class="px-4 py-2 bg-blue-500 text-white text-sm rounded hover:bg-blue-700">Add</button>
+            </div>
+        </form>
     </div>
 </div>
 
@@ -143,27 +169,31 @@
 <div id="addBoardMemberModal" class="hidden fixed inset-0 bg-black/50 z-50 flex items-center justify-center">
     <div class="bg-white rounded-lg shadow-lg w-96 p-6 relative">
         <h2 class="text-lg font-semibold mb-4">Add New Board Member</h2>
-        <div class="mb-4">
-            <label for="newBoardMemberBoardID" class="block text-sm font-medium mb-1">Board ID</label>
-            <input type="text" id="newBoardMemberBoardID" class="w-full px-3 py-2 border rounded text-sm" />
-        </div>
-        <div class="mb-4">
-            <label for="newBoardMemberUserID" class="block text-sm font-medium mb-1">User ID</label>
-            <input type="text" id="newBoardMemberUserID" class="w-full px-3 py-2 border rounded text-sm" />
-        </div>
-        <div class="mb-4">
-            <label for="newBoardMemberRole" class="block text-sm font-medium mb-1">Role</label>
-            <select id="newBoardMemberRole" class="w-full px-3 py-2 border rounded text-sm">
-                <option value="Viewer">Viewer</option>
-                <option value="Editor">Editor</option>
-            </select>
-        </div>
-        <div class="flex justify-end">
-            <button onclick="closeAddBoardMemberModal()"
-                class="px-4 py-2 text-sm text-gray-700 hover:text-gray-900">Cancel</button>
-            <button onclick="addBoardMember()"
-                class="px-4 py-2 bg-blue-500 text-white text-sm rounded hover:bg-blue-700">Add</button>
-        </div>
+        <form autocomplete="off">
+            <div class="mb-4">
+                <label for="newBoardMemberBoardID" class="block text-sm font-medium mb-1">Board ID</label>
+                <input type="text" id="newBoardMemberBoardID" name="admin_memberboardid" autocomplete="off"
+                    class="w-full px-3 py-2 border rounded text-sm" />
+            </div>
+            <div class="mb-4">
+                <label for="newBoardMemberUserID" class="block text-sm font-medium mb-1">User ID</label>
+                <input type="text" id="newBoardMemberUserID" name="admin_memberuserid" autocomplete="off"
+                    class="w-full px-3 py-2 border rounded text-sm" />
+            </div>
+            <div class="mb-4">
+                <label for="newBoardMemberRole" class="block text-sm font-medium mb-1">Role</label>
+                <select id="newBoardMemberRole" name="admin_memberrole" class="w-full px-3 py-2 border rounded text-sm">
+                    <option value="Viewer">Viewer</option>
+                    <option value="Editor">Editor</option>
+                </select>
+            </div>
+            <div class="flex justify-end">
+                <button type="button" onclick="closeAddBoardMemberModal()"
+                    class="px-4 py-2 text-sm text-gray-700 hover:text-gray-900">Cancel</button>
+                <button type="button" onclick="addBoardMember()"
+                    class="px-4 py-2 bg-blue-500 text-white text-sm rounded hover:bg-blue-700">Add</button>
+            </div>
+        </form>
     </div>
 </div>
 
