@@ -1,17 +1,31 @@
 <header
-    class=" fixed bg-white z-10 w-full h-12 flex justify-center items-center border-b border-gray-300 transition-shadow duration-300 hover:shadow-lg hover:shadow-blue-300/50">
-    <nav class="navbar w-full h-full flex justify-center items-center px-6">
-        <div class="left-nav flex gap-4 items-center h-full text-[#091E42] w-7/10 justify-start">
+    class="fixed top-0 bg-white z-50 w-full h-12 flex justify-center items-center border-b border-gray-300 transition-shadow duration-300 hover:shadow-lg hover:shadow-blue-300/50">
+    <nav class="container mx-auto h-full flex justify-between items-center px-4 md:px-6">
+        <!-- Left section -->
+        <div class="flex items-center h-full">
+            <!-- Logo -->
             <a href="/User/Home" class="flex gap-2 items-center h-full text-[#173B4D]">
                 <img src="~/assets/logo.png" alt="Logo" class="size-6" />
                 <span class="text-[18px] font-bold">Taskie</span>
             </a>
+
+            <!-- Mobile menu toggle -->
+            <button id="mobile-menu-toggle" class="ml-4 md:hidden p-1 rounded-md hover:bg-gray-100 transition-colors">
+                <i class="fa-solid fa-bars text-gray-700"></i>
+            </button>
+        </div>
+
+        <!-- Desktop Navigation Items -->
+        <div class="hidden md:flex items-center gap-6 h-full">
+            <!-- Recent boards dropdown -->
             <div class="relative group">
-                <button class="cursor-pointer hover:text-blue-500 text-sm py-2">
-                    Recent
+                <button
+                    class="flex items-center gap-2 cursor-pointer hover:text-blue-500 text-sm py-2 font-medium transition-colors">
+                    <span>Recent</span>
+                    <i class="fa-solid fa-angle-down text-[12px]"></i>
                 </button>
                 <div id="recentBoardsDropdown"
-                    class="absolute left-0 w-64 bg-white shadow-lg rounded z-50 hidden group-hover:block">
+                    class="absolute left-0 w-64 bg-white shadow-lg rounded-md z-50 hidden group-hover:block transform transition opacity-0 group-hover:opacity-100 -translate-y-2 group-hover:translate-y-0 duration-150">
                     <div class="py-2 px-3 border-b border-gray-200">
                         <h3 class="text-sm font-medium text-gray-700">Recent boards</h3>
                     </div>
@@ -21,12 +35,16 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Starred boards dropdown -->
             <div class="relative group">
-                <button class="cursor-pointer hover:text-blue-500 text-sm py-2">
-                    Starred
+                <button
+                    class="flex items-center gap-2 cursor-pointer hover:text-blue-500 text-sm py-2 font-medium transition-colors">
+                    <span>Starred</span>
+                    <i class="fa-solid fa-angle-down text-[12px]"></i>
                 </button>
                 <div id="starredBoardsDropdown"
-                    class="absolute left-0 w-64 bg-white shadow-lg rounded z-50 hidden group-hover:block">
+                    class="absolute left-0 w-64 bg-white shadow-lg rounded-md z-50 hidden group-hover:block transform transition opacity-0 group-hover:opacity-100 -translate-y-2 group-hover:translate-y-0 duration-150">
                     <div class="py-2 px-3 border-b border-gray-200">
                         <h3 class="text-sm font-medium text-gray-700">Starred boards</h3>
                     </div>
@@ -36,24 +54,102 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Create board button -->
             <button onclick="openNewBoardModal()"
-                class="block h-8/10 rounded-sm px-4 bg-blue-500 text-white cursor-pointer hover:bg-blue-700 font-medium text-sm">
-                Create
+                class="flex items-center gap-2 rounded-md px-4 py-1.5 bg-blue-500 text-white cursor-pointer hover:bg-blue-600 font-medium text-sm transition-colors shadow-sm hover:shadow">
+                <i class="fa-solid fa-plus text-[12px]"></i>
+                <span>Create</span>
             </button>
         </div>
-        <div class="right-nav flex items-center gap-4 h-full w-3/10 justify-end relative">
+
+        <!-- Right side: profile dropdown -->
+        <div class="flex items-center h-full">
+            <!-- Quick create button (mobile only) -->
+            <button onclick="openNewBoardModal()"
+                class="md:hidden mr-2 px-3 py-1 bg-blue-500 text-white rounded-full shadow hover:bg-blue-600 transition-colors">
+                <i class="fa-solid fa-plus text-[12px]"></i>
+            </button>
+
+            <!-- Profile dropdown -->
             @await Html.PartialAsync("User/ProfileDropdown")
         </div>
     </nav>
+
+    <!-- Mobile Navigation Menu -->
+    <div id="mobile-menu" class="fixed inset-0 bg-black/30 bg-opacity-50 z-40 hidden md:hidden"
+        style="backdrop-filter: blur(2px);">
+        <div id="mobile-menu-panel"
+            class="h-full w-3/4 max-w-xs bg-white shadow-xl transform -translate-x-full transition-transform duration-300 ease-in-out overflow-y-auto">
+            <div class="p-4 border-b border-gray-200">
+                <div class="flex justify-between items-center">
+                    <h2 class="font-semibold text-lg">Menu</h2>
+                    <button id="mobile-menu-close" class="p-1 rounded-full hover:bg-gray-100">
+                        <i class="fa-solid fa-xmark h-6 w-6 text-gray-500"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile menu items -->
+            <div class="p-4">
+                <h3 class="text-xs uppercase text-gray-500 font-semibold mb-2">Boards</h3>
+                <a href="/User/Home" class="flex items-center p-3 rounded-md hover:bg-gray-100 mb-1 text-gray-700">
+                    <i class="fa-solid fa-house h-5 w-5 mr-3 text-gray-500"></i>
+                    All Boards
+                </a>
+
+                <!-- Recent section -->
+                <button id="mobile-recent-toggle"
+                    class="flex justify-between items-center w-full p-3 rounded-md hover:bg-gray-100 mb-1 text-gray-700">
+                    <div class="flex items-center">
+                        <i class="fa-solid fa-clock h-5 w-5 mr-3 text-gray-500"></i>
+                        Recent Boards
+                    </div>
+                    <i id="mobile-recent-icon" class="fa-solid fa-chevron-down h-4 w-4 text-gray-500"></i>
+                </button>
+
+                <!-- Recent boards collapsible section -->
+                <div id="mobile-recent-content" class="pl-11 hidden">
+                    <div id="mobile-recent-boards-list" class="max-h-40 overflow-y-auto">
+                        <div class="py-2 text-sm text-gray-500">No recent boards</div>
+                    </div>
+                </div>
+
+                <!-- Starred section -->
+                <button id="mobile-starred-toggle"
+                    class="flex justify-between items-center w-full p-3 rounded-md hover:bg-gray-100 mb-1 text-gray-700">
+                    <div class="flex items-center">
+                        <i class="fa-solid fa-star h-5 w-5 mr-3 text-gray-500"></i>
+                        Starred Boards
+                    </div>
+                    <i id="mobile-starred-icon" class="fa-solid fa-chevron-down h-4 w-4 text-gray-500"></i>
+                </button>
+
+                <!-- Starred boards collapsible section -->
+                <div id="mobile-starred-content" class="pl-11 hidden">
+                    <div id="mobile-starred-boards-list" class="max-h-40 overflow-y-auto">
+                        <div class="py-2 text-sm text-gray-500">No starred boards</div>
+                    </div>
+                </div>
+
+                <div class="border-t border-gray-200 my-2"></div>
+
+                <!-- Create board -->
+                <button onclick="openNewBoardModal(); closeMobileMenu();"
+                    class="w-full flex items-center justify-center gap-2 p-3 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-colors shadow-sm">
+                    <i class="fa-solid fa-plus text-sm"></i>
+                    Create New Board
+                </button>
+            </div>
+        </div>
+    </div>
 </header>
 
 <!-- Include Login Modal -->
 @await Html.PartialAsync("_LoginModal")
 
 <script src="~/js/header.js" asp-append-version="true"></script>
-
 <script src="~/js/login.js" asp-append-version="true"></script>
-
 <script src="~/js/recentBoards.js" asp-append-version="true"></script>
-
 <script src="~/js/starredBoards.js" asp-append-version="true"></script>
+<script src="~/js/mobileHeader.js" asp-append-version="true"></script>

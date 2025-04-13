@@ -1,39 +1,48 @@
 <header
-    class="fixed mt-12 bg-gradient-to-r from-slate-100 to-slate-200 w-full h-12 flex justify-center items-center z-2 transition-shadow duration-300 hover:shadow-lg hover:shadow-slate-300/50">
-    <nav class="navbar w-full h-full flex justify-center items-center px-6">
-        <div class="left-nav flex gap-4 items-center h-full w-7/10 justify-start">
-            <button class="font-bold text-gray-800 w-fit">
-                <input class="w-fit px-2 py-1" type="" id="boardName" value="@ViewData["BoardName"]" />
+    class="fixed mt-12 bg-blue-600 w-full h-12 flex justify-center items-center z-10 transition-shadow duration-300 hover:shadow-lg hover:shadow-slate-300/50">
+    <nav class="container mx-auto h-full flex items-center px-4 md:px-6">
+        <!-- Left side: Board name, star, viewer badge -->
+        <div class="flex items-center h-full flex-1 overflow-hidden">
+            <button class="font-bold text-white min-w-0 max-w-[130px] md:max-w-none overflow-hidden text-ellipsis">
+                <input class="w-full px-2 py-1 bg-transparent hover:bg-blue-500 focus:outline-none focus:bg-white 
+                       focus:text-gray-700 focus:rounded-sm text-sm md:text-base overflow-hidden text-ellipsis"
+                    type="text" id="boardName" value="@ViewData["BoardName"]" />
             </button>
             <button id="starred" onclick="toggleBoardStar()"
-                class="flex justify-center items-center px-1 py-1 rounded-sm hover:bg-white/30 size-8">
-                <i class="fa-regular fa-star text-[14px]"></i>
+                class="flex justify-center items-center p-2 rounded-sm hover:bg-white/30 ml-1 md:ml-3">
+                <i class="fa-regular fa-star text-white text-[14px] md:text-base"></i>
             </button>
             @if (ViewData["UserRole"]?.ToString() == "Viewer")
             {
-                <span class="px-2 py-1 bg-gray-200 text-gray-700 rounded-full text-xs font-medium">
+                <span
+                    class="hidden md:inline-block px-2 py-1 bg-gray-200 text-gray-700 rounded-full text-xs font-medium ml-2">
                     View Only
+                </span>
+                <span class="md:hidden px-2 py-1 bg-gray-200 text-gray-700 rounded-full text-xs font-medium ml-1">
+                    <i class="fa-solid fa-eye"></i>
                 </span>
             }
         </div>
-        <div class="right-nav flex items-center gap-4 h-full w-3/10 justify-end relative">
+
+        <!-- Right side: Share button and settings -->
+        <div class="flex items-center gap-2 md:gap-4 h-full justify-end">
             <button id="shareBoard" onclick="openShareModal()"
-                class="flex justify-center items-center px-3 py-1 rounded bg-blue-500 text-white text-sm hover:bg-blue-600 mr-2">
-                <i class="fa-solid fa-user-plus mr-1"></i>
-                Share
+                class="flex items-center px-2 md:px-3 py-1 rounded bg-blue-700 text-white text-sm hover:bg-blue-800 transition-colors">
+                <i class="fa-solid fa-user-plus md:mr-1"></i>
+                <span class="hidden md:inline-block">Share</span>
             </button>
             <div class="relative">
                 <button id="settings" onclick="toggleSettingsDropdown()"
-                    class="flex justify-center items-center px-1 py-1 rounded-sm hover:bg-white/30 size-8">
-                    <i class="fa-solid fa-ellipsis text-[14px]"></i>
+                    class="flex justify-center items-center p-2 rounded-sm hover:bg-white/30">
+                    <i class="fa-solid fa-ellipsis text-white text-[14px] md:text-base"></i>
                 </button>
                 <div id="settings-dropdown"
-                    class="absolute right-0 mt-1 w-40 bg-white border-gray-300 border rounded shadow-md z-10 hidden">
+                    class="absolute right-0 mt-1 w-40 bg-white border border-gray-300 rounded-md shadow-lg z-20 hidden">
                     <ul class="py-1">
                         <li>
                             <button onclick="deleteBoard()"
-                                class="block w-full text-left px-4 py-2 text-sm text-red-600 hover:bg-gray-200 cursor-pointer">
-                                Delete board
+                                class="block w-full text-left px-4 py-2 text-sm text-red-600 hover:bg-gray-100 transition-colors cursor-pointer">
+                                <i class="fa-solid fa-trash-can mr-2"></i> Delete board
                             </button>
                         </li>
                     </ul>
@@ -42,9 +51,18 @@
         </div>
     </nav>
 </header>
-<main class="bg-gradient-to-r from-slate-200 to-slate-300 w-full h-full border-b border-gray-100">
+
+<!-- Main board content -->
+<main class="bg-gradient-to-r from-blue-500 to-cyan-500 w-full min-h-screen border-b border-gray-100 pt-24 mt-12">
     <input type="hidden" id="boardId" value="@ViewData["BoardID"]" />
-    <div class="lists-col flex gap-4 h-full w-full p-4 mt-24">
+
+    <!-- Add floating action button for mobile - easy add list -->
+    <button onclick="openNewListModal(event)"
+        class="fixed bottom-4 right-4 md:hidden z-10 bg-blue-600 hover:bg-blue-700 text-white rounded-full p-4 shadow-lg transition-colors">
+        <i class="fa-solid fa-plus"></i>
+    </button>
+
+    <div class="lists-col flex gap-4 h-full w-full p-4  scrollbar-thin">
         <!-- Lists will be dynamically rendered here -->
     </div>
 </main>
@@ -65,3 +83,28 @@
 @await Html.PartialAsync("User/NewBoard")
 
 <script src="~/js/user.js" asp-append-version="true"></script>
+
+<script>
+    // Ensure the board name input stays responsive to window size changes
+    window.addEventListener('resize', adjustBoardNameInput);
+
+    function adjustBoardNameInput() {
+        const boardName = document.getElementById('boardName');
+        if (boardName) {
+            // Adjust max width based on available space
+            if (window.innerWidth < 768) {
+                // On mobile, limit the width to prevent overflow
+                const containerWidth = document.querySelector('.container').offsetWidth;
+                const otherElementsWidth = 100; // Approximate width of star button + other elements
+                const maxWidth = Math.max(80, containerWidth - otherElementsWidth);
+                boardName.style.maxWidth = `${maxWidth}px`;
+            } else {
+                // On desktop, allow more space
+                boardName.style.maxWidth = '';
+            }
+        }
+    }
+
+    // Run on page load
+    document.addEventListener('DOMContentLoaded', adjustBoardNameInput);
+</script>

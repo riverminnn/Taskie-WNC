@@ -1,44 +1,114 @@
 <header
-    class="fixed top-0 w-full h-15 bg-white shadow-md flex justify-center items-center z-50 transition-shadow duration-300 hover:shadow-lg hover:shadow-blue-300/50">
-    <nav class="w-6/10 h-full flex justify-between items-center px-6">
-        <!-- Left Navigation -->
-        <div class="flex items-center gap-4 text-[#091E42]">
-            <a href="/" class="flex items-center gap-2 text-[#173B4D]">
-                <img src="~/assets/logo.png" alt="Logo" class="w-6 h-6" />
+    class="fixed top-0 w-full bg-white shadow-md flex justify-center items-center z-50 transition-all duration-300 h-15">
+    <div class="container mx-auto px-4 py-3 md:py-4">
+        <div class="flex justify-between items-center">
+            <!-- Logo - Always visible -->
+            <a href="/" class="flex items-center gap-2 text-[#173B4D] z-20">
+                <img src="~/assets/logo.png" alt="Logo" class="w-7 h-7 md:w-6 md:h-6" />
                 <span class="text-lg font-bold">Taskie</span>
             </a>
-            <button onclick="location.href='/feature'" class="text-sm hover:text-blue-500">
-                Features
-            </button>
-            <button onclick="location.href='/about'" class="text-sm hover:text-blue-500">
-                About
-            </button>
-            <button onclick="location.href='/contact'" class="text-sm hover:text-blue-500">
-                Contact
-            </button>
-        </div>
 
-        <!-- Right Navigation -->
-        <div class="flex items-center gap-4">
-            @if (!string.IsNullOrEmpty(Context.Session.GetString("Email")))
-            {
-                <button onclick="location.href='/User/Home'"
-                    class="px-6 py-2 bg-[#172b4d] text-white text-sm font-medium rounded hover:bg-[#4c5970]">
-                    Go to your boards
-                </button>
-            }
-            else
-            {
-                <button onclick="openLoginModal()"
-                    class="px-4 py-2 bg-blue-500 text-white text-sm font-medium rounded hover:bg-blue-700">
-                    Login
-                </button>
-            }
+            <!-- Mobile Menu Toggle -->
+            <button id="mobile-menu-button" class="md:hidden z-20 p-2 focus:outline-none">
+                <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path id="menu-icon" class="block" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M4 6h16M4 12h16M4 18h16"></path>
+                    <path id="close-icon" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex items-center justify-between flex-grow ml-10">
+                <!-- Left Nav Links -->
+                <div class="flex items-center gap-6 text-[#091E42]">
+                    <a href="/feature" class="text-sm hover:text-blue-500 transition-colors">Features</a>
+                    <a href="/about" class="text-sm hover:text-blue-500 transition-colors">About</a>
+                    <a href="/contact" class="text-sm hover:text-blue-500 transition-colors">Contact</a>
+                </div>
+
+                <!-- Right Nav Elements -->
+                <div class="flex items-center gap-4">
+                    @if (!string.IsNullOrEmpty(Context.Session.GetString("Email")))
+                    {
+                        <a href="/User/Home"
+                            class="px-6 py-2 bg-[#172b4d] text-white text-sm font-medium rounded-md hover:bg-[#4c5970] transition-colors shadow-sm">
+                            Go to your boards
+                        </a>
+                    }
+                    else
+                    {
+                        <button onclick="openLoginModal()"
+                            class="px-6 py-2 bg-blue-500 text-white text-sm font-medium rounded-md hover:bg-blue-600 transition-colors shadow-sm">
+                            Login
+                        </button>
+                    }
+                </div>
+            </nav>
+
+            <!-- Mobile Navigation Menu -->
+            <div id="mobile-menu"
+                class="fixed md:hidden inset-0 bg-white z-10 transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col justify-center items-center">
+                <div class="flex flex-col items-center space-y-6 text-lg">
+                    <a href="/feature"
+                        class="text-[#091E42] hover:text-blue-500 transition-colors hover:scale-105 transform">Features</a>
+                    <a href="/about"
+                        class="text-[#091E42] hover:text-blue-500 transition-colors hover:scale-105 transform">About</a>
+                    <a href="/contact"
+                        class="text-[#091E42] hover:text-blue-500 transition-colors hover:scale-105 transform">Contact</a>
+
+                    @if (!string.IsNullOrEmpty(Context.Session.GetString("Email")))
+                    {
+                        <a href="/User/Home"
+                            class="mt-4 px-8 py-3 bg-[#172b4d] text-white font-medium rounded-md hover:bg-[#4c5970] transition-colors shadow-md">
+                            Go to your boards
+                        </a>
+                    }
+                    else
+                    {
+                        <button onclick="openLoginModal(); toggleMobileMenu();"
+                            class="mt-4 px-8 py-3 bg-blue-500 text-white font-medium rounded-md hover:bg-blue-600 transition-colors shadow-md">
+                            Login
+                        </button>
+                    }
+                </div>
+            </div>
         </div>
-    </nav>
+    </div>
 </header>
 
 <!-- Include Login Modal -->
 @await Html.PartialAsync("_LoginModal")
+
+<script>
+    // Toggle mobile menu functionality
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIcon = document.getElementById('menu-icon');
+    const closeIcon = document.getElementById('close-icon');
+
+    function toggleMobileMenu() {
+        if (mobileMenu.classList.contains('translate-x-full')) {
+            mobileMenu.classList.replace('translate-x-full', 'translate-x-0');
+            menuIcon.classList.replace('block', 'hidden');
+            closeIcon.classList.replace('hidden', 'block');
+            document.body.classList.add('overflow-hidden'); // Prevent scrolling
+        } else {
+            mobileMenu.classList.replace('translate-x-0', 'translate-x-full');
+            menuIcon.classList.replace('hidden', 'block');
+            closeIcon.classList.replace('block', 'hidden');
+            document.body.classList.remove('overflow-hidden'); // Allow scrolling
+        }
+    }
+
+    mobileMenuButton.addEventListener('click', toggleMobileMenu);
+
+    // Close mobile menu on window resize if it becomes desktop size
+    window.addEventListener('resize', () => {
+        if (window.innerWidth >= 768 && !mobileMenu.classList.contains('translate-x-full')) {
+            toggleMobileMenu();
+        }
+    });
+</script>
 
 <script src="~/js/header.js" asp-append-version="true"></script>

@@ -1,25 +1,58 @@
 let allBoardsData = null;
 
+/**
+ * Determines if the current page is the User Home page
+ * @returns {boolean} True if on User Home page
+ */
+function isUserHomePage() {
+    return window.location.pathname === '/User/Home' ||
+        window.location.pathname === '/User' ||
+        window.location.pathname === '/User/';
+}
+
+/**
+ * Opens the new board modal
+ */
 function openNewBoardModal() {
-    document.getElementById('newBoardModal').classList.remove('hidden');
+    const modal = document.getElementById('newBoardModal');
     document.getElementById('newBoardModal').classList.add('flex');
+    modal.classList.remove('hidden');
+
+    // Focus the input field after a short delay to ensure modal is visible
+    setTimeout(() => {
+        const input = document.getElementById('boardNameInput');
+        if (input) {
+            input.focus();
+        }
+    }, 100);
 }
 
+/**
+ * Closes the new board modal
+ */
 function closeNewBoardModal() {
-    document.getElementById('newBoardModal').classList.add('hidden');
+    const modal = document.getElementById('newBoardModal');
     document.getElementById('newBoardModal').classList.remove('flex');
+    modal.classList.add('hidden');
+
+    // Clear input
+    const input = document.getElementById('boardNameInput');
+    if (input) {
+        input.value = '';
+    }
 }
 
+/**
+ * Creates a new board
+ */
 async function createBoard() {
-    const boardTitle = document.getElementById('boardTitle').value.trim();
-    const boardTitleError = document.getElementById('boardTitleError');
+    const boardNameInput = document.getElementById('boardTitle');
+    const boardName = boardNameInput.value.trim();
 
-    if (!boardTitle) {
-        boardTitleError.classList.remove('hidden');
+    if (!boardName) {
+        alert('Board name is required!');
         return;
     }
-
-    boardTitleError.classList.add('hidden');
 
     try {
         const response = await fetch('/Board/Create', {
@@ -27,23 +60,31 @@ async function createBoard() {
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({ boardName: boardTitle }),
+            body: JSON.stringify({ boardName }),
         });
-        console.log(JSON.stringify({ boardName: boardTitle }));
+
         const data = await response.json();
 
         if (data.success) {
             closeNewBoardModal();
-            fetchBoards(); // Refresh the board list
+            fetchBoards(); // Refresh the boards
         } else {
-            console.error(data.message);
+            alert(data.message || 'Failed to create board');
         }
     } catch (error) {
         console.error('Error creating board:', error);
+        alert('An error occurred while creating the board');
     }
 }
 
+/**
+ * Fetches all boards for the current user
+ */
 async function fetchBoards() {
+    // Only fetch boards on User Home page
+    if (!isUserHomePage()) {
+        return;
+    }
     try {
         const response = await fetch('/Board/GetBoards', {
             method: 'POST',
@@ -53,6 +94,9 @@ async function fetchBoards() {
         });
 
         const data = await response.json();
+
+        console.log(data);
+
 
         if (data.success) {
             // Store the data globally for filtering/sorting
@@ -68,125 +112,210 @@ async function fetchBoards() {
     }
 }
 
-// Apply current filters and sorting options to the boards data
+/**
+ * Gets recent boards from localStorage
+ * @param {Object} filteredData - The data containing all boards
+ * @returns {Array} - Array of recent boards
+ */
+function getRecentBoards(filteredData) {
+    try {
+        const recentBoardsFromStorage = JSON.parse(localStorage.getItem('recentBoards') || '[]');
+        if (recentBoardsFromStorage.length === 0) return [];
+
+        // Get all boards (from either owned or shared)
+        const allBoardsArray = [...(filteredData.ownedBoards || []), ...(filteredData.sharedBoards || [])];
+
+        // Filter to just the boards that are in our recent list
+        const recentBoardIds = recentBoardsFromStorage.map(rb => parseInt(rb.id));
+        const result = allBoardsArray.filter(board =>
+            recentBoardIds.includes(board.boardID)
+        );
+
+        // Sort by recent visit order
+        result.sort((a, b) => {
+            const aIndex = recentBoardIds.indexOf(a.boardID);
+            const bIndex = recentBoardIds.indexOf(b.boardID);
+            return aIndex - bIndex;
+        });
+
+        return result;
+    } catch (error) {
+        console.error('Error getting recent boards:', error);
+        return [];
+    }
+}
+
+/**
+ * Unifies boards data for consistent handling
+ * @param {Object} filteredData - The data to unify
+ * @returns {Object} - Data with unified boards
+ */
+function unifyBoardsData(filteredData) {
+    if (filteredData.boards) return filteredData;
+
+    // Create a deep copy to avoid modifying the original
+    const result = JSON.parse(JSON.stringify(filteredData));
+
+    // Combine owned and shared boards into a single array
+    const ownedBoards = result.ownedBoards || [];
+    const sharedBoards = result.sharedBoards || [];
+
+    // Mark ownership status
+    ownedBoards.forEach(board => board.isOwner = true);
+    sharedBoards.forEach(board => board.isOwner = false);
+
+    // Create a unified array
+    result.boards = [...ownedBoards, ...sharedBoards];
+
+    return result;
+}
+
+/**
+ * Sorts boards based on the given option
+ * @param {Array} boards - The boards to sort
+ * @param {string} sortOption - The sorting option
+ * @returns {Array} - Sorted boards
+ */
+function sortBoards(boards, sortOption) {
+    if (boards.length === 0) return boards;
+
+    if (sortOption === 'Alphabetical') {
+        return [...boards].sort((a, b) => a.boardName.localeCompare(b.boardName));
+    } else if (sortOption === 'Date created') {
+        return [...boards].sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+    } else { // Most recently active
+        return [...boards].sort((a, b) => new Date(b.lastActivity || b.createdAt) - new Date(a.lastActivity || a.createdAt));
+    }
+}
+
+/**
+ * Applies filters and sorting to the boards
+ */
 function applyFiltersAndSort() {
-    if (!allBoardsData) return;
+    // Only run this function on the User Home page or if required elements exist
+    if (!isUserHomePage() || !allBoardsData) return;
 
     const searchTerm = document.getElementById('searchBoards').value.toLowerCase().trim();
     const sortOption = document.getElementById('sort').value;
 
-    // Create a deep copy of the data to avoid modifying the original
-    const filteredData = JSON.parse(JSON.stringify(allBoardsData));
+    // Unify boards data for consistent handling
+    let filteredData = unifyBoardsData(allBoardsData);
+
+    // Filter based on active category
+    let boardsToShow = [];
+
+    if (window.activeFilter === 'all') {
+        boardsToShow = filteredData.boards;
+    } else if (window.activeFilter === 'recent') {
+        boardsToShow = getRecentBoards(filteredData);
+    } else if (window.activeFilter === 'owned') {
+        boardsToShow = filteredData.ownedBoards || filteredData.boards.filter(board => board.isOwner);
+    } else if (window.activeFilter === 'shared') {
+        boardsToShow = filteredData.sharedBoards || filteredData.boards.filter(board => !board.isOwner);
+    }
+
+    // Ensure boardsToShow is an array
+    boardsToShow = Array.isArray(boardsToShow) ? boardsToShow : [];
 
     // Apply search filter
     if (searchTerm) {
-        // Filter owned boards
-        filteredData.ownedBoards = filteredData.ownedBoards.filter(board =>
-            board.boardName.toLowerCase().includes(searchTerm)
-        );
-
-        // Filter shared boards
-        filteredData.sharedBoards = filteredData.sharedBoards.filter(board =>
-            board.boardName.toLowerCase().includes(searchTerm)
-        );
+        boardsToShow = boardsToShow.filter(board =>
+            board.boardName.toLowerCase().includes(searchTerm));
     }
 
     // Apply sorting
-    sortBoards(filteredData.ownedBoards, sortOption);
-    sortBoards(filteredData.sharedBoards, sortOption);
+    boardsToShow = sortBoards(boardsToShow, sortOption);
 
-    // Render the filtered and sorted data
-    renderBoards(filteredData);
+    // Render the filtered and sorted boards
+    renderBoards(boardsToShow);
 }
 
-// Sort boards based on selected option
-function sortBoards(boards, sortOption) {
-    if (!boards || boards.length === 0) return;
+/**
+ * Filter boards by category
+ * @param {string} category - The category to filter by (all, recent, owned, shared)
+ */
+function filterBoards(category) {
+    // Update active button visual state
+    document.querySelectorAll('[id$="-boards-btn"]').forEach(btn => {
+        btn.classList.remove('bg-blue-50', 'text-blue-700', 'border-blue-500');
+        btn.classList.add('bg-white', 'text-gray-600', 'border-gray-300');
+    });
 
-    switch (sortOption) {
-        case 'Alphabetical':
-            boards.sort((a, b) => a.boardName.localeCompare(b.boardName));
-            break;
-
-        case 'Date created':
-            boards.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
-            break;
-
-        // For "Most recently active" we'll use createdAt as a fallback
-        // In a full implementation, you might track last activity date
-        case 'Most recently active':
-        default:
-            boards.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
-            break;
+    const buttonId = `${category}-boards-btn`;
+    const activeButton = document.getElementById(buttonId);
+    if (activeButton) {
+        activeButton.classList.add('bg-blue-50', 'text-blue-700', 'border-blue-500');
+        activeButton.classList.remove('bg-white', 'text-gray-600', 'border-gray-300');
     }
+
+    // Apply the filter
+    window.activeFilter = category;
+    applyFiltersAndSort();
 }
 
-function renderBoards(data) {
+/**
+ * Trigger filtering when sort option changes
+ */
+function applySorting() {
+    applyFiltersAndSort();
+}
+
+/**
+ * Renders boards to the UI
+ * @param {Array} boards - The boards to render
+ */
+function renderBoards(boards) {
     const boardsContainer = document.getElementById('boardsContainer');
-    boardsContainer.innerHTML = ''; // Clear existing boards
+    boardsContainer.innerHTML = '';
 
-    // Add "Create New Board" button
-    boardsContainer.innerHTML += `
-        <button onclick="openNewBoardModal()"
-            class="flex items-center justify-center bg-gray-200 rounded shadow p-4 cursor-pointer hover:bg-gray-300 h-24 w-full">
-            <div class="text-center">
-                <span class="block text-lg font-semibold text-gray-600">Create new board</span>
-            </div>
-        </button>
-    `;
-
-    // Section for boards owned by user
-    if (data.ownedBoards && data.ownedBoards.length > 0) {
-        boardsContainer.innerHTML += `<h2 class="col-span-full mt-6 mb-2 text-lg font-medium">Your boards</h2>`;
-
-        // Render each owned board
-        data.ownedBoards.forEach(board => {
-            boardsContainer.innerHTML += `
-                <div onclick="goToBoardDetail(${board.boardID})"
-                    class="bg-gradient-to-r from-slate-200 to-slate-300 cursor-pointer rounded shadow p-4 h-24 w-full flex flex-col justify-between">
-                    <span class="block text-lg font-semibold truncate">${board.boardName}</span>
-                    <div class="mt-2 text-xs text-gray-600">
-                        Created ${formatDate(board.createdAt || new Date())}
-                    </div>
-                </div>
-            `;
-        });
+    if (!boards || boards.length === 0) {
+        document.getElementById('emptyState').classList.remove('hidden');
+        return;
     }
 
-    // Section for shared boards
-    if (data.sharedBoards && data.sharedBoards.length > 0) {
-        boardsContainer.innerHTML += `<h2 class="col-span-full mt-6 mb-2 text-lg font-medium">Shared with you</h2>`;
+    document.getElementById('emptyState').classList.add('hidden');
 
-        // Render each shared board
-        data.sharedBoards.forEach(board => {
-            boardsContainer.innerHTML += `
-                <div onclick="goToBoardDetail(${board.boardID})"
-                    class="bg-gradient-to-r from-purple-500 to-purple-700 cursor-pointer text-white rounded shadow p-4 h-24 w-full flex flex-col justify-between">
-                    <span class="block text-lg font-semibold truncate">${board.boardName}</span>
-                    <div class="flex justify-between items-center mt-2">
-                        <span class="text-xs">Owner: ${board.ownerName || 'Unknown'}</span>
-                    </div>
-                </div>
-            `;
-        });
-    }
+    // Render each board with enhanced UI
+    boards.forEach(board => {
+        const boardCard = document.createElement('div');
+        boardCard.className = 'board-card bg-white rounded-lg border border-gray-200 overflow-hidden flex flex-col shadow-sm transition-all duration-200 hover:shadow-md hover:scale-105 hover:border-blue-400';
 
-    // Show empty state if no boards after filtering
-    if ((!data.ownedBoards || data.ownedBoards.length === 0) &&
-        (!data.sharedBoards || data.sharedBoards.length === 0)) {
+        // Determine board color based on role
+        let headerClass = 'bg-blue-500';
+        let roleTag = '';
 
-        const searchTerm = document.getElementById('searchBoards').value.trim();
-        if (searchTerm) {
-            boardsContainer.innerHTML += `
-                <div class="col-span-full mt-6 text-center text-gray-500">
-                    <p>No boards found matching "${searchTerm}"</p>
-                </div>
-            `;
+        if (!board.isOwner) {
+            headerClass = 'bg-purple-500';
+            roleTag = `<span class="text-xs font-medium px-2 py-1 rounded-full bg-purple-100 text-purple-700">Shared</span>`;
         }
-    }
+
+        const createdDate = new Date(board.createdAt).toLocaleDateString();
+
+        boardCard.innerHTML = `
+            <div class="${headerClass} h-2 w-full"></div>
+            <div class="p-4 flex-grow flex flex-col cursor-pointer" onclick="goToBoardDetail(${board.boardID})">
+                <div class="flex justify-between items-start mb-4">
+                    <h3 class="font-medium text-gray-800">${board.boardName}</h3>
+                    ${roleTag}
+                </div>
+               
+                <div class="mt-auto flex justify-between items-center">
+                    <div class="flex items-center">
+                         <p class="text-sm text-gray-500 mb-3">Created ${createdDate}</p>
+                    </div>
+                </div>
+            </div>
+        `;
+
+        boardsContainer.appendChild(boardCard);
+    });
 }
 
-// Add this helper function for formatted dates
+/**
+ * Format date for display
+ * @param {string} dateString - The date string to format
+ * @returns {string} - Formatted date string
+ */
 function formatDate(dateString) {
     const date = new Date(dateString);
     const now = new Date();
@@ -238,10 +367,11 @@ async function goToBoardDetail(boardID) {
     }
 }
 
-
-// Fetch boards when the page loads
 // Set up event listeners when the page loads
 document.addEventListener('DOMContentLoaded', () => {
+    // Initialize filter state
+    window.activeFilter = 'all';
+
     // Fetch boards initially
     fetchBoards();
 
@@ -257,7 +387,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const sortDropdown = document.getElementById('sort');
     if (sortDropdown) {
         sortDropdown.addEventListener('change', () => {
-            applyFiltersAndSort();
+            applySorting();
         });
     }
 });

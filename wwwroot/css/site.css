@@ -1,5 +1,54 @@
 @import "tailwindcss";
 
+@media (max-width: 768px) {
+    .lists-col {
+        gap: 0.5rem !important;
+        padding: 0.5rem !important;
+    }
+
+    [id^="card-item-"] {
+        margin-bottom: 0.375rem !important;
+    }
+}
+
+/* Improve touch targets on mobile */
+@media (max-width: 640px) {
+
+    .new-card,
+    #addListButton {
+        min-height: 42px;
+    }
+
+    #list-settings-button {
+        min-width: 32px;
+        min-height: 32px;
+    }
+}
+
+/* Smoothen the transitions */
+.cards-container {
+    transition: padding 0.15s ease, border 0.15s ease, background-color 0.15s ease;
+}
+
+[id^="card-item-"] {
+    cursor: grab;
+    transition: transform 0.1s ease, opacity 0.2s ease, border 0.15s ease;
+}
+
+[id^="card-item-"]:active {
+    cursor: grabbing;
+}
+
+/* Add this for a more responsive dragging experience */
+.lists-col {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    min-height: calc(100vh - 12rem);
+    padding: 1rem;
+    align-items: flex-start;
+}
+
 /* Add these custom scrollbar styles */
 .scrollbar-thin::-webkit-scrollbar {
     width: 6px;

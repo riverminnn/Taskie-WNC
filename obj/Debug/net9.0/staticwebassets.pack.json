@@ -1,6 +1,10 @@
 {
   "Files": [
     {
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\assets\\about-team.jpg",
+      "PackagePath": "staticwebassets\\assets\\about-team.jpg"
+    },
+    {
       "Id": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\assets\\fonts\\GoogleSans-Bold.ttf",
       "PackagePath": "staticwebassets\\assets\\fonts\\GoogleSans-Bold.ttf"
     },
@@ -43,6 +47,10 @@
     {
       "Id": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\assets\\logo.png",
       "PackagePath": "staticwebassets\\assets\\logo.png"
+    },
+    {
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\assets\\review.png",
+      "PackagePath": "staticwebassets\\assets\\review.png"
     },
     {
       "Id": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\css\\site.css",

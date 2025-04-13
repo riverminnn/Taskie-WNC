@@ -123,7 +123,7 @@ function updateStarIcon(isStarred) {
     if (isStarred) {
         starIcon.className = 'fa-solid fa-star text-[14px] text-yellow-500';
     } else {
-        starIcon.className = 'fa-regular fa-star text-[14px]';
+        starIcon.className = 'fa-regular fa-star text-[14px] text-white';
     }
 }
 

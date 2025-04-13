@@ -1,4 +1,3 @@
-
 export async function loadLists() {
     const response = await fetch('/Admin/GetLists');
     const lists = await response.json();

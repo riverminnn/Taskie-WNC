@@ -34,6 +34,17 @@ namespace TaskieWNC.Controllers
                 return Json(new { success = false, message = "Card name is required." });
             }
 
+            // Make sure position is set if not provided
+            if (newCard.Position <= 0)
+            {
+                // Get highest position in list and add 1
+                var maxPosition = _cardRepository.GetCardsByListId(newCard.ListID)
+                    .Select(c => c.Position)
+                    .DefaultIfEmpty(0)
+                    .Max();
+                newCard.Position = maxPosition + 1;
+            }
+
             // Add the new card to the database
             _cardRepository.AddCard(newCard);
 
@@ -352,6 +363,140 @@ namespace TaskieWNC.Controllers
             {
                 return Json(new { success = false, message = $"Error deleting comment: {ex.Message}" });
             }
+        }
+
+        [HttpPost]
+        [Route("MoveToList")]
+        public IActionResult MoveToList([FromBody] MoveCardRequest request)
+        {
+            if (request == null || request.CardID <= 0 || request.ListID <= 0)
+            {
+                return Json(new { success = false, message = "Invalid request data." });
+            }
+
+            try
+            {
+                var card = _cardRepository.GetCardById(request.CardID);
+                if (card == null)
+                {
+                    return Json(new { success = false, message = "Card not found." });
+                }
+
+                var sourceList = _listRepository.GetListById(card.ListID);
+                var targetList = _listRepository.GetListById(request.ListID);
+
+                if (sourceList == null || targetList == null)
+                {
+                    return Json(new { success = false, message = "List not found." });
+                }
+
+                // Check if both lists belong to the same board
+                if (sourceList.BoardID != targetList.BoardID)
+                {
+                    return Json(new { success = false, message = "Cannot move cards between different boards." });
+                }
+
+                // Check if user has edit permission
+                if (!UserCanEdit(sourceList.BoardID))
+                {
+                    return Json(new { success = false, message = "You don't have permission to modify this board." });
+                }
+
+                // Move the card to the new list (update ListID)
+                card.ListID = request.ListID;
+
+                // Place card at the end of the target list
+                int maxPosition = _cardRepository.GetCardsByListId(request.ListID)
+                    .Select(c => c.Position)
+                    .DefaultIfEmpty(-1)
+                    .Max();
+
+                card.Position = maxPosition + 1;
+
+                _cardRepository.UpdateCard(card);
+
+                return Json(new { success = true, message = "Card moved successfully." });
+            }
+            catch (Exception ex)
+            {
+                return Json(new { success = false, message = $"Error moving card: {ex.Message}" });
+            }
+        }
+
+        [HttpPost]
+        [Route("UpdatePositions")]
+        public IActionResult UpdatePositions([FromBody] List<CardPositionUpdate> updates)
+        {
+            if (updates == null || !updates.Any())
+            {
+                return Json(new { success = false, message = "No position updates provided." });
+            }
+
+            try
+            {
+                // Get the first card to check permissions
+                var firstCardId = updates.First().CardID;
+                var firstCard = _cardRepository.GetCardById(firstCardId);
+
+                if (firstCard == null)
+                {
+                    return Json(new { success = false, message = "Card not found." });
+                }
+
+                // Get the list to check board permissions
+                var list = _listRepository.GetListById(firstCard.ListID);
+                if (list == null)
+                {
+                    return Json(new { success = false, message = "List not found." });
+                }
+
+                // Check if user has edit permission for this board
+                if (!UserCanEdit(list.BoardID))
+                {
+                    return Json(new { success = false, message = "You don't have permission to modify this board." });
+                }
+
+                // Update all card positions
+                foreach (var update in updates)
+                {
+                    var card = _cardRepository.GetCardById(update.CardID);
+                    if (card != null)
+                    {
+                        card.Position = update.Position;
+                        _cardRepository.UpdateCard(card);
+                    }
+                }
+
+                return Json(new { success = true, message = "Card positions updated successfully." });
+            }
+            catch (Exception ex)
+            {
+                return Json(new { success = false, message = $"Error updating card positions: {ex.Message}" });
+            }
+        }
+
+        // Add these model classes
+        public class CardPositionUpdate
+        {
+            public int CardID { get; set; }
+            public int Position { get; set; }
+        }
+
+        public class MoveCardRequest
+        {
+            public int CardID { get; set; }
+            public int ListID { get; set; }
+        }
+
+        private bool UserCanEdit(int boardId)
+        {
+            // Implement your permission check here
+            if (!TryGetUserId(out int userId))
+            {
+                return false;
+            }
+
+            return _boardRepository.HasBoardAccess(boardId, userId);
         }
 
         public class DeleteCommentRequest

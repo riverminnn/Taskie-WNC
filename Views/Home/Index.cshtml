@@ -1,39 +1,156 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-<div class="mt-15 w-full h-15 bg-[#DEEBFF] flex justify-center items-center text-[#091E42] gap-2 font-medium">
-    <span class="">
+
+<!-- Announcement Banner -->
+<div
+    class="mt-15 w-full py-3 bg-gradient-to-r from-blue-100 to-blue-200 flex flex-col md:flex-row justify-center items-center text-[#091E42] gap-2 font-medium shadow-sm">
+    <span class="text-center md:text-left px-4">
         Accelerate your teams' work with Taskie now available for all Premium and Enterprise!
     </span>
-    <span class="text-[#0052CC] hover:text-blue-500 underline cursor-pointer">
-        Learn more.
-    </span>
+    <a href="/pricing"
+        class="text-blue-600 hover:text-blue-700 underline cursor-pointer font-semibold transition duration-300">
+        Learn more
+    </a>
 </div>
-<section class="bg-white lg:grid lg:h-screen lg:place-content-center">
-    <div class="mx-auto w-screen max-w-screen-xl px-4 py-12 sm:px-6 sm:py-24 lg:px-8 lg:py-32">
-        <div class="mx-auto max-w-[52rem] text-center">
-            <h1 class="text-4xl font-bold text-gray-900 sm:text-5xl">
+
+<!-- Hero Section -->
+<section class="bg-gradient-to-br from-white to-slate-200 px-4 py-12 md:py-20">
+    <div class="container mx-auto max-w-6xl flex flex-col md:flex-row items-center gap-8 md:gap-12">
+        <div class="w-full md:w-1/2 text-center md:text-left">
+            <h1 class="text-3xl md:text-5xl font-bold text-gray-900 leading-tight">
                 Capture, organize, and tackle your
-                <strong class="text-blue-600"> to-dos </strong>
+                <span class="text-blue-600 relative">
+                    to-dos
+                    <svg class="absolute w-full h-2 -bottom-1 left-0 text-blue-200" viewBox="0 0 100 10"
+                        preserveAspectRatio="none">
+                        <path d="M0,5 Q50,10 100,5" stroke="currentColor" stroke-width="8" fill="none" />
+                    </svg>
+                </span>
                 from anywhere.
             </h1>
 
-            <p class="mt-4 text-base text-pretty text-gray-700 sm:text-lg/relaxed">
-                Stay organized and efficient with Inbox, Boards, and Card. Every to-do, idea,
-                or responsibility—no matter how small—finds its place, keeping you at the top of your game.
+            <p class="mt-4 text-lg text-gray-700 md:pr-6">
+                Stay organized and efficient with Inbox, Boards, and Cards. Every to-do, idea,
+                or responsibility—no matter how small—finds its place.
             </p>
 
-            <div class="mt-4 flex justify-center gap-4 sm:mt-6">
-                <a class="inline-block rounded bg-blue-500 px-5 py-3 font-medium text-white shadow-md transition-colors hover:bg-blue-700"
-                    href="/">
+            <div class="mt-6 flex flex-col sm:flex-row justify-center md:justify-start gap-4">
+                <button onclick="openLoginModal()"
+                    class="px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition shadow-md hover:shadow-lg group">
                     Get Started
-                </a>
+                    <span class="inline-block transition-transform group-hover:translate-x-1">→</span>
+                </button>
 
-                <a class="inline-block rounded px-5 py-3 font-medium text-gray-700 shadow-md transition-colors hover:bg-gray-50 hover:text-gray-900"
-                    href="/">
+                <a href="/Feature"
+                    class="px-6 py-3 bg-white text-gray-800 font-medium rounded-lg border border-gray-300 hover:bg-gray-50 transition shadow-sm">
                     Learn More
                 </a>
             </div>
+        </div>
+        <div class="w-full md:w-1/2 mt-8 md:mt-0">
+            <img src="~/assets/taskie-board.png" alt="Taskie Dashboard" class="w-full h-auto rounded-lg shadow-xl">
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="py-16 bg-white">
+    <div class="container mx-auto max-w-6xl px-4">
+        <h2 class="text-2xl md:text-3xl font-bold text-center mb-12">Why teams love Taskie</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Feature 1 -->
+            <div class="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition">
+                <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                    <i class="fa-solid fa-check-double text-blue-600"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">Simple Task Management</h3>
+                <p class="text-gray-600">Create, organize, and complete tasks with an intuitive interface that keeps
+                    everything in one place.</p>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition">
+                <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                    <i class="fa-solid fa-users text-blue-600"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">Team Collaboration</h3>
+                <p class="text-gray-600">Share boards, assign tasks, and communicate with team members in real-time.</p>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition">
+                <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                    <i class="fa-solid fa-chart-line text-blue-600"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">Progress Tracking</h3>
+                <p class="text-gray-600">Monitor project status and team productivity with visual dashboards and
+                    reports.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonial Section -->
+<section class="py-16 bg-gray-50">
+    <div class="container mx-auto max-w-4xl px-4">
+        <div class="bg-white p-8 rounded-xl shadow-md">
+            <div class="flex flex-col items-center text-center">
+                <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                    <span class="text-blue-600 text-2xl">"</span>
+                </div>
+                <p class="text-lg md:text-xl text-gray-700 italic mb-6">
+                    Taskie has completely transformed how our team manages projects. The intuitive design and
+                    powerful features have increased our productivity by 40%.
+                </p>
+                <div class="flex items-center">
+                    <img src="~/assets/review2.png" alt="Dung Le" class="w-12 h-12 rounded-full mr-4 object-cover">
+                    <div class="text-left">
+                        <h4 class="font-semibold">Daniel William Sooman</h4>
+                        <p class="text-gray-500 text-sm">Product Manager at DaniDev</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-16 bg-gradient-to-r from-blue-600 to-blue-800 text-white">
+    <div class="container mx-auto max-w-4xl px-4 text-center">
+        <h2 class="text-2xl md:text-3xl font-bold mb-4">Ready to get started with Taskie?</h2>
+        <p class="text-blue-100 mb-8 max-w-2xl mx-auto">
+            Join thousands of teams who use Taskie to organize their work and boost productivity.
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+            <button onclick="openLoginModal()"
+                class="px-6 py-3 bg-white text-blue-700 font-medium rounded-lg hover:bg-gray-100 transition shadow-md">
+                Sign Up Free
+            </button>
+            <a href="/Contact"
+                class="px-6 py-3 border border-white text-white font-medium rounded-lg hover:bg-blue-700 transition">
+                Contact Sales
+            </a>
+        </div>
+    </div>
+</section>
+<!-- Integration Partners -->
+<section class="py-12 bg-white">
+    <div class="container mx-auto max-w-6xl px-4">
+        <h3 class="text-center text-gray-500 mb-8">Trusted by leading companies worldwide</h3>
+        <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16">
+            <!-- Using the SVG files from your assets folder -->
+            <img src="/assets/microsoft.svg" alt="Microsoft"
+                class="h-8 opacity-70 hover:opacity-100 transition-opacity duration-300">
+            <img src="/assets/google.svg" alt="Google"
+                class="h-8 opacity-70 hover:opacity-100 transition-opacity duration-300">
+            <img src="/assets/meta.svg" alt="Meta"
+                class="h-8 opacity-70 hover:opacity-100 transition-opacity duration-300">
+            <img src="/assets/netflix.svg" alt="Netflix"
+                class="h-8 opacity-70 hover:opacity-100 transition-opacity duration-300">
+            <img src="/assets/amazon.svg" alt="Amazon"
+                class="h-8 opacity-70 hover:opacity-100 transition-opacity duration-300">
         </div>
     </div>
 </section>

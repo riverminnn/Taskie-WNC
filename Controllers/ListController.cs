@@ -28,7 +28,9 @@ namespace TaskieWNC.Controllers
         [Route("GetLists")]
         public IActionResult GetLists([FromBody] int boardID)
         {
-            var lists = _listRepository.GetListsByBoardId(boardID);
+            var lists = _listRepository.GetListsByBoardId(boardID)
+                                      .OrderBy(l => l.Position) // Make sure lists are ordered by position
+                                      .ToList();
 
             // Include cards for each list
             var listsWithCards = lists.Select(list => new
@@ -44,22 +46,31 @@ namespace TaskieWNC.Controllers
 
         [HttpPost]
         [Route("Add")]
-        public IActionResult Add([FromBody] ListModel newList)
+        public IActionResult Add([FromBody] AddListRequest request)
         {
-            if (!UserCanEdit(newList.BoardID))
+            try
             {
-                return Json(new { success = false, message = "You don't have permission to modify this board." });
-            }
+                // Check if user has permission to add list
+                if (!UserCanEdit(request.BoardId))
+                {
+                    return Json(new { success = false, message = "You don't have permission to add lists to this board" });
+                }
 
-            if (newList == null || string.IsNullOrEmpty(newList.ListName))
+                var list = new ListModel
+                {
+                    ListName = request.ListName,
+                    BoardID = request.BoardId,
+                    Position = request.Position // Use the position from the request
+                };
+
+                _listRepository.AddList(list);
+
+                return Json(new { success = true, message = "List added successfully!" });
+            }
+            catch (Exception ex)
             {
-                return Json(new { success = false, message = "List name is required." });
+                return Json(new { success = false, message = $"Failed to add list: {ex.Message}" });
             }
-
-            // Add the new list to the database
-            _listRepository.AddList(newList);
-
-            return Json(new { success = true, message = "List added successfully!", list = newList });
         }
 
         [HttpPost]
@@ -131,6 +142,65 @@ namespace TaskieWNC.Controllers
             // Check if user is an editor
             var membership = _boardMemberRepository.GetBoardMembership(boardId, userId);
             return membership != null && membership.Role == "Editor";
+        }
+        [HttpPost]
+        [Route("UpdatePositions")]
+        public IActionResult UpdatePositions([FromBody] List<ListPositionUpdate> updates)
+        {
+            if (updates == null || !updates.Any())
+            {
+                return Json(new { success = false, message = "No position updates provided." });
+            }
+
+            try
+            {
+                // Get the board ID from the first list to check permissions
+                var firstListId = updates.First().ListID;
+                var firstList = _listRepository.GetListById(firstListId);
+
+                if (firstList == null)
+                {
+                    return Json(new { success = false, message = "List not found." });
+                }
+
+                // Check if user has edit permission
+                if (!UserCanEdit(firstList.BoardID))
+                {
+                    return Json(new { success = false, message = "You don't have permission to modify this board." });
+                }
+
+                // Update all list positions
+                foreach (var update in updates)
+                {
+                    var list = _listRepository.GetListById(update.ListID);
+                    if (list != null)
+                    {
+                        list.Position = update.Position;
+                        _listRepository.UpdateList(list);
+                    }
+                }
+
+                return Json(new { success = true, message = "List positions updated successfully." });
+            }
+            catch (Exception ex)
+            {
+                return Json(new { success = false, message = $"Error updating list positions: {ex.Message}" });
+            }
+        }
+
+        // Also update your request model
+        public class AddListRequest
+        {
+            public string? ListName { get; set; }
+            public int BoardId { get; set; }
+            public int Position { get; set; }
+        }
+
+        // Add this model class inside ListController
+        public class ListPositionUpdate
+        {
+            public int ListID { get; set; }
+            public int Position { get; set; }
         }
 
         // Model classes

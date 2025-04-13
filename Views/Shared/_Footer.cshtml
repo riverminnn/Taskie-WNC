@@ -1,43 +1,128 @@
-<footer class="bg-[#172b4d] bottom-0 flex flex-col justify-center items-center p-6 w-full text-white">
-    <div class="w-full max-w-6xl flex justify-between items-start mb-4">
-        <!-- Left Section -->
-        <a href="/" class="flex gap-2 items-center h-full">
-            <img src="~/assets/logo-light.png" alt="Logo" class="size-6" />
-            <span class="text-[18px] font-bold">Taskie</span>
-        </a>
-
-        <!-- Middle Section -->
-        <div class="flex gap-2">
-            <a href="/feature" class="text-white hover:underline">Feature</a>
-            <a href="/about" class="text-white hover:underline">About</a>
-            <a href="/contact" class="text-white hover:underline">Contact Us</a>
-        </div>
-
-        <!-- Right Section -->
-        <div class="flex gap-4">
-            <a href="/" class="text-white hover:text-gray-300">
-                <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="/" class="text-white hover:text-gray-300">
-                <i class="fab fa-twitter"></i>
-            </a>
-            <a href="/" class="text-white hover:text-gray-300">
-                <i class="fab fa-linkedin-in"></i>
-            </a>
-            <a href="/" class="text-white hover:text-gray-300">
-                <i class="fab fa-instagram"></i>
-            </a>
+<footer class="bg-[#172b4d] bottom-0 flex flex-col justify-center items-center p-6 md:py-12 w-full text-white">
+    <!-- New Newsletter Section -->
+    <div class="w-full max-w-6xl mb-12 bg-[#203a69] rounded-xl p-6 md:p-8 shadow-lg">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="max-w-md">
+                <h3 class="text-xl md:text-2xl font-bold mb-2">Stay updated with Taskie</h3>
+                <p class="text-blue-100 text-sm md:text-base">Get the latest productivity tips, features updates and
+                    special offers.</p>
+            </div>
+            <div class="w-full md:w-auto">
+                <form class="flex flex-col sm:flex-row gap-3">
+                    <input type="email" placeholder="Your email address"
+                        class="px-4 py-3 rounded-lg bg-[#2c4b82] text-white placeholder:text-blue-200 border border-[#3c5c96] focus:outline-none focus:ring-2 focus:ring-blue-400 w-full md:w-auto"
+                        required />
+                    <button type="submit"
+                        class="px-6 py-3 bg-blue-500 hover:bg-blue-600 rounded-lg font-medium transition-colors">
+                        Subscribe
+                    </button>
+                </form>
+            </div>
         </div>
     </div>
 
-    <!-- Bottom Section -->
-    <div class="w-full max-w-6xl flex justify-between items-center border-t border-gray-600 pt-4">
-        <div class="flex items-center gap-2">
-            <span>&copy; 2024 Taskie</span>
+    <!-- Main Footer Content - Enhanced with categories -->
+    <div class="w-full max-w-6xl grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-4 mb-12">
+        <!-- Company Info -->
+        <div class="flex flex-col items-center md:items-start">
+            <a href="/" class="flex gap-2 items-center mb-4">
+                <img src="~/assets/logo-light.png" alt="Logo" class="size-8 md:size-6" />
+                <span class="text-xl md:text-[18px] font-bold">Taskie</span>
+            </a>
+            <p class="text-blue-100 text-sm mb-4 text-center md:text-left">
+                Helping teams work more efficiently with intuitive task management since 2019.
+            </p>
+            <div class="flex flex-col text-sm text-blue-100 gap-2">
+                <div class="flex items-center gap-2">
+                    <i class="fas fa-map-marker-alt w-4 text-center"></i>
+                    <span>96 Dinh Cong, Hanoi</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i class="fas fa-envelope w-4 text-center"></i>
+                    <a href="mailto:hello@taskie.com" class="hover:text-white">info@taskie.com</a>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i class="fas fa-phone w-4 text-center"></i>
+                    <a href="tel:+123456789" class="hover:text-white">+84 868 710 827</a>
+                </div>
+            </div>
         </div>
-        <div class="flex gap-4">
-            <a href="/privacy" class="text-white hover:underline">Privacy Policy</a>
-            <a href="/terms" class="text-white hover:underline">Terms</a>
+
+        <!-- Product Links -->
+        <div class="flex flex-col items-center md:items-start">
+            <h3 class="text-lg font-semibold mb-4">Product</h3>
+            <ul class="flex flex-col items-center md:items-start gap-2">
+                <li><a href="/feature" class="text-blue-100 hover:text-white hover:underline text-sm">Features</a></li>
+                <li><a href="/pricing" class="text-blue-100 hover:text-white hover:underline text-sm">Pricing</a></li>
+                <li><a href="/integrations"
+                        class="text-blue-100 hover:text-white hover:underline text-sm">Integrations</a></li>
+                <li><a href="/security" class="text-blue-100 hover:text-white hover:underline text-sm">Security</a></li>
+                <li><a href="/changelog" class="text-blue-100 hover:text-white hover:underline text-sm">Changelog</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Resources Links -->
+        <div class="flex flex-col items-center md:items-start">
+            <h3 class="text-lg font-semibold mb-4">Resources</h3>
+            <ul class="flex flex-col items-center md:items-start gap-2">
+                <li><a href="/blog" class="text-blue-100 hover:text-white hover:underline text-sm">Blog</a></li>
+                <li><a href="/tutorials" class="text-blue-100 hover:text-white hover:underline text-sm">Tutorials</a>
+                </li>
+                <li><a href="/help" class="text-blue-100 hover:text-white hover:underline text-sm">Help Center</a></li>
+                <li><a href="/templates" class="text-blue-100 hover:text-white hover:underline text-sm">Templates</a>
+                </li>
+                <li><a href="/api" class="text-blue-100 hover:text-white hover:underline text-sm">API Documentation</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Company Links -->
+        <div class="flex flex-col items-center md:items-start">
+            <h3 class="text-lg font-semibold mb-4">Company</h3>
+            <ul class="flex flex-col items-center md:items-start gap-2">
+                <li><a href="/about" class="text-blue-100 hover:text-white hover:underline text-sm">About Us</a></li>
+                <li><a href="/customers" class="text-blue-100 hover:text-white hover:underline text-sm">Customers</a>
+                </li>
+                <li><a href="/careers" class="text-blue-100 hover:text-white hover:underline text-sm">Careers</a></li>
+                <li><a href="/contact" class="text-blue-100 hover:text-white hover:underline text-sm">Contact Us</a>
+                </li>
+            </ul>
+
+            <!-- Social Media -->
+            <div class="flex gap-4 mt-6">
+                <a href="/" class="text-blue-100 hover:text-white transition-colors bg-[#203a69] px-6 py-2 rounded-full"
+                    aria-label="Facebook">
+                    <i class="fab fa-facebook-f text-sm"></i>
+                </a>
+                <a href="/" class="text-blue-100 hover:text-white transition-colors bg-[#203a69] px-6 py-2 rounded-full"
+                    aria-label="Twitter">
+                    <i class="fab fa-twitter text-sm"></i>
+                </a>
+                <a href="/" class="text-blue-100 hover:text-white transition-colors bg-[#203a69] px-6 py-2 rounded-full"
+                    aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in text-sm"></i>
+                </a>
+                <a href="/" class="text-blue-100 hover:text-white transition-colors bg-[#203a69] px-6 py-2 rounded-full"
+                    aria-label="Instagram">
+                    <i class="fab fa-instagram text-sm"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Section - Copyright and Links -->
+    <div
+        class="w-full max-w-6xl flex flex-col md:flex-row justify-center md:justify-between items-center border-t border-gray-600 pt-6 gap-4 md:gap-0">
+        <div class="flex items-center">
+            <span class="text-sm text-blue-100">&copy; 2024 Taskie. All rights reserved.</span>
+        </div>
+        <div class="flex flex-wrap justify-center gap-6 md:gap-4 text-xs">
+            <a href="/privacy" class="text-blue-100 hover:text-white hover:underline">Privacy Policy</a>
+            <a href="/terms" class="text-blue-100 hover:text-white hover:underline">Terms of Service</a>
+            <a href="/cookies" class="text-blue-100 hover:text-white hover:underline">Cookie Policy</a>
+            <a href="/accessibility" class="text-blue-100 hover:text-white hover:underline">Accessibility</a>
+            <a href="/sitemap" class="text-blue-100 hover:text-white hover:underline">Sitemap</a>
         </div>
     </div>
 </footer>

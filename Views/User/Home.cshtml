@@ -1,38 +1,109 @@
-﻿<div class="h-screen flex flex-col mt-12">
+﻿<div class="flex flex-col min-h-screen mt-12 bg-slate-50">
     <!-- Main Content -->
-    <main class="flex-grow flex flex-col bg-gray-100 px-24 py-6">
-        <!-- Profile Section -->
-        <div class="flex items-center gap-4 mb-6">
-            <img src="~/assets/images/default.png" alt="avatar" class="size-16">
-            <div class="flex flex-col">
-                <span class="text-lg font-semibold">@Context.Session.GetString("Email")</span>
-                <span class="text-sm text-gray-500">Private</span>
+    <main class="flex-grow px-4 md:px-8 lg:px-16 xl:px-24 py-6">
+        <!-- Welcome Banner -->
+        <div
+            class="relative mb-8 bg-gradient-to-r from-blue-600 to-blue-800 rounded-xl p-6 text-white shadow-md overflow-hidden">
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between">
+                <div class="flex items-center gap-4 mb-4 md:mb-0">
+                    <div class="relative">
+                        <img src="~/assets/images/default.png" alt="avatar"
+                            class="size-16 rounded-full border-2 border-white">
+                        <div class="absolute bottom-0 right-0 w-4 h-4 bg-green-500 rounded-full border-2 border-white">
+                        </div>
+                    </div>
+                    <div class="flex flex-col">
+                        <h2 class="text-xl font-bold">Welcome, @Context.Session.GetString("FullName")</h2>
+                        <span class="text-sm text-blue-100">@Context.Session.GetString("Email")</span>
+                    </div>
+                </div>
+                <button onclick="openNewBoardModal()"
+                    class="bg-white text-blue-700 px-4 py-2 rounded-lg font-medium flex items-center gap-2 hover:bg-blue-50 transition shadow-sm">
+                    <i class="fa-solid fa-plus"></i>
+                    Create New Board
+                </button>
             </div>
         </div>
 
-        <h1 class="text-2xl font-medium my-5">Boards</h1>
+        <!-- Boards Header -->
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
+            <div class="flex items-center justify-between md:justify-start w-full md:w-auto mb-4 md:mb-0">
+                <h1 class="text-2xl font-bold text-gray-800">My Boards</h1>
+                <div class="md:hidden">
+                    <button onclick="openNewBoardModal()"
+                        class="bg-blue-600 text-white p-3 rounded-full shadow hover:bg-blue-700 transition">
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                </div>
+            </div>
 
-        <!-- Sorting, Filtering, and Search -->
-        <div class="flex items-center justify-between mb-6">
-            <div class="flex items-center gap-4">
-                <div>
-                    <label for="sort" class="text-sm text-gray-500">Sort by</label>
-                    <select id="sort" class="ml-2 px-3 py-2 border border-gray-300 rounded text-sm">
+            <!-- Sorting and Search (Stack on mobile, side by side on desktop) -->
+            <div class="flex flex-col sm:flex-row gap-4">
+                <div class="relative">
+                    <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                        <i class="fa-solid fa-magnifying-glass text-gray-400"></i>
+                    </div>
+                    <input id="searchBoards" type="text" placeholder="Search boards"
+                        class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" />
+                </div>
+
+                <div class="flex items-center bg-white rounded-lg border border-gray-300 px-3">
+                    <label for="sort" class="text-sm text-gray-500 whitespace-nowrap">Sort by:</label>
+                    <select id="sort" onchange="applySorting()"
+                        class="ml-2 py-2 bg-transparent border-none text-sm focus:outline-none focus:ring-0">
                         <option value="Most recently active">Most recently active</option>
-                        <option value="Alphabetical">Alphabetical</option>
+                        <option value="Alphabetical">A-Z</option>
                         <option value="Date created">Date created</option>
                     </select>
                 </div>
             </div>
-            <div>
-                <input id="searchBoards" type="text" placeholder="Search boards"
-                    class="px-4 py-2 border rounded text-sm w-64" />
-            </div>
         </div>
 
-        <!-- Boards Section -->
-        <div id="boardsContainer" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 w-full">
-            <!-- Boards will be dynamically rendered here -->
+        <!-- Board Categories -->
+        <div class="flex overflow-x-auto scrollbar-thin mb-6 pb-2">
+            <button id="all-boards-btn"
+                class="px-4 py-2 rounded-full text-sm font-medium border whitespace-nowrap mr-2 transition-all bg-blue-50 text-blue-700 border-blue-500"
+                onclick="filterBoards('all')">
+                All Boards
+            </button>
+            <button id="recent-boards-btn"
+                class="px-4 py-2 rounded-full text-sm font-medium border whitespace-nowrap mr-2 transition-all bg-white text-gray-600 border-gray-300 hover:bg-gray-50"
+                onclick="filterBoards('recent')">
+                Recent
+            </button>
+            <button id="owned-boards-btn"
+                class="px-4 py-2 rounded-full text-sm font-medium border whitespace-nowrap mr-2 transition-all bg-white text-gray-600 border-gray-300 hover:bg-gray-50"
+                onclick="filterBoards('owned')">
+                Owned by me
+            </button>
+            <button id="shared-boards-btn"
+                class="px-4 py-2 rounded-full text-sm font-medium border whitespace-nowrap mr-2 transition-all bg-white text-gray-600 border-gray-300 hover:bg-gray-50"
+                onclick="filterBoards('shared')">
+                Shared with me
+            </button>
+        </div>
+
+        <!-- Boards Grid -->
+        <div id="boardsContainer"
+            class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 w-full">
+            <!-- Dynamically rendered boards will go here -->
+            <div class="animate-pulse h-40 bg-gray-200 rounded-lg"></div>
+            <div class="animate-pulse h-40 bg-gray-200 rounded-lg"></div>
+            <div class="animate-pulse h-40 bg-gray-200 rounded-lg"></div>
+        </div>
+
+        <!-- Empty State (shown when no boards) -->
+        <div id="emptyState" class="hidden flex flex-col items-center justify-center py-16 text-center">
+            <div class="w-24 h-24 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                <i class="fa-solid fa-clipboard-list text-blue-500 text-3xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-800 mb-2">No boards found</h3>
+            <p class="text-gray-500 max-w-md mb-6">Create your first board to start organizing your tasks and
+                collaborate with your team.</p>
+            <button onclick="openNewBoardModal()"
+                class="bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition shadow">
+                Create Your First Board
+            </button>
         </div>
     </main>
 </div>
@@ -41,3 +112,18 @@
 @await Html.PartialAsync("User/NewBoard")
 
 <script src="~/js/user.js" asp-append-version="true"></script>
+
+<script>
+    // Initialize these variables on page load for the filter system
+    document.addEventListener('DOMContentLoaded', function () {
+        window.activeFilter = 'all';
+
+        // Register event handler for search input
+        document.getElementById('searchBoards').addEventListener('input', function () {
+            applyFiltersAndSort();
+        });
+
+        // Fetch boards on page load
+        fetchBoards();
+    });
+</script>
