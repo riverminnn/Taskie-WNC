@@ -257,6 +257,10 @@
       "PackagePath": "staticwebassets\\js\\user.js"
     },
     {
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\js\\userProfile.js",
+      "PackagePath": "staticwebassets\\js\\userProfile.js"
+    },
+    {
       "Id": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\lib\\microsoft\\signalr\\dist\\browser\\signalr.min.js",
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\browser\\signalr.min.js"
     },
