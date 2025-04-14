@@ -1,0 +1,37 @@
+git clone https://github.com/riverminnn/Taskie-WNC
+
+cd Taskie-WNC
+ 
+1. Change The ConnectionString in appsettings.json to your desired database
+
+"ConnectionStrings": {
+    "DefaultConnection": "Data Source=(YOUR DESKTOP DATASOURCE);Initial Catalog=(YOUR DATABASE NAME);Integrated Security=True;Trust Server Certificate=True"
+  }
+
+2. Run the commands
+
+dotnet tool install --global dotnet-ef
+
+dotnet add package Microsoft.EntityFrameworkCore.SqlServer
+
+dotnet add package Microsoft.EntityFrameworkCore
+
+dotnet add package Microsoft.EntityFrameworkCore.Design
+
+dotnet clean
+
+npm i
+
+dotnet restore
+
+dotnet ef migrations add Init
+dotnet ef database update
+dotnet watch
+
+3. Development
+
+npx tailwindcss -i ./wwwroot/css/site.css -o ./wwwroot/css/tailwind.css --watch
+
+run this on another terminal to update css using tailwind.css
+
+   

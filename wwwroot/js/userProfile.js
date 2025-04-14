@@ -110,7 +110,7 @@ function validatePassword(password) {
     }
 
     // Check for special characters
-    if (!/[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(password)) {
+    if (!/[!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?]/.test(password)) {
         validationResults.valid = false;
         validationResults.errors.push("Password must include at least one special character");
     }
@@ -261,7 +261,7 @@ function updateValidationIcons(password) {
             : '<i class="fas fa-times text-red-500"></i>';
 
     document.getElementById('specialIcon').innerHTML =
-        /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(password)
+        /[!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?]/.test(password)
             ? '<i class="fas fa-check text-green-500"></i>'
             : '<i class="fas fa-times text-red-500"></i>';
 }
