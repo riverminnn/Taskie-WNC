@@ -229,6 +229,10 @@
       "PackagePath": "staticwebassets\\js\\admin\\userAdmin.js"
     },
     {
+      "Id": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\js\\admin\\userPlusAdmin.js",
+      "PackagePath": "staticwebassets\\js\\admin\\userPlusAdmin.js"
+    },
+    {
       "Id": "D:\\University\\Year4\\HK2\\WebNC\\Taskie\\Taskie-WNC\\wwwroot\\js\\alert.js",
       "PackagePath": "staticwebassets\\js\\alert.js"
     },

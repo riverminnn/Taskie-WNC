@@ -206,6 +206,10 @@ namespace TaskieWNC.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
+                    b.Property<string>("VerifyKey")
+                        .HasMaxLength(10)
+                        .HasColumnType("nvarchar(10)");
+
                     b.HasKey("UserID");
 
                     b.ToTable("Users");

@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace TaskieWNC.Migrations
 {
     [DbContext(typeof(MyDbContext))]
-    [Migration("20250413080753_Init")]
+    [Migration("20250414072431_Init")]
     partial class Init
     {
         /// <inheritdoc />
@@ -208,6 +208,10 @@ namespace TaskieWNC.Migrations
                         .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("VerifyKey")
+                        .HasMaxLength(10)
+                        .HasColumnType("nvarchar(10)");
 
                     b.HasKey("UserID");
 

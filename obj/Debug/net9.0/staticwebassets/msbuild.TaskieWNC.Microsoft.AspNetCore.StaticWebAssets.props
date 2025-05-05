@@ -894,8 +894,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>ec2xizij36</Fingerprint>
-      <Integrity>Hiiya0mXCspL1zIpabhH+1PApHhuSBjdLar6CGJ1y54=</Integrity>
+      <Fingerprint>abexbss6oq</Fingerprint>
+      <Integrity>Sh4JCFksTsjgKRimTMUyVCWdMuHtWUQJqYorPb6c3R0=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\admin\admin.js'))</OriginalItemSpec>
@@ -1007,6 +1007,24 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\admin\userAdmin.js'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\admin\userPlusAdmin.js'))">
+      <SourceType>Package</SourceType>
+      <SourceId>TaskieWNC</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/TaskieWNC</BasePath>
+      <RelativePath>js/admin/userPlusAdmin.js</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>e3ihenrjwd</Fingerprint>
+      <Integrity>JpD+r3NkF2+2RTgZqeYLZfmbSepJfatTVIuhSKQFE5c=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\admin\userPlusAdmin.js'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\alert.js'))">
       <SourceType>Package</SourceType>
@@ -1362,8 +1380,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>sufpb4eif3</Fingerprint>
-      <Integrity>hPckAm+AKll4KqqZd2ZiJnmAxe1AWn4XkH2A5quLGHU=</Integrity>
+      <Fingerprint>1s75c9o2o9</Fingerprint>
+      <Integrity>oQaJolq1DjMAGS+wo5st34vTwmpcl492+KywqVQFcV0=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\userProfile.js'))</OriginalItemSpec>

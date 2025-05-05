@@ -28,5 +28,9 @@ namespace TaskieWNC.Models
         [Required]
         [MaxLength(50)]
         public string Role { get; set; } = "User";
+
+        [StringLength(10, MinimumLength = 10, ErrorMessage = "Verify key must be exactly 10 characters.")]
+        [RegularExpression(@"^[0-9][a-zA-Z0-9]{9}$", ErrorMessage = "Must start with a number.")]
+        public string? VerifyKey { get; set; }
     }
 }

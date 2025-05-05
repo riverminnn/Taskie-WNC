@@ -50,7 +50,8 @@ namespace TaskieWNC.Controllers
                 FullName = request.FullName,
                 Email = request.Email,
                 PasswordHash = AuthService.HashPassword(request.Password),
-                Role = request.Role
+                Role = request.Role,
+                VerifyKey = request.VerifyKey
             };
 
             _userRepository.Register(user);

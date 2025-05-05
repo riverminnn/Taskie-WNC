@@ -1,9 +1,19 @@
 import { loadUsers, updateUser, deleteUser, showAddUserModal, closeAddUserModal, addUser } from './userAdmin.js';
+import { loadUsersPlus, updateUserPlus, deleteUserPlus, showAddUserModalPlus, closeAddUserModalPlus, addUserPlus } from './userPlusAdmin.js';
+
 import { loadLists, updateList, deleteList, showAddListModal, closeAddListModal, addList } from './listAdmin.js';
 import { loadComments, updateComment, deleteComment, showAddCommentModal, closeAddCommentModal, addComment } from './commentAdmin.js';
 import { loadCards, updateCard, deleteCard, showAddCardModal, closeAddCardModal, addCard } from './cardAdmin.js';
 import { loadBoards, updateBoard, deleteBoard, showAddBoardModal, closeAddBoardModal, addBoard } from './boardAdmin.js';
 import { loadBoardMembers, updateBoardMemberRole, deleteBoardMember, showAddBoardMemberModal, closeAddBoardMemberModal, addBoardMember } from './boardMember.js';
+
+// Expose these functions to the global scope for inline HTML event handlers
+window.loadUsersPlus = loadUsersPlus;
+window.updateUserPlus = updateUserPlus;
+window.deleteUserPlus = deleteUserPlus;
+window.showAddUserModalPlus = showAddUserModalPlus;
+window.closeAddUserModalPlus = closeAddUserModalPlus;
+window.addUserPlus = addUserPlus;
 
 // Expose these functions to the global scope for inline HTML event handlers
 window.loadUsers = loadUsers;

@@ -17,113 +17,113 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = TaskieWNC
 build_property.RootNamespace = TaskieWNC
-build_property.ProjectDir = d:\University\Year4\HK2\WebNC\Taskie\Taskie-WNC\
+build_property.ProjectDir = D:\University\Year4\HK2\WebNC\Taskie\Taskie-WNC\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 9.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = d:\University\Year4\HK2\WebNC\Taskie\Taskie-WNC
+build_property.MSBuildProjectDirectory = D:\University\Year4\HK2\WebNC\Taskie\Taskie-WNC
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 9.0
 build_property.EnableCodeStyleSeverity = 
 
-[d:/University/Year4/HK2/WebNC/Taskie/Taskie-WNC/Views/Admin/Home.cshtml]
+[D:/University/Year4/HK2/WebNC/Taskie/Taskie-WNC/Views/Admin/Home.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSG9tZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/University/Year4/HK2/WebNC/Taskie/Taskie-WNC/Views/Admin/_Sidebar.cshtml]
+[D:/University/Year4/HK2/WebNC/Taskie/Taskie-WNC/Views/Admin/_Sidebar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cX1NpZGViYXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/University/Year4/HK2/WebNC/Taskie/Taskie-WNC/Views/Board/Modals/CardDetailModal.cshtml]
+[D:/University/Year4/HK2/WebNC/Taskie/Taskie-WNC/Views/Board/Modals/CardDetailModal.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9hcmRcTW9kYWxzXENhcmREZXRhaWxNb2RhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/University/Year4/HK2/WebNC/Taskie/Taskie-WNC/Views/Board/Modals/NewCardModal.cshtml]
+[D:/University/Year4/HK2/WebNC/Taskie/Taskie-WNC/Views/Board/Modals/NewCardModal.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9hcmRcTW9kYWxzXE5ld0NhcmRNb2RhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/University/Year4/HK2/WebNC/Taskie/Taskie-WNC/Views/Board/Modals/NewListModal.cshtml]
+[D:/University/Year4/HK2/WebNC/Taskie/Taskie-WNC/Views/Board/Modals/NewListModal.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9hcmRcTW9kYWxzXE5ld0xpc3RNb2RhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/University/Year4/HK2/WebNC/Taskie/Taskie-WNC/Views/Board/Modals/ShareBoardModal.cshtml]
+[D:/University/Year4/HK2/WebNC/Taskie/Taskie-WNC/Views/Board/Modals/ShareBoardModal.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9hcmRcTW9kYWxzXFNoYXJlQm9hcmRNb2RhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/University/Year4/HK2/WebNC/Taskie/Taskie-WNC/Views/Home/Index.cshtml]
+[D:/University/Year4/HK2/WebNC/Taskie/Taskie-WNC/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/University/Year4/HK2/WebNC/Taskie/Taskie-WNC/Views/Shared/About.cshtml]
+[D:/University/Year4/HK2/WebNC/Taskie/Taskie-WNC/Views/Shared/About.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEFib3V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/University/Year4/HK2/WebNC/Taskie/Taskie-WNC/Views/Shared/Alerts.cshtml]
+[D:/University/Year4/HK2/WebNC/Taskie/Taskie-WNC/Views/Shared/Alerts.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEFsZXJ0cy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/University/Year4/HK2/WebNC/Taskie/Taskie-WNC/Views/Shared/Contact.cshtml]
+[D:/University/Year4/HK2/WebNC/Taskie/Taskie-WNC/Views/Shared/Contact.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbnRhY3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/University/Year4/HK2/WebNC/Taskie/Taskie-WNC/Views/Shared/Features.cshtml]
+[D:/University/Year4/HK2/WebNC/Taskie/Taskie-WNC/Views/Shared/Features.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEZlYXR1cmVzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/University/Year4/HK2/WebNC/Taskie/Taskie-WNC/Views/Shared/NotFound.cshtml]
+[D:/University/Year4/HK2/WebNC/Taskie/Taskie-WNC/Views/Shared/NotFound.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXE5vdEZvdW5kLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/University/Year4/HK2/WebNC/Taskie/Taskie-WNC/Views/Shared/Pricing.cshtml]
+[D:/University/Year4/HK2/WebNC/Taskie/Taskie-WNC/Views/Shared/Pricing.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFByaWNpbmcuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/University/Year4/HK2/WebNC/Taskie/Taskie-WNC/Views/Shared/User/NewBoard.cshtml]
+[D:/University/Year4/HK2/WebNC/Taskie/Taskie-WNC/Views/Shared/User/NewBoard.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFVzZXJcTmV3Qm9hcmQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/University/Year4/HK2/WebNC/Taskie/Taskie-WNC/Views/Shared/User/ProfileDropdown.cshtml]
+[D:/University/Year4/HK2/WebNC/Taskie/Taskie-WNC/Views/Shared/User/ProfileDropdown.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFVzZXJcUHJvZmlsZURyb3Bkb3duLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/University/Year4/HK2/WebNC/Taskie/Taskie-WNC/Views/Shared/_Footer.cshtml]
+[D:/University/Year4/HK2/WebNC/Taskie/Taskie-WNC/Views/Shared/_Footer.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Gb290ZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/University/Year4/HK2/WebNC/Taskie/Taskie-WNC/Views/Shared/_Header.cshtml]
+[D:/University/Year4/HK2/WebNC/Taskie/Taskie-WNC/Views/Shared/_Header.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9IZWFkZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/University/Year4/HK2/WebNC/Taskie/Taskie-WNC/Views/Shared/_Layout.cshtml]
+[D:/University/Year4/HK2/WebNC/Taskie/Taskie-WNC/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/University/Year4/HK2/WebNC/Taskie/Taskie-WNC/Views/Shared/_LoginModal.cshtml]
+[D:/University/Year4/HK2/WebNC/Taskie/Taskie-WNC/Views/Shared/_LoginModal.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpbk1vZGFsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/University/Year4/HK2/WebNC/Taskie/Taskie-WNC/Views/Shared/_UserHeader.cshtml]
+[D:/University/Year4/HK2/WebNC/Taskie/Taskie-WNC/Views/Shared/_UserHeader.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Vc2VySGVhZGVyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/University/Year4/HK2/WebNC/Taskie/Taskie-WNC/Views/User/BoardDetail.cshtml]
+[D:/University/Year4/HK2/WebNC/Taskie/Taskie-WNC/Views/User/BoardDetail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxCb2FyZERldGFpbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/University/Year4/HK2/WebNC/Taskie/Taskie-WNC/Views/User/Home.cshtml]
+[D:/University/Year4/HK2/WebNC/Taskie/Taskie-WNC/Views/User/Home.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxIb21lLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/University/Year4/HK2/WebNC/Taskie/Taskie-WNC/Views/User/UserProfile.cshtml]
+[D:/University/Year4/HK2/WebNC/Taskie/Taskie-WNC/Views/User/UserProfile.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxVc2VyUHJvZmlsZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/University/Year4/HK2/WebNC/Taskie/Taskie-WNC/Views/_ViewImports.cshtml]
+[D:/University/Year4/HK2/WebNC/Taskie/Taskie-WNC/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/University/Year4/HK2/WebNC/Taskie/Taskie-WNC/Views/_ViewStart.cshtml]
+[D:/University/Year4/HK2/WebNC/Taskie/Taskie-WNC/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
